@@ -36,7 +36,9 @@ export default function WeldedWireMesh() {
                 Welded Wire Mesh (Stainless Steel)
               </div>
               <p class="my- text-sm text-slate-500">
-              Stainless steel welded wire mesh is a highly versatile and durable material that serves a wide range of industrial and commercial applications. 
+                Stainless steel welded wire mesh is a highly versatile and
+                durable material that serves a wide range of industrial and
+                commercial applications.
               </p>
               <Button href="#" class="" variant="gradient">
                 Enquire Now
@@ -52,11 +54,16 @@ export default function WeldedWireMesh() {
               Product Description
             </AccordionHeader>
             <AccordionBody className="max-w-[700px]">
-            Stainless steel welded wire mesh is a highly versatile and durable material that serves a wide range of industrial and commercial applications. Crafted by welding stainless steel wires at precise intersections, it forms a uniform and robust grid-like structure. This construction provides exceptional strength and rigidity, ensuring reliable performance even under demanding conditions.
-            <p>&nbsp;</p>
-            <p>Wire diameter range: 0.8mm – 3mm</p>
-            <p>&nbsp;</p>
-            <p>Alloy: SS304, SS316  </p>
+              Stainless steel welded wire mesh is a highly versatile and durable
+              material that serves a wide range of industrial and commercial
+              applications. Crafted by welding stainless steel wires at precise
+              intersections, it forms a uniform and robust grid-like structure.
+              This construction provides exceptional strength and rigidity,
+              ensuring reliable performance even under demanding conditions.
+              <p>&nbsp;</p>
+              <p>Wire diameter range: 0.8mm – 3mm</p>
+              <p>&nbsp;</p>
+              <p>Alloy: SS304, SS316 </p>
             </AccordionBody>
           </Accordion>
           <Accordion open={openAcc2}>
@@ -84,13 +91,15 @@ export default function WeldedWireMesh() {
                 <li>
                   &#10004; &nbsp; Industrial filtration, sieves, and separators
                 </li>
-                <li>&#10004; &nbsp; Ventilation grilles and ducts in HVAC systems</li>
-                <li>&#10004; &nbsp; Decorative bannisters and architectural finishes</li>
-                <li>&#10004; &nbsp; Machinery protection</li>
                 <li>
-                  &#10004; &nbsp; Agricultural applications
+                  &#10004; &nbsp; Ventilation grilles and ducts in HVAC systems
                 </li>
-                
+                <li>
+                  &#10004; &nbsp; Decorative bannisters and architectural
+                  finishes
+                </li>
+                <li>&#10004; &nbsp; Machinery protection</li>
+                <li>&#10004; &nbsp; Agricultural applications</li>
               </ul>
             </AccordionBody>
           </Accordion>
