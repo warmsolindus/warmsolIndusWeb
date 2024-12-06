@@ -1,124 +1,3 @@
-// import React, { useEffect } from "react";
-// import { Typography, Button } from "@material-tailwind/react";
-// import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
-// import FooterWithSitemap from "../components/Footer";
-// import { Link } from "react-router-dom";
-// export default function Home() {
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, []);
-//   return (
-//     <div className="bg-amber-100">
-//       <NavigationbarWithDropdownMultilevelMenu />
-//       <div>
-//         <img
-//           className="mt-2 h-95 w-[100%] object-cover object-center bg-fixed bg-center bg-cover"
-//           src="./src/images/bgfactoryimg.jpg"
-//           alt="factory image"
-//         />
-//       </div>
-//       <div className="mt-16 text-left ml-9 max-w-[700px]">
-//         <div>
-//           <Typography variant="h4" className="">
-//             ABOUT US
-//           </Typography>
-//           <Typography variant="paragraph" className="my-3 tracking-wider">
-//             Welcome to Warmsol Industries, your trusted partner in premium
-//             industrial solutions. With a steadfast commitment to excellence, we
-//             specialize in providing top-tier Insulation Materials, Metal
-//             Jacketing Materials and Accessories, and Refractory Materials,
-//             alongside Comprehensive Procurement Services tailored to meet the
-//             unique demands of our clients.
-//           </Typography>
-//           <Link to={"/about-us"}>
-//           <Button className="rounded-full py-4 my-3" color="deep-orange">
-//             View More!
-//           </Button>
-//           </Link>
-//         </div>
-//         <div className="my-8">
-//           <Typography variant="h6" color="deep-purple" className="mt-5">
-//             WHO WE ARE?
-//           </Typography>
-//           <Typography variant="paragraph" className="mt-3 tracking-wider">
-//             At Warmsol Industries, we are driven by a passion for innovation and
-//             quality. Our expertise lies in delivering products and services that
-//             enhance operational efficiency, ensure durability, and provide
-//             cost-effective solutions for industries worldwide. Whether
-//             safeguarding systems from heat loss or ensuring structural integrity
-//             with high-performance refractory materials, our solutions are
-//             engineered to excel under the most challenging conditions.
-//           </Typography>
-//         </div>
-//       </div>
-
-//       <div className="px-10 w-[92%] mx-auto rounded-lg bg-[url('./src/images/tortoise-shell.svg')]">
-//         <div>
-//           <Typography
-//             variant="h3"
-//             className="pt-6 text-center"
-//             color="blue-gray"
-//           >
-//             WHAT WE DO?
-//           </Typography>
-//         </div>
-//         <div className="flex flex-wrap w-[100%] h-80">
-//           <div className="md:w-1/2">
-//             <div className="text-left text-2xl font-extrabold py-8">
-//               Manufacturing Division
-//             </div>
-//             <div>
-//               <div className="flex flex-wrap gap-2 w-[100%]">
-//                 <Link to={"/insulation-materials"}>
-//                   <Button className="rounded-full" color="">
-//                     insulation materials
-//                   </Button>
-//                 </Link>
-//                 <Link to={"/metal-jacketing-materials"}>
-//                   <Button className="rounded-full" color="white">
-//                     metal jacketing materials
-//                   </Button>
-//                 </Link>
-//                 <Button className="rounded-full" color="white">
-//                   Insulation &cladding Accessories
-//                 </Button>
-//                 <Button className="rounded-full" color="">
-//                   refractory materials
-//                 </Button>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="md:w-1/2">
-//             <div className="text-left text-2xl font-extrabold py-8">
-//               Industrial Material Supply
-//             </div>
-//             <div>
-//               <div className="flex flex-wrap gap-2 w-[100%]">
-//                 <Button className="rounded-full" color="">
-//                   metal jacketing materials
-//                 </Button>
-//                 <Button className="rounded-full" color="white">
-//                   insulation materials
-//                 </Button>
-//                 <Button className="rounded-full" color="white">
-//                   Insulation &cladding Accessories
-//                 </Button>
-//                 <Button className="rounded-full" color="">
-//                   refractory materials
-//                 </Button>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div>
-//         WHO WE SERVE
-//       </div>
-//       <FooterWithSitemap />
-//     </div>
-//   );
-// }
-
 import React, { useEffect } from "react";
 import {
   Typography,
@@ -139,20 +18,20 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
   const industries = [
-    { name: "Oil & Gas", image: "./src/images/oil-gas.png" },
-    { name: "Petrochemical", image: "./src/images/petrochemical.png" },
-    { name: "Fertilizer", image: "./src/images/fertilizer.png" },
-    { name: "Steel", image: "./src/images/steel.png" },
-    { name: "Water Treatment", image: "./src/images/water-treatment.png" },
-    { name: "Power Generation", image: "./src/images/power-generation.png" },
+    { name: "Oil & Gas", image: "images/oil-gas.png" },
+    { name: "Petrochemical", image: "/images/petrochemical.png" },
+    { name: "Fertilizer", image: "/images/fertilizer.png" },
+    { name: "Steel", image: "/images/steel.png" },
+    { name: "Water Treatment", image: "/images/water-treatment.png" },
+    { name: "Power Generation", image: "/images/power-generation.png" },
   ];
   const clients = [
-    "/placeholder.svg?height=80&width=160",
-    "/placeholder.svg?height=80&width=160",
-    "/placeholder.svg?height=80&width=160",
-    "/placeholder.svg?height=80&width=160",
-    "/placeholder.svg?height=80&width=160",
-    "/placeholder.svg?height=80&width=160"
+    // "/placeholder.svg?height=80&width=160",
+    // "/placeholder.svg?height=80&width=160",
+    // "/placeholder.svg?height=80&width=160",
+    // "/placeholder.svg?height=80&width=160",
+    // "/placeholder.svg?height=80&width=160",
+    // "/placeholder.svg?height=80&width=160"
   ];
 
   return (
@@ -205,7 +84,7 @@ export default function Home() {
           </Typography>
         </div>
       </div>
-      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('./src/images/protruding-squares.svg')] bg-fixed rounded-lg">
+      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('src/images/protruding-squares.svg?react')] bg-fixed rounded-lg">
         <div className="max-w-7xl mx-auto">
           <Typography variant="h3" className="mb-8 text-center" color="white">
             WHAT WE DO?
@@ -292,7 +171,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">
                 <img
-                  src="./src/images/why.jpg?height=300&width=400"
+                  src="/images/why.jpg?height=300&width=400"
                   alt="WarmSol Industries Facility"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
