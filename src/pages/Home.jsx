@@ -45,7 +45,7 @@ export default function Home() {
           </Typography>
           <Typography
             variant="paragraph"
-            className="mb-6 tracking-wider text-center sm:text-left"
+            className="mb-6 tracking-wider sm:text-left"
           >
             Welcome to Warmsol Industries, your trusted partner in premium
             industrial solutions. With a steadfast commitment to excellence, we
@@ -56,7 +56,7 @@ export default function Home() {
           </Typography>
           <div className="text-center sm:text-left">
             <Link to={"/about-us"}>
-              <Button className="rounded-full py-2 px-4 hover:animate-bounce" color="deep-orange">
+              <Button className="rounded-full py-2 px-4 animate-bounce shadow-blue-500/50" color="deep-orange">
                 View More!
               </Button>
             </Link>
@@ -100,19 +100,19 @@ export default function Home() {
               </Typography>
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
                 <Link to={"/insulation-materials"}>
-                  <Button className="rounded-full mb-2 hover:animate-bounce" color="blue-gray">
+                  <Button className="rounded-full mb-2 " color="blue-gray">
                     Insulation Materials
                   </Button>
                 </Link>
                 <Link to={"/metal-jacketing-materials"}>
-                  <Button className="rounded-full mb-2 hover:animate-bounce" color="gray">
+                  <Button className="rounded-full mb-2 " color="gray">
                     Metal Jacketing Materials
                   </Button>
                 </Link>
-                <Button className="rounded-full mb-2 hover:animate-bounce" color="gray">
+                <Button className="rounded-full mb-2 " color="gray">
                   Insulation & Cladding Accessories
                 </Button>
-                <Button className="rounded-full mb-2 hover:animate-bounce" color="blue-gray">
+                <Button className="rounded-full mb-2 " color="blue-gray">
                   Refractory Materials
                 </Button>
               </div>
@@ -126,13 +126,13 @@ export default function Home() {
                 PROCUREMENT SERVICES
               </Typography>
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                <Button className="rounded-full mb-2 hover:animate-bounce" color="blue-gray">
+                <Button className="rounded-full mb-2 " color="blue-gray">
                   Pipe and fittings
                 </Button>
-                <Button className="rounded-full mb-2 hover:animate-bounce" color="gray">
+                <Button className="rounded-full mb-2 " color="gray">
                   Electrical and instrumentation materials
                 </Button>
-                <Button className="rounded-full mb-2 hover:animate-bounce" color="gray">
+                <Button className="rounded-full mb-2 " color="gray">
                   Hand tools and consumables
                 </Button>
               </div>
