@@ -15,10 +15,31 @@ function AboutUs() {
           
 <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
     <NavigationbarWithDropdownMultilevelMenu />
+
+    <div className="relative h-[60vh] md:h-[80vh] w-full" >
+        <div className="absolute inset-0">
+          <img
+            src="/images/industry.jpg?height=800&width=1200"
+            alt="aboutUs"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"/>
+        </div>
+        <div className="relative h-full flex items-center justify-center">
+          <Typography
+            variant="h1"
+            color="white"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
+          >
+            ABOUT WARMSOL INDUSTRIES
+          </Typography>
+        </div>
+      </div>
+
       <div className="px-4 py-12">
-        <Typography variant="h1" color="blue-gray" className="mb-6 text-2xl md:text-3xl lg:text-4xl text-center font-extrabold">
+        {/* <Typography variant="h1" color="blue-gray" className="mb-6 text-2xl md:text-3xl lg:text-4xl text-center font-extrabold">
           About WARMSOL
-        </Typography>
+        </Typography> */}
         
         <Card className="mb-8 overflow-hidden">
           <CardBody className="p-8">

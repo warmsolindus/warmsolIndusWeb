@@ -7,7 +7,6 @@ export function ImageCarousel() {
   const images = [
     "/images/bgfactoryimg.jpg",
     "/images/C.jpg",
-    "/images/A.jpg",
     "/images/B.jpeg"
   ];
 
