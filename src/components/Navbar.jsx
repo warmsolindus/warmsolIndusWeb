@@ -206,7 +206,7 @@ function NavListMenu() {
             open={insulationNestedMenu}
             handler={setInsulationNestedMenu}
           >
-            <Link to={"insulation-materials"}>
+            <Link to={"/insulation-materials"}>
             <MenuHandler className="flex items-center justify-between">
             
               <MenuItem>
@@ -307,7 +307,7 @@ function NavListMenu() {
             open={insulationNestedMenu}
             handler={setInsulationNestedMenu}
           >
-            <Link to={"insulation-materials"}>
+            <Link to={"/insulation-materials"}>
             <MenuHandler className="flex items-center justify-between">
             
               <MenuItem>
