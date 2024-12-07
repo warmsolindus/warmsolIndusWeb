@@ -27,7 +27,7 @@ export default function AluminiumSheet() {
             <div class="md:shrink-0">
               <img
                 class="h-72 w-full object-cover md:h-full md:w-72 hover:scale-105 hover:object-scale-down"
-                src="./src/images/almWMB.jpg"
+                src="/images/almWMB.jpg"
                 alt="Modern building architecture"
               />
             </div>

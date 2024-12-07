@@ -27,7 +27,7 @@ export default function WeldedWireMesh() {
             <div class="md:shrink-0">
               <img
                 class="h-72 w-full object-cover md:h-full md:w-72 hover:scale-105"
-                src="./src/images/welded-wire-mesh-SS.jpg"
+                src="/images/welded-wire-mesh-SS.jpg"
                 alt="Modern building architecture"
               />
             </div>

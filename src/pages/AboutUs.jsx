@@ -16,8 +16,8 @@ function AboutUs() {
 <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
     <NavigationbarWithDropdownMultilevelMenu />
       <div className="px-4 py-12">
-        <Typography variant="h1" color="" className="mb-6 text-2xl md:text-3xl lg:text-4xl text-center font-extrabold">
-          About WarmSol Industries
+        <Typography variant="h1" color="blue-gray" className="mb-6 text-2xl md:text-3xl lg:text-4xl text-center font-extrabold">
+          About WARMSOL
         </Typography>
         
         <Card className="mb-8 overflow-hidden">
@@ -25,7 +25,7 @@ function AboutUs() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">
                 <img 
-                  src="./src/images/aboutus.png?height=300&width=400" 
+                  src="/images/aboutus.png?height=300&width=400" 
                   alt="WarmSol Industries Facility" 
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
@@ -41,6 +41,7 @@ function AboutUs() {
                   <li>Hot and Cold insulation materials</li>
                   <li>Cladding and Jacketing solutions</li>
                   <li>Essential insulation accessories</li>
+                  <li>Refractory materials</li>
                 </ul>
                 <Typography variant="paragraph" className="text-base md:text-lg text-gray-700">
                   With expertise and a commitment to innovation, we are your trusted partner in achieving efficient, effective, and sustainable insulation solutions for both large-scale industrial projects and commercial spaces.

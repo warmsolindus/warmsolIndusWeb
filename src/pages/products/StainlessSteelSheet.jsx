@@ -27,7 +27,7 @@ export default function StainlessSteelSheet() {
             <div class="md:shrink-0">
               <img
                 class="h-72 w-full object-cover md:h-full md:w-72 hover:scale-105"
-                src="./src/images/stainless-steel-coil.jpg"
+                src="/images/stainless-steel-coil.jpg"
                 alt="Product image"
               />
             </div>

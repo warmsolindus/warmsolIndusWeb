@@ -403,7 +403,7 @@ function NavListMenu() {
 
 function NavList() {
   return (
-    <List className="mb-6 mt-4  lg:mb-0 lg:mt-0 lg:flex-row lg:p-1 gap-8 mr-6">
+    <List className="mb-6 mt-4 lg:mb-0 lg:mt-0 lg:flex-row lg:p-1 gap-8 mr-6">
       <Typography
         as="a"
         href=""
@@ -412,7 +412,7 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"/home"}>
-          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-350 after:ease-in-out hover:after:scale-x-105 focus:outline-">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-350 after:ease-in-out hover:after:scale-x-105 focus:outline active-outline">
             Home
           </ListItem>
         </Link>
@@ -487,7 +487,7 @@ export default function NavigationbarWithDropdownMultilevelMenu() {
           <Link to={"/home"}>
             <img
               className="h-16 w-full rounded-lg object-cover object-center"
-              src="./src/images/logo.png"
+              src="/images/logo.png"
               alt="logo"
             />
           </Link>

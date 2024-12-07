@@ -28,7 +28,7 @@ export default function PolyurethaneFoam() {
             <div class="md:shrink-0">
               <img
                 class="h-72 w-full object-cover md:h-full md:w-72 hover:scale-105"
-                src="./src/images/PUF.png"
+                src="/images/PUF.png"
                 alt="Polyisocyanurate"
               />
             </div>

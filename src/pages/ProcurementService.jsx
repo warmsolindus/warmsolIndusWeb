@@ -21,7 +21,7 @@ export default function ProcurementServices() {
       <div className="relative h-[80vh] w-full" >
         <div className="absolute inset-0">
           <img
-            src="./src/images/procurement.jpeg?height=800&width=1200"
+            src="/images/procurement.jpeg?height=800&width=1200"
             alt="Warehouse"
             className="h-full w-full object-cover"
           />
@@ -196,7 +196,7 @@ export default function ProcurementServices() {
 //         <div
 //           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
 //           style={{
-//             backgroundImage: "url('./src/images/procurement.jpeg?height=400&width=1200')",
+//             backgroundImage: "url('/images/procurement.jpeg?height=400&width=1200')",
 //             backgroundColor: 'rgba(0, 0, 0, 0.6)',
 //             backgroundBlend: 'overlay'
 //           }}

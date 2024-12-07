@@ -111,7 +111,7 @@ export function ContactSection() {
             </div>
 
             {/* <img
-            src="./src/images/map.png"
+            src="/images/map.png"
             alt="map"
             className="w-full h-2/3 lg:max-h-[510px]"
           /> */}

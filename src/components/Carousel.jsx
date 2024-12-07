@@ -5,10 +5,10 @@ export function ImageCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const images = [
-    "./src/images/bgfactoryimg.jpg",
-    "./src/images/C.jpg",
-    "./src/images/A.jpg",
-    "./src/images/B.jpeg"
+    "/images/bgfactoryimg.jpg",
+    "/images/C.jpg",
+    "/images/A.jpg",
+    "/images/B.jpeg"
   ];
 
   useEffect(() => {

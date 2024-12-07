@@ -29,7 +29,7 @@ export default function ProductInfo() {
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2">
                 <img
-                  src="./src/images/cfb.avif?height=400&width=400"
+                  src="/images/cfb.avif?height=400&width=400"
                   alt="Product"
                   className="w-full h-auto object-contain lg:h-full"
                 />
@@ -157,7 +157,7 @@ export default function ProductInfo() {
           <CardBody className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
               <img
-                src="./src/images/cfb.avif?height=400&width=400"
+                src="/images/cfb.avif?height=400&width=400"
                 alt="Product"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
