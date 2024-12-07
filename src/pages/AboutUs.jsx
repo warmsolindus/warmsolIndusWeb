@@ -132,39 +132,3 @@ function AboutUs() {
 }
 export default AboutUs;
 
-// import React from "react";
-// import {
-//   Typography,
-//   Card,
-//   CardBody,
-//   Container,
-// } from "@material-tailwind/react";
-// import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
-// import FooterWithSitemap from "../components/Footer";
-
-// const AboutUs = () => {
-//   return (
-
-
-   
-//   );
-// };
-
-// export default AboutUs;
-
-
-{/* <div className="bg-amber-100">
-      <NavigationbarWithDropdownMultilevelMenu />
-      <div className="mt-16 text-left ml-9 max-w-[700px]">
-      <Typography variant="h4" className="font-extrabold">
-        ABOUT US
-      </Typography>
-      <Typography variant="paragraph" className="my-3 tracking-wider">
-        WARMSOL Industries is a leading manufacturer and distributor of world
-        class insulation products such as Hot and Cold insulation,
-        Cladding/Jacketing materials and essential accessories designed to meet
-        the most demanding industry standards.
-      </Typography>
-      </div>
-      <FooterWithSitemap />
-    </div> */}
