@@ -31,7 +31,7 @@ export default function ProcurementServices() {
           <Typography
             variant="h1"
             color="white"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-center"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
             PROCUREMENT SERVICES
           </Typography>

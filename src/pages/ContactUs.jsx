@@ -17,15 +17,29 @@ export function ContactSection() {
   return (
     <div className="bg-amber-100">
       <NavigationbarWithDropdownMultilevelMenu />
-      <section className="px-8 py-8 lg:py-16">
-        <div className="container mx-auto text-center">
+
+      <div className="relative h-[60vh] md:h-[80vh] w-full" >
+        <div className="absolute inset-0 bg-[url('/images/contactUs.jpg?height=800&width=1200')] bg-fixed bg-cover">
+          {/* <img
+            src="/images/contactUs.jpg?height=800&width=1200"
+            alt="Warehouse"
+            className="h-full w-full object-cover"
+          /> */}
+          <div className="absolute inset-0 bg-black/50"/>
+        </div>
+        <div className="relative h-full flex items-center justify-center">
           <Typography
             variant="h1"
-            color="blue-gray"
-            className="  mb-4 !text-3xl lg:!text-5xl"
+            color="white"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
-            Contact Us
+            CONTACT US
           </Typography>
+        </div>
+      </div>
+
+      <section className="px-8 py-8 lg:py-16">
+        <div className="container mx-auto text-center">
           <Typography
             variant="h5"
             color="blue-gray"
