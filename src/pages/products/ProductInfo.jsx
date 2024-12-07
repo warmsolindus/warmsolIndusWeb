@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Typography,
   Card,
@@ -18,6 +18,9 @@ import NavigationbarWithDropdownMultilevelMenu from "../../components/Navbar";
 import FooterWithSitemap from "../../components/Footer";
 
 export default function ProductInfo() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [activeTab, setActiveTab] = React.useState("description");
   
   return (

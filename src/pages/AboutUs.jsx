@@ -17,7 +17,7 @@ function AboutUs() {
     <NavigationbarWithDropdownMultilevelMenu />
 
     <div className="relative h-[60vh] md:h-[80vh] w-full" >
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 ">
           <img
             src="/images/industry.jpg?height=800&width=1200"
             alt="aboutUs"
@@ -29,7 +29,7 @@ function AboutUs() {
           <Typography
             variant="h1"
             color="white"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center font-mon"
           >
             ABOUT WARMSOL INDUSTRIES
           </Typography>
@@ -48,7 +48,7 @@ function AboutUs() {
                 <img 
                   src="/images/aboutus.png?height=300&width=400" 
                   alt="WarmSol Industries Facility" 
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg shadow-lg brightness-75"
                 />
               </div>
               <div className="w-full md:w-1/2">

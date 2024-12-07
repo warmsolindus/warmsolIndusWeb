@@ -24,27 +24,27 @@ import { Link } from "react-router-dom";
 const insulationMaterial = [
   {
     title: "Ceramic Fiber Blankets",
-    path: "ceramic-fiber-blanket",
+    path: "/ceramic-fiber-blanket",
   },
   {
     title: "Cellular / Foam Glass",
-    path: "cellular-or-foam-glass",
+    path: "/cellular-or-foam-glass",
   },
   {
     title: "PIR (Polyisocyanurate)",
-    path: "polyisocyanurate-PIR",
+    path: "/polyisocyanurate-PIR",
   },
   {
     title: "PUF (Polyurethane Foam)",
-    path: "polyurethane-foam-PUF",
+    path: "/polyurethane-foam-PUF",
   },
   {
     title: "Calcium Silicate ",
-    path: "calcium-silicate",
+    path: "/calcium-silicate",
   },
   {
     title: "Perlite",
-    path: "perlite",
+    path: "/perlite",
   },
 ];
 const metalJacketing = [
@@ -58,15 +58,15 @@ const metalJacketing = [
   },
   {
     title: "Perforated Sheet ",
-    path: "perforated-sheet",
+    path: "/perforated-sheet",
   },
   {
     title: "Corrugated Sheet ",
-    path: "corrugated-sheet",
+    path: "/corrugated-sheet",
   },
   {
     title: "Welded Wire mesh SS",
-    path: "welded-wire-mesh",
+    path: "/welded-wire-mesh",
   },
   {
     title: "Lead Sheet",
@@ -160,9 +160,11 @@ function NavListMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = (menu) =>
     menu.map(({ title, path }, key) => (
-      <a href={path} key={key}>
+      // <a href={path} key={key}>
+      <Link to={path} key={key}>
         <MenuItem>{title}</MenuItem>
-      </a>
+        </Link>
+      // </a>
     ));
 
   return (

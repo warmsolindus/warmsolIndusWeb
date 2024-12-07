@@ -19,7 +19,10 @@ export function ContactSection() {
       <NavigationbarWithDropdownMultilevelMenu />
 
       <div className="relative h-[60vh] md:h-[80vh] w-full" >
-        <div className="absolute inset-0 bg-[url('/images/contactUs.jpg?height=800&width=1200')] bg-fixed bg-cover">
+        <div className="absolute inset-0 bg-[url('/images/contactUs.jpg?height=800&width=1200')] bg-fixed bg-cover transition-transform duration-[4000ms] ease-out ${
+            imageLoaded ? 'scale-120' : 'scale-100'
+          }`}
+">
           {/* <img
             src="/images/contactUs.jpg?height=800&width=1200"
             alt="Warehouse"
@@ -123,12 +126,6 @@ export function ContactSection() {
                 
               </div>
             </div>
-
-            {/* <img
-            src="/images/map.png"
-            alt="map"
-            className="w-full h-2/3 lg:max-h-[510px]"
-          /> */}
           
             <form
               action="https://formsubmit.co/jabinkm007@gmail.com"

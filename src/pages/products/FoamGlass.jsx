@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Typography,
   Button,
@@ -9,6 +9,9 @@ import {
 import NavigationbarWithDropdownMultilevelMenu from "../../components/Navbar";
 import FooterWithSitemap from "../../components/Footer";
 export default function FoamGlass() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [openAcc1, setOpenAcc1] = React.useState(true);
   const [openAcc2, setOpenAcc2] = React.useState(true);
   const [openAcc3, setOpenAcc3] = React.useState(true);

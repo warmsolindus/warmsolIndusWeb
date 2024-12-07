@@ -39,7 +39,7 @@ export default function ProcurementServices() {
       </div>
 
       {/* Services Navigation */}
-      <div className="bg-deep-orange-800 w-full overflow-x-auto sticky top-24 z-1">
+      <div className="bg-deep-orange-800 w-full overflow-x-auto sticky top-24 z-40">
         <div className="flex flex-nowrap justify-start md:justify-center gap-5 md:gap-10 p-4 min-w-max md:min-w-0">
           {serviceCategories.map((category, index) => (
             <Button
