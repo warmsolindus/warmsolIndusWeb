@@ -7,7 +7,7 @@ export function ImageCarousel() {
   const images = [
     "/images/bgfactoryimg.jpg",
     "/images/C.jpg",
-    "/images/B.jpeg"
+    "/images/B.jpeg",
   ];
 
   useEffect(() => {
@@ -51,4 +51,3 @@ export function ImageCarousel() {
     </Carousel>
   );
 }
-

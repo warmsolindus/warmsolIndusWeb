@@ -22,9 +22,8 @@ export default function PolyurethaneFoam() {
 
   return (
     <div className="bg-amber-50">
-      
-        <NavigationbarWithDropdownMultilevelMenu />
-     
+      <NavigationbarWithDropdownMultilevelMenu />
+
       <div>
         <div class="max-w-md mx-auto my-8 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
           <div class="md:flex">
@@ -51,7 +50,7 @@ export default function PolyurethaneFoam() {
           </div>
         </div>
       </div>
-      <div className="mx-20 my-10 px-6 bg-white rounded-lg">
+      <div className="mx-6 md:mx-20 my-10 px-6 bg-white rounded-lg">
         <>
           <Accordion open={openAcc1}>
             <AccordionHeader onClick={handleOpenAcc1}>
@@ -74,22 +73,14 @@ export default function PolyurethaneFoam() {
             <AccordionHeader onClick={handleOpenAcc2}>Benefits</AccordionHeader>
             <AccordionBody>
               <ul>
-                <li>
-                  &#10004; &nbsp; Long-lasting
-                </li>
+                <li>&#10004; &nbsp; Long-lasting</li>
                 <li>&#10004; &nbsp; Low thermal conductivity</li>
                 <li>&#10004; &nbsp; Lightweight and easy to install</li>
-                <li>
-                  &#10004; &nbsp; Dimensional stability
-                </li>
+                <li>&#10004; &nbsp; Dimensional stability</li>
                 <li>&#10004; &nbsp; High mechanical strength</li>
                 <li>&#10004; &nbsp; Temperature range of -45°C to 80°C</li>
-                <li>
-                  &#10004; &nbsp; Resist corrosive chemicals
-                </li>
-                <li>
-                  &#10004; &nbsp; Cost and energy saving
-                </li>
+                <li>&#10004; &nbsp; Resist corrosive chemicals</li>
+                <li>&#10004; &nbsp; Cost and energy saving</li>
               </ul>
             </AccordionBody>
           </Accordion>
@@ -100,12 +91,19 @@ export default function PolyurethaneFoam() {
             <AccordionBody>
               <ul>
                 <li>&#10004; &nbsp; Under slab, roof and wall insulation</li>
-                <li>&#10004; &nbsp; Core material for architectural and structural panels </li>
                 <li>
-                  &#10004; &nbsp; Insulated windows, doors and air barrier sealants
+                  &#10004; &nbsp; Core material for architectural and structural
+                  panels{" "}
+                </li>
+                <li>
+                  &#10004; &nbsp; Insulated windows, doors and air barrier
+                  sealants
                 </li>
                 <li>&#10004; &nbsp; Pipe, Tank and Vessel insulation</li>
-                <li>&#10004; &nbsp; Insulation for shipping containers, trucks or rail cars</li>
+                <li>
+                  &#10004; &nbsp; Insulation for shipping containers, trucks or
+                  rail cars
+                </li>
               </ul>
             </AccordionBody>
           </Accordion>

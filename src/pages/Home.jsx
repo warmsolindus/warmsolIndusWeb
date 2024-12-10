@@ -18,7 +18,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
   const industries = [
-    { name: "Oil & Gas", image: "images/oil-gas.png" },
+    { name: "Oil & Gas", image: "/images/oil-gas.png" },
     { name: "Petrochemical", image: "/images/petrochemical.png" },
     { name: "Fertilizer", image: "/images/fertilizer.png" },
     { name: "Steel", image: "/images/steel.png" },
@@ -26,7 +26,7 @@ export default function Home() {
     { name: "Power Generation", image: "/images/power-generation.png" },
   ];
   const clients = [
-    // "/placeholder.svg?height=80&width=160",
+    "/images/ANCclient.jpg?height=160&width=320",
     // "/placeholder.svg?height=80&width=160",
     // "/placeholder.svg?height=80&width=160",
     // "/placeholder.svg?height=80&width=160",
@@ -56,7 +56,10 @@ export default function Home() {
           </Typography>
           <div className="text-center sm:text-left">
             <Link to={"/about-us"}>
-              <Button className="rounded-full py-2 px-4 animate-bounce shadow-blue-500/50" color="deep-orange">
+              <Button
+                className="rounded-full py-2 px-4 animate-bounce shadow-blue-500/50"
+                color="deep-orange"
+              >
                 View More!
               </Button>
             </Link>
@@ -200,7 +203,7 @@ export default function Home() {
                   their insulation, metal jacketing, refractory, and procurement
                   needs. Together, we can build stronger, more efficient, and
                   sustainable industrial systems.
-                </Typography> 
+                </Typography>
               </div>
             </div>
           </CardBody>
@@ -211,23 +214,23 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
               <Typography
-                variant="small"
+                variant="h3"
                 color="deep-purple"
                 className="mb-2 font-semibold uppercase tracking-wider"
               >
                 OUR CLIENTS
               </Typography>
-              <Typography variant="h2" color="blue-gray">
-                Trusted By Industry Leaders
+              <Typography variant="h4" color="blue-gray">
+                TRUSTED BY INDUSTRY LEADERS
               </Typography>
             </div>
-            <div className="flex overflow-x-auto gap-8 py-4">
+            <div className="flex justify-center overflow-x-auto gap-8 py-4 mx-auto">
               {clients.map((client, index) => (
                 <img
                   key={index}
                   src={client}
                   alt={`Client ${index + 1}`}
-                  className="h-20 w-40 object-contain flex-shrink-0"
+                  className="h-40 w-80 object-contain flex-shrink-0"
                 />
               ))}
             </div>

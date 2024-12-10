@@ -50,7 +50,7 @@ export default function WeldedWireMesh() {
           </div>
         </div>
       </div>
-      <div className="mx-20 my-10 px-6 bg-white rounded-lg">
+      <div className="mx-6 md:mx-20 my-10 px-6 bg-white rounded-lg">
         <>
           <Accordion open={openAcc1}>
             <AccordionHeader onClick={handleOpenAcc1}>

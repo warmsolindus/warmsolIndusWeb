@@ -11,7 +11,7 @@ const insulationMaterials = [
     title: "Cellular/Foam glass",
     subTitle:
       "Cellular / Foam glass insulation is a lightweight, rigid material composed of millions of completely sealed glass cells.",
-      links: "/cellular-or-foam-glass",
+    links: "/cellular-or-foam-glass",
   },
   {
     imgUrl: "/images/PIR.png",

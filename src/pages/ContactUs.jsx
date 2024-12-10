@@ -9,7 +9,6 @@ import {
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
 
-
 export function ContactSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,17 +17,19 @@ export function ContactSection() {
     <div className="bg-amber-100">
       <NavigationbarWithDropdownMultilevelMenu />
 
-      <div className="relative h-[60vh] md:h-[80vh] w-full" >
-        <div className="absolute inset-0 bg-[url('/images/contactUs.jpg?height=800&width=1200')] bg-fixed bg-cover transition-transform duration-[4000ms] ease-out ${
+      <div className="relative h-[60vh] md:h-[80vh] w-full">
+        <div
+          className="absolute inset-0 bg-[url('/images/contactUs.jpg?height=800&width=1200')] bg-fixed bg-cover transition-transform duration-[4000ms] ease-out ${
             imageLoaded ? 'scale-120' : 'scale-100'
           }`}
-">
+"
+        >
           {/* <img
             src="/images/contactUs.jpg?height=800&width=1200"
             alt="Warehouse"
             className="h-full w-full object-cover"
           /> */}
-          <div className="absolute inset-0 bg-black/50"/>
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative h-full flex items-center justify-center">
           <Typography
@@ -63,70 +64,78 @@ export function ContactSection() {
                   about our product. They are very happy with their purchase.
                 </Typography>
                 <div className="justify-self-center">
-                <Typography
-                  variant="h5"
-                  className="py-4 !text-base lg:!text-2xl"
-                >
-                  <i className="fa fa-building text-2xl" /> &nbsp; FIND US AT
-                  OFFICE
-                </Typography>
-                <div className="py-4">
-                  <Typography className="font-semibold">
-                    Warmsol Industries FZC LLC
+                  <Typography
+                    variant="h5"
+                    className="py-4 !text-base lg:!text-2xl"
+                  >
+                    <i className="fa fa-building text-2xl" /> &nbsp; FIND US AT
+                    OFFICE
                   </Typography>
-                  <Typography className="font-semibold">
-                    Business Center,
+                  <div className="py-4">
+                    <Typography className="font-semibold">
+                      Warmsol Industries FZC LLC
+                    </Typography>
+                    <Typography className="font-semibold">
+                      Business Center,
+                    </Typography>
+                    <Typography className="font-semibold">
+                      Sharjah Publishing City Free Zone,
+                    </Typography>
+                    <Typography className="font-semibold">Sharjah ,</Typography>
+                    <Typography className="font-semibold">
+                      United Arab Emirates
+                    </Typography>
+                  </div>
+                  <Typography
+                    variant="h5"
+                    className="py-4 !text-base lg:!text-2xl"
+                  >
+                    <i className="fa fa-phone text-2xl" /> &nbsp; GIVE US A RING
                   </Typography>
-                  <Typography className="font-semibold">
-                    Sharjah Publishing City Free Zone,
-                  </Typography>
-                  <Typography className="font-semibold">Sharjah ,</Typography>
-                  <Typography className="font-semibold">
-                    United Arab Emirates
-                  </Typography>
-                </div>
-                <Typography
-                  variant="h5"
-                  className="py-4 !text-base lg:!text-2xl"
-                >
-                  <i className="fa fa-phone text-2xl" /> &nbsp; GIVE US A RING
-                </Typography>
-                <div className="py-2">
-                  <Typography className="font-semibold">
-                    Mohamed Jabin
-                  </Typography>
-                  <Typography className="font-semibold">
-                    Office Administrative
-                  </Typography>
-                  <Typography className="font-semibold">
-                  <i className="fa fa-phone" /><a href="tel:+971 56 4944247"> +971 56 4944247</a>
-                  </Typography>
-                  <Typography className="font-semibold">
-                  <i className="fa fa-envelope" /> <a href="mailto:sales@warmsolindus.com">sales@warmsolindus.com</a></Typography>
-                </div>
-                <div className="flex justify-between gap-4 py-3">
-                  <IconButton className="rounded bg-[#1877F2] hover:shadow-[#1877F2]/20 focus:shadow-[#1877F2]/20 active:shadow-[#1877F2]/10">
-                    <i className="fab fa-facebook text-lg" />
-                  </IconButton>
-                  <IconButton className="rounded bg-[#000000] hover:shadow-[#000000]/20 focus:shadow-[#000000]/20 active:shadow-[#000000]/10">
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
-              </svg>
-                  </IconButton>
-                  <IconButton className="rounded bg-[#0077B5] hover:shadow-[#0077B5]/20 focus:shadow-[#0077B5]/20 active:shadow-[#0077B5]/10">
-                    <i className="fab fa-linkedin text-lg" />
-                  </IconButton>
-                  <IconButton className="rounded bg-[#333333] hover:shadow-[#333333]/20 focus:shadow-[#333333]/20 active:shadow-[#333333]/10">
-                    <i className="fab fa-github text-lg" />
-                  </IconButton>
-                </div>
+                  <div className="py-2">
+                    <Typography className="font-semibold">
+                      Mohamed Jabin
+                    </Typography>
+                    <Typography className="font-semibold">
+                      Office Administrative
+                    </Typography>
+                    <Typography className="font-semibold">
+                      <i className="fa fa-phone" />
+                      <a href="tel:+971 56 4944247"> +971 56 4944247</a>
+                    </Typography>
+                    <Typography className="font-semibold">
+                      <i className="fa fa-envelope" />{" "}
+                      <a href="mailto:sales@warmsolindus.com">
+                        sales@warmsolindus.com
+                      </a>
+                    </Typography>
+                  </div>
+                  <div className="flex justify-between gap-4 py-3">
+                    <IconButton className="rounded bg-[#1877F2] hover:shadow-[#1877F2]/20 focus:shadow-[#1877F2]/20 active:shadow-[#1877F2]/10">
+                      <i className="fab fa-facebook text-lg" />
+                    </IconButton>
+                    <IconButton className="rounded bg-[#000000] hover:shadow-[#000000]/20 focus:shadow-[#000000]/20 active:shadow-[#000000]/10">
+                      <svg
+                        className="h-5 w-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
+                      </svg>
+                    </IconButton>
+                    <IconButton className="rounded bg-[#0077B5] hover:shadow-[#0077B5]/20 focus:shadow-[#0077B5]/20 active:shadow-[#0077B5]/10">
+                      <i className="fab fa-linkedin text-lg" />
+                    </IconButton>
+                    <IconButton className="rounded bg-[#333333] hover:shadow-[#333333]/20 focus:shadow-[#333333]/20 active:shadow-[#333333]/10">
+                      <i className="fab fa-github text-lg" />
+                    </IconButton>
+                  </div>
                 </div>
               </div>
-              <div>
-                
-              </div>
+              <div></div>
             </div>
-          
+
             <form
               action="https://formsubmit.co/jabinkm007@gmail.com"
               method="POST"

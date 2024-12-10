@@ -10,22 +10,22 @@ const serviceCategories = [
 ];
 
 export default function ProcurementServices() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-amber-50">
       <NavigationbarWithDropdownMultilevelMenu />
-      
+
       {/* Hero Section */}
-      <div className="relative h-[80vh] w-full" >
+      <div className="relative h-[80vh] w-full">
         <div className="absolute inset-0">
           <img
             src="/images/procurement.jpeg?height=800&width=1200"
             alt="Warehouse"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50"/>
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative h-full flex items-center justify-center">
           <Typography
@@ -63,7 +63,10 @@ export default function ProcurementServices() {
                 Our Procurement Expertise
               </Typography>
               <Typography className="text-gray-700">
-                We specialize in sourcing and supplying a comprehensive range of industrial materials and equipment. Our procurement services are designed to streamline your supply chain and ensure you get the highest quality products at competitive prices.
+                We specialize in sourcing and supplying a comprehensive range of
+                industrial materials and equipment. Our procurement services are
+                designed to streamline your supply chain and ensure you get the
+                highest quality products at competitive prices.
               </Typography>
             </CardBody>
           </Card>
@@ -87,7 +90,6 @@ export default function ProcurementServices() {
         <Typography variant="h3" color="blue-gray" className="mb-8 text-center">
           Our Product Categories
         </Typography>
-
 
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {serviceCategories.map((category, index) => (

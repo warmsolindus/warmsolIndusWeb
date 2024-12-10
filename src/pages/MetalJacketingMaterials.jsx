@@ -27,14 +27,14 @@ export default function MetalJacketingMaterials() {
     <div className="bg-amber-100">
       <NavigationbarWithDropdownMultilevelMenu />
 
-      <div className="relative h-[60vh] md:h-[80vh] w-full" >
+      <div className="relative h-[60vh] md:h-[80vh] w-full">
         <div className="absolute inset-0">
           <img
             src="/images/metal-jacketing.jpg?height=800&width=1200"
             alt="Warehouse"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50"/>
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative h-full flex items-center justify-center">
           <Typography

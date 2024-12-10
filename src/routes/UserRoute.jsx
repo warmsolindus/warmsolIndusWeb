@@ -28,7 +28,10 @@ export default function UserRoute() {
       <Route path="/cellular-or-foam-glass" element={<FoamGlass />} />
       <Route path="/polyisocyanurate-PIR" element={<Polyisocyanurate />} />
       <Route path="/polyurethane-foam-PUF" element={<PolyurethaneFoam />} />
-      <Route path="/metal-jacketing-materials" element={<MetalJacketingMaterials />} />
+      <Route
+        path="/metal-jacketing-materials"
+        element={<MetalJacketingMaterials />}
+      />
       <Route path="/aluminium-sheet" element={<AluminiumSheet />} />
       <Route path="/stainless-steel-sheet" element={<StainlessSteelSheet />} />
       <Route path="/corrugated-sheet" element={<CorrugatedSheet />} />

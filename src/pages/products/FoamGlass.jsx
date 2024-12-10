@@ -22,9 +22,8 @@ export default function FoamGlass() {
 
   return (
     <div className="bg-amber-50">
-      
-        <NavigationbarWithDropdownMultilevelMenu />
-      
+      <NavigationbarWithDropdownMultilevelMenu />
+
       <div>
         <div class="max-w-md mx-auto my-8 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
           <div class="md:flex">
@@ -50,7 +49,7 @@ export default function FoamGlass() {
           </div>
         </div>
       </div>
-      <div className="mx-20 my-10 px-6 bg-white rounded-lg">
+      <div className="mx-6 md:mx-20 my-10 px-6 bg-white rounded-lg">
         <>
           <Accordion open={openAcc1}>
             <AccordionHeader onClick={handleOpenAcc1}>

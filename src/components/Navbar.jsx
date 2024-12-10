@@ -163,7 +163,7 @@ function NavListMenu() {
       // <a href={path} key={key}>
       <Link to={path} key={key}>
         <MenuItem>{title}</MenuItem>
-        </Link>
+      </Link>
       // </a>
     ));
 
@@ -207,19 +207,17 @@ function NavListMenu() {
             handler={setInsulationNestedMenu}
           >
             <Link to={"/insulation-materials"}>
-            <MenuHandler className="flex items-center justify-between">
-            
-              <MenuItem>
-                Insulation Materials
-                <ChevronUpIcon
-                  strokeWidth={2.5}
-                  className={`h-3.5 w-3.5 transition-transform ${
-                    isMenuOpen ? "rotate-90" : ""
-                  }`}
-                />
-              </MenuItem>
-              
-            </MenuHandler>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Insulation Materials
+                  <ChevronUpIcon
+                    strokeWidth={2.5}
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      isMenuOpen ? "rotate-90" : ""
+                    }`}
+                  />
+                </MenuItem>
+              </MenuHandler>
             </Link>
             <MenuList className="rounded-xl">
               {renderItems(insulationMaterial)}
@@ -234,17 +232,17 @@ function NavListMenu() {
             handler={setMetalNestedMenu}
           >
             <Link to={"/metal-jacketing-materials"}>
-            <MenuHandler className="flex items-center justify-between">
-              <MenuItem>
-                Metal Jacketing Materials
-                <ChevronUpIcon
-                  strokeWidth={2.5}
-                  className={`h-3.5 w-3.5 transition-transform ${
-                    isMenuOpen ? "rotate-90" : ""
-                  }`}
-                />
-              </MenuItem>
-            </MenuHandler>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Metal Jacketing Materials
+                  <ChevronUpIcon
+                    strokeWidth={2.5}
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      isMenuOpen ? "rotate-90" : ""
+                    }`}
+                  />
+                </MenuItem>
+              </MenuHandler>
             </Link>
             <MenuList className="rounded-xl">
               {renderItems(metalJacketing)}
@@ -308,19 +306,17 @@ function NavListMenu() {
             handler={setInsulationNestedMenu}
           >
             <Link to={"/insulation-materials"}>
-            <MenuHandler className="flex items-center justify-between">
-            
-              <MenuItem>
-                Insulation Materials
-                <ChevronUpIcon
-                  strokeWidth={2.5}
-                  className={`h-3.5 w-3.5 transition-transform ${
-                    isMenuOpen ? "rotate-90" : ""
-                  }`}
-                />
-              </MenuItem>
-              
-            </MenuHandler>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Insulation Materials
+                  <ChevronUpIcon
+                    strokeWidth={2.5}
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      isMenuOpen ? "rotate-90" : ""
+                    }`}
+                  />
+                </MenuItem>
+              </MenuHandler>
             </Link>
             <MenuList className="block rounded-xl lg:hidden">
               {renderItems(insulationMaterial)}
@@ -335,17 +331,17 @@ function NavListMenu() {
             handler={setMetalNestedMenu}
           >
             <Link to={"/metal-jacketing-materials"}>
-            <MenuHandler className="flex items-center justify-between">
-              <MenuItem>
-                Metal Jacketing Materials
-                <ChevronUpIcon
-                  strokeWidth={2.5}
-                  className={`h-3.5 w-3.5 transition-transform ${
-                    isMenuOpen ? "rotate-90" : ""
-                  }`}
-                />
-              </MenuItem>
-            </MenuHandler>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Metal Jacketing Materials
+                  <ChevronUpIcon
+                    strokeWidth={2.5}
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      isMenuOpen ? "rotate-90" : ""
+                    }`}
+                  />
+                </MenuItem>
+              </MenuHandler>
             </Link>
             <MenuList className="block rounded-xl lg:hidden">
               {renderItems(metalJacketing)}
@@ -441,9 +437,9 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"/procurement-services"}>
-        <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-105">
-          Procurement Services
-        </ListItem>
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-105">
+            Procurement Services
+          </ListItem>
         </Link>
       </Typography>
       <Typography

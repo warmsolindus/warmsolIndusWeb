@@ -39,7 +39,9 @@ export default function PerforatedSheet() {
                 Perforated Sheet (Stainless Steel)
               </div>
               <p class="my- text-sm text-slate-500">
-              Stainless steel Perforated sheets are durable and versatile materials with precision-cut holes. It has more load bearing capacity than wire mesh or expanded metal.
+                Stainless steel Perforated sheets are durable and versatile
+                materials with precision-cut holes. It has more load bearing
+                capacity than wire mesh or expanded metal.
               </p>
               <Button href="#" class="" variant="gradient">
                 Enquire Now
@@ -48,22 +50,27 @@ export default function PerforatedSheet() {
           </div>
         </div>
       </div>
-      <div className="mx-20 my-10 px-6 bg-white rounded-lg">
+      <div className="mx-6 md:mx-20 my-10 px-6 bg-white rounded-lg">
         <>
           <Accordion open={openAcc1}>
             <AccordionHeader onClick={handleOpenAcc1}>
               Product Description
             </AccordionHeader>
             <AccordionBody className="max-w-[700px]">
-            Stainless steel Perforated sheets are durable and versatile materials with precision-cut holes. It has more load bearing capacity than wire mesh or expanded metal. These sheets are ideal for industrial, architectural, and decorative applications, offering excellent corrosion resistance, strength, and aesthetic flexibility.
-            <p>&nbsp;</p>
-            <p>Available thickness range: 0.5mm – 1mm</p>
-            <p>&nbsp;</p>
-            <p>Hole diameter: 5mm  </p>
-            <p>&nbsp;</p>
-            <p>Pitch: 8mm  </p>
-            <p>&nbsp;</p>
-            <p>Alloy: SS316   </p>
+              Stainless steel Perforated sheets are durable and versatile
+              materials with precision-cut holes. It has more load bearing
+              capacity than wire mesh or expanded metal. These sheets are ideal
+              for industrial, architectural, and decorative applications,
+              offering excellent corrosion resistance, strength, and aesthetic
+              flexibility.
+              <p>&nbsp;</p>
+              <p>Available thickness range: 0.5mm – 1mm</p>
+              <p>&nbsp;</p>
+              <p>Hole diameter: 5mm </p>
+              <p>&nbsp;</p>
+              <p>Pitch: 8mm </p>
+              <p>&nbsp;</p>
+              <p>Alloy: SS316 </p>
             </AccordionBody>
           </Accordion>
           <Accordion open={openAcc2}>
@@ -75,7 +82,6 @@ export default function PerforatedSheet() {
                 <li>&#10004; &nbsp; Lightweight and easy to install</li>
                 <li>&#10004; &nbsp; Thermal and Chemical Stability</li>
                 <li>&#10004; &nbsp; Corrosion Resistance</li>
-                
               </ul>
             </AccordionBody>
           </Accordion>
@@ -85,15 +91,23 @@ export default function PerforatedSheet() {
             </AccordionHeader>
             <AccordionBody>
               <ul>
-                <li>&#10004; &nbsp; Safety guards, ventilation, wall and ceiling panels</li>
+                <li>
+                  &#10004; &nbsp; Safety guards, ventilation, wall and ceiling
+                  panels
+                </li>
                 <li>&#10004; &nbsp; Staircase railings and sunshades</li>
                 <li>
-                  &#10004; &nbsp; Sound absorption and noise reduction in acoustic panels
+                  &#10004; &nbsp; Sound absorption and noise reduction in
+                  acoustic panels
                 </li>
-                <li>&#10004; &nbsp; Ventilation grilles and ducts in HVAC systems</li>
-                <li>&#10004; &nbsp; Decorative Bannisters and Architectural finishes</li>
+                <li>
+                  &#10004; &nbsp; Ventilation grilles and ducts in HVAC systems
+                </li>
+                <li>
+                  &#10004; &nbsp; Decorative Bannisters and Architectural
+                  finishes
+                </li>
                 <li>&#10004; &nbsp; Glass furnace crown insulation</li>
-                
               </ul>
             </AccordionBody>
           </Accordion>
