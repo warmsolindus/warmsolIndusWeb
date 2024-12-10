@@ -34,7 +34,7 @@ export default function ProductInfo() {
                 <img
                   src="/images/cfb.avif?height=400&width=400"
                   alt="Product"
-                  className="w-full h-auto object-contain lg:h-full scale-95 hover:scale-105 duration-700"
+                  className="w-full h-auto object-contain lg:h-full scale-95 hover:scale-105 duration-700 cursor-zoom-in"
                 />
               </div>
               <div className="lg:w-1/2 p-6 sm:p-8">
@@ -127,7 +127,7 @@ export default function ProductInfo() {
                 <TabPanel value="description">
                   <Typography
                     variant="paragraph"
-                    className="text-sm sm:text-base"
+                    className="text-sm sm:text-base max-w-[700px] mx-auto text-justify"
                   >
                     Ceramic Fiber Blanket is manufactured from spun ceramic
                     fiber and is needled to provide exceptional handling

@@ -178,7 +178,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="medium" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 text-orange font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-100"
+              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900 font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-deep-orange-700 after:scale-x-0 after:transition-transform after:duration-700 after:ease-in-out hover:after:scale-x-105"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -410,7 +410,7 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"/home"}>
-          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-350 after:ease-in-out hover:after:scale-x-105 focus:outline active-outline">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-deep-orange-700 after:scale-x-0 after:transition-transform after:duration-700 after:ease-in-out hover:after:scale-x-105 focus:outline active-outline">
             Home
           </ListItem>
         </Link>
@@ -423,7 +423,7 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"/about-us"}>
-          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-105">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-deep-orange-700 after:scale-x-0 after:transition-transform after:duration-700 after:ease-in-out hover:after:scale-x-105">
             About Us
           </ListItem>
         </Link>
@@ -437,7 +437,7 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"/procurement-services"}>
-          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-105">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-deep-orange-700 after:scale-x-0 after:transition-transform after:duration-700 after:ease-in-out hover:after:scale-x-105">
             Procurement Services
           </ListItem>
         </Link>
@@ -450,7 +450,7 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"/contact-us"}>
-          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black after:scale-x-0 after:transition-transform after:duration-250 after:ease-in-out hover:after:scale-x-105 after:origin-right">
+          <ListItem className="flex items-center gap-2 py-2 pr-4 text-black font-sans no-underline relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-deep-orange-700 after:scale-x-0 after:transition-transform after:duration-700 after:ease-in-out hover:after:scale-x-105">
             Contact Us
           </ListItem>
         </Link>
