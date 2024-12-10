@@ -34,7 +34,7 @@ export default function ProductInfo() {
                 <img
                   src="/images/cfb.avif?height=400&width=400"
                   alt="Product"
-                  className="w-full h-auto object-contain lg:h-full"
+                  className="w-full h-auto object-contain lg:h-full scale-95 hover:scale-105 duration-700"
                 />
               </div>
               <div className="lg:w-1/2 p-6 sm:p-8">
