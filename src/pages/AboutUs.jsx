@@ -119,6 +119,7 @@ function AboutUs() {
             </Typography>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               <div className="text-center">
+                <img src="images/quality.png" className="w-36 mx-auto"/>
                 <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
                   Quality Assurance
                 </Typography>
@@ -127,6 +128,7 @@ function AboutUs() {
                 </Typography>
               </div>
               <div className="text-center">
+                <img src="images/support.png" className="w-36 mx-auto"/>
                 <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
                   Expert Support
                 </Typography>
@@ -135,6 +137,7 @@ function AboutUs() {
                 </Typography>
               </div>
               <div className="text-center">
+                <img src="images/sustainable.png" className="w-36 mx-auto"/>
                 <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
                   Sustainable Practices
                 </Typography>
