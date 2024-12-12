@@ -90,7 +90,7 @@ export function ContactSection() {
                     variant="h5"
                     className="py-4 !text-base lg:!text-2xl"
                   >
-                    <i className="fa fa-phone text-2xl" /> &nbsp; GIVE US A RING
+                    <i className="fa fa-phone text-2xl" color="deep-orange" /> &nbsp; GIVE US A RING
                   </Typography>
                   <div className="py-2">
                     <Typography className="font-semibold">
@@ -155,11 +155,11 @@ export function ContactSection() {
                     First Name
                   </Typography>
                   <Input
-                    color="gray"
+                    color="purple"
                     size="lg"
                     placeholder="First Name"
                     name="first-name"
-                    className="focus:border-t-gray-900"
+                    className="focus:border-t-purple-700"
                     containerProps={{
                       className: "min-w-full",
                     }}
@@ -176,11 +176,11 @@ export function ContactSection() {
                     Last Name
                   </Typography>
                   <Input
-                    color="gray"
+                    color="purple"
                     size="lg"
                     placeholder="Last Name"
                     name="last-name"
-                    className="focus:border-t-gray-900"
+                    className="focus:border-t-purple-700"
                     containerProps={{
                       className: "!min-w-full",
                     }}
@@ -198,11 +198,11 @@ export function ContactSection() {
                   Your Email
                 </Typography>
                 <Input
-                  color="gray"
+                  color="purple"
                   size="lg"
                   placeholder="name@email.com"
                   name="email"
-                  className="focus:border-t-gray-900"
+                  className="focus:border-t-purple-700"
                   containerProps={{
                     className: "!min-w-full",
                   }}
@@ -220,10 +220,10 @@ export function ContactSection() {
                 </Typography>
                 <Textarea
                   rows={6}
-                  color="gray"
+                  color="purple"
                   placeholder="Message"
                   name="message"
-                  className="focus:border-t-gray-900"
+                  className="focus:border-t-purple-700"
                   containerProps={{
                     className: "!min-w-full",
                   }}
@@ -232,7 +232,7 @@ export function ContactSection() {
                   }}
                 />
               </div>
-              <Button className="w-full" color="gray">
+              <Button className="w-full hover:scale-105" color="gray">
                 Send message
               </Button>
             </form>

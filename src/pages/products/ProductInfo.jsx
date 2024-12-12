@@ -172,7 +172,7 @@ export default function ProductInfo() {
                   >
                     Product Benefits
                   </Typography>
-                  <List className="space-y-2">
+                  <List className="space-y-1">
                     {[
                       "Benefit 1: Description of the benefit",
                       "Benefit 2: Description of the benefit",
@@ -213,148 +213,7 @@ export default function ProductInfo() {
           </CardBody>
         </Card>
       </div>
-      {/* <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <Card className="mb-12">
-          <CardBody className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/2">
-              <img
-                src="/images/cfb.avif?height=400&width=400"
-                alt="Product"
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="md:w-1/2">
-              <Typography variant="h2" color="blue-gray" className="mb-4">
-                Ceramic Fiber Blanket
-              </Typography>
-              <Typography variant="lead" className="mb-4">
-              Ceramic Fiber Blanket is manufactured from spun ceramic fiber
-                and is needled to provide exceptional handling strength for
-                high-temperature insulation applications.
-              </Typography>
-              <Typography variant="paragraph" className="mb-4">
-                Product code: CFB
-              </Typography>
-              <Typography variant="h6" color="blue" className="mb-2">
-                Key Features:
-              </Typography>
-              <List>
-                <ListItem>
-                  <ListItemPrefix>
-                    <CheckCircleIcon className="h-5 w-5 text-green-500" />
-                  </ListItemPrefix>
-                  Excellent insulation properties
-                </ListItem>
-                <ListItem>
-                  <ListItemPrefix>
-                    <CheckCircleIcon className="h-5 w-5 text-green-500" />
-                  </ListItemPrefix>
-                  Excellent chemical stability
-                </ListItem>
-                <ListItem>
-                  <ListItemPrefix>
-                    <CheckCircleIcon className="h-5 w-5 text-green-500" />
-                  </ListItemPrefix>
-                  Lightweight
-                </ListItem>
-              </List>
-            </div>
-          </CardBody>
-        </Card>
-
-        <Card>
-          <CardHeader
-            color="deep-orange"
-            className="relative h-16 flex items-center"
-          >
-            <Typography variant="h4" color="white" className="pl-4">
-              Product Details
-            </Typography>
-          </CardHeader>
-          <CardBody>
-            <Tabs value={activeTab}>
-              <TabsHeader>
-                <Tab value="description" onClick={() => setActiveTab("description")}>
-                  Description
-                </Tab>
-                <Tab value="specifications" onClick={() => setActiveTab("specifications")}>
-                  Specifications
-                </Tab>
-                <Tab value="benefits" onClick={() => setActiveTab("benefits")}>
-                  Benefits
-                </Tab>
-                <Tab value="applications" onClick={() => setActiveTab("applications")}>
-                  Applications
-                </Tab>
-              </TabsHeader>
-              <TabsBody>
-                <TabPanel value="description">
-                  <Typography variant="paragraph" className=" max-w-[700px]">
-                  Ceramic Fiber Blanket is manufactured from spun ceramic fiber and
-              is needled to provide exceptional handling strength for
-              high-temperature insulation applications. It is lightweight and
-              thermally efficient, resulting in a material that has the
-              advantage of low heat storage and complete resistance to thermal
-              shock. This is approved for use against cellulosic and hydrocarbon
-              fires and for dry-wrapping of structural steel. Ceramic Fiber
-              Blankets come in various chemical compositions, densities, and
-              sizes, making them one of the most versatile insulation products
-              in the industry.
-                  </Typography>
-                </TabPanel>
-                <TabPanel value="specifications">
-                  <Typography variant="h6" color="blue-gray" className="mb-4">
-                    Technical Specifications
-                  </Typography>
-                  <List>
-                    <ListItem>Specification 1: Value</ListItem>
-                    <ListItem>Specification 2: Value</ListItem>
-                    <ListItem>Specification 3: Value</ListItem>
-                    <ListItem>Specification 4: Value</ListItem>
-                    <ListItem>Specification 5: Value</ListItem>
-                  </List>
-                </TabPanel>
-                <TabPanel value="benefits">
-                  <Typography variant="h6" color="blue-gray" className="mb-4">
-                    Product Benefits
-                  </Typography>
-                  <List>
-                    <ListItem>
-                      <ListItemPrefix>
-                        <CheckCircleIcon className="h-5 w-5 text-green-500" />
-                      </ListItemPrefix>
-                      Benefit 1: Description of the benefit
-                    </ListItem>
-                    <ListItem>
-                      <ListItemPrefix>
-                        <CheckCircleIcon className="h-5 w-5 text-green-500" />
-                      </ListItemPrefix>
-                      Benefit 2: Description of the benefit
-                    </ListItem>
-                    <ListItem>
-                      <ListItemPrefix>
-                        <CheckCircleIcon className="h-5 w-5 text-green-500" />
-                      </ListItemPrefix>
-                      Benefit 3: Description of the benefit
-                    </ListItem>
-                  </List>
-                </TabPanel>
-                <TabPanel value="applications">
-                  <Typography variant="h6" color="blue-gray" className="mb-4">
-                    Common Applications
-                  </Typography>
-                  <List>
-                    <ListItem>Application 1: Description</ListItem>
-                    <ListItem>Application 2: Description</ListItem>
-                    <ListItem>Application 3: Description</ListItem>
-                    <ListItem>Application 4: Description</ListItem>
-                  </List>
-                </TabPanel>
-              </TabsBody>
-            </Tabs>
-          </CardBody>
-        </Card>
-      </div> */}
+      
       <FooterWithSitemap />
     </div>
   );

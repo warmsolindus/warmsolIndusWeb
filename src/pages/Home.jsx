@@ -101,21 +101,21 @@ export default function Home() {
               >
                 MANUFACTURING DIVISION
               </Typography>
-              <div className="flex flex-wrap justify-center md:justify-start gap-2">
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <Link to={"/insulation-materials"}>
-                  <Button className="rounded-full mb-2 " color="blue-gray">
+                  <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="blue-gray">
                     Insulation Materials
                   </Button>
                 </Link>
                 <Link to={"/metal-jacketing-materials"}>
-                  <Button className="rounded-full mb-2 " color="gray">
+                  <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="gray">
                     Metal Jacketing Materials
                   </Button>
                 </Link>
-                <Button className="rounded-full mb-2 " color="gray">
+                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="gray">
                   Insulation & Cladding Accessories
                 </Button>
-                <Button className="rounded-full mb-2 " color="blue-gray">
+                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="blue-gray">
                   Refractory Materials
                 </Button>
               </div>
@@ -128,14 +128,14 @@ export default function Home() {
               >
                 PROCUREMENT SERVICES
               </Typography>
-              <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                <Button className="rounded-full mb-2 " color="blue-gray">
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="blue-gray">
                   Pipe and fittings
                 </Button>
-                <Button className="rounded-full mb-2 " color="gray">
+                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 " color="gray">
                   Electrical and instrumentation materials
                 </Button>
-                <Button className="rounded-full mb-2 " color="gray">
+                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 " color="gray">
                   Hand tools and consumables
                 </Button>
               </div>
@@ -150,7 +150,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {industries.map((industry, index) => (
             <Card key={index} className="w-full">
-              <CardBody className="flex flex-col items-center rounded-lg hover:bg-gray-400">
+              <CardBody className="flex flex-col items-center rounded-lg hover:bg-gray-200">
                 <img
                   src={industry.image}
                   alt={`${industry.name} icon`}
@@ -215,12 +215,12 @@ export default function Home() {
             <div className="mb-12 text-center">
               <Typography
                 variant="h3"
-                color="deep-purple"
+                color="blue-gray"
                 className="mb-2 font-semibold uppercase tracking-wider"
               >
                 OUR CLIENTS
               </Typography>
-              <Typography variant="h4" color="blue-gray">
+              <Typography variant="h5" color="deep-purple">
                 TRUSTED BY INDUSTRY LEADERS
               </Typography>
             </div>
@@ -238,7 +238,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="bg-black py-24 sm:py-32">
+      {/* <div className="bg-black py-24 sm:py-32">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 className="text-center text-lg/8 font-semibold text-white">Trusted by the world’s most innovative teams</h2>
     <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
@@ -249,7 +249,7 @@ export default function Home() {
       <img className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/statamic-logo-white.svg" alt="Statamic"/>
     </div>
   </div>
-</div>
+</div> */}
 
       <FooterWithSitemap />
     </div>
