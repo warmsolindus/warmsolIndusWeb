@@ -58,7 +58,7 @@ function AboutUs() {
                 <Typography variant="paragraph" className="mb-4 text-base md:text-lg text-gray-700">
                   WarmSol Industries stands at the forefront of insulation technology, manufacturing and distributing world-class products that meet the most demanding industry standards. Our comprehensive range includes:
                 </Typography>
-                <ul className="list-image-[url(images/tick.png)] list-outside mb-4 pl-4 text-gray-700">
+                <ul className="list-image-[url(/images/tick.png)] list-outside mb-4 pl-4 text-gray-700">
                   <li>Hot and Cold insulation materials</li>
                   <li>Cladding and Jacketing solutions</li>
                   <li>Essential insulation accessories</li>
@@ -82,7 +82,7 @@ function AboutUs() {
               <Typography variant="paragraph" className="text-base text-gray-700">
                 At WarmSol Industries, our mission is to deliver exceptional insulation materials that ensure:
               </Typography>
-              <ul className="list-image-[url(images/tick.png)] list-outside mt-2 pl-4 text-gray-700">
+              <ul className="list-image-[url(/images/tick.png)] list-outside mt-2 pl-4 text-gray-700">
                 <li>Optimal energy efficiency</li>
                 <li>Enhanced safety in various applications</li>
                 <li>Long-lasting durability in diverse environments</li>
@@ -99,7 +99,7 @@ function AboutUs() {
               <Typography variant="paragraph" className="text-base text-gray-700">
                 We aspire to become the most trusted partner in the insulation industry by:
               </Typography>
-              <ul className="list-image-[url(images/tick.png)] list-outside mt-2 pl-4 text-gray-700">
+              <ul className="list-image-[url(/images/tick.png)] list-outside mt-2 pl-4 text-gray-700">
                 <li>Providing top-tier insulation products for industrial and commercial spaces</li>
                 <li>Offering unparalleled professional knowledge and expertise</li>
                 <li>Delivering exceptional customer service at every touchpoint</li>

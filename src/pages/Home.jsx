@@ -87,7 +87,7 @@ export default function Home() {
           </Typography>
         </div>
       </div>
-      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/protruding-squares.svg?react')] bg-fixed rounded-lg">
+      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg3.png?react')] bg-fixed rounded-lg">
         <div className="max-w-7xl mx-auto">
           <Typography variant="h3" className="mb-8 text-center" color="white">
             WHAT WE DO?
@@ -209,7 +209,7 @@ export default function Home() {
           </CardBody>
         </Card>
       </div>
-      <div>
+      {/* <div>
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
@@ -236,9 +236,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
 
-      {/* <div className="bg-black py-24 sm:py-32">
+      {/* <div className="bg-orange-900 py-24 sm:py-32">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 className="text-center text-lg/8 font-semibold text-white">Trusted by the world’s most innovative teams</h2>
     <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">

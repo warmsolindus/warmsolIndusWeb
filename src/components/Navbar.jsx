@@ -484,8 +484,8 @@ export default function NavigationbarWithDropdownMultilevelMenu() {
         >
           <Link to={"/home"}>
             <img
-              className="h-16 w-full rounded-lg object-cover object-center"
-              src="/images/logo.png"
+              className="sm:h-12 w-full rounded-lg object-cover object-center "
+              src="/images/logo.svg"
               alt="logo"
             />
           </Link>
