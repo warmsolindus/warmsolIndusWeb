@@ -87,7 +87,7 @@ export default function Home() {
           </Typography>
         </div>
       </div>
-      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg3.png?react')] bg-fixed rounded-lg">
+      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg6.png?react')] bg-fixed bg-repeat rounded-lg">
         <div className="max-w-7xl mx-auto">
           <Typography variant="h3" className="mb-8 text-center" color="white">
             WHAT WE DO?
@@ -96,7 +96,7 @@ export default function Home() {
             <div>
               <Typography
                 variant="h4"
-                color="lime"
+                color="white"
                 className="mb-4 font-bold text-center md:text-left"
               >
                 MANUFACTURING DIVISION
@@ -123,7 +123,7 @@ export default function Home() {
             <div>
               <Typography
                 variant="h4"
-                color="lime"
+                color="white"
                 className="mb-4 font-bold text-center md:text-left"
               >
                 PROCUREMENT SERVICES
