@@ -68,7 +68,7 @@ export default function Polyisocyanurate() {
             </AccordionBody>
           </Accordion>
           <Accordion open={openAcc2}>
-            <AccordionHeader onClick={handleOpenAcc2}>Benefits</AccordionHeader>
+            <AccordionHeader onClick={handleOpenAcc2}>Characteristics</AccordionHeader>
             <AccordionBody>
               <ul>
                 <li>
