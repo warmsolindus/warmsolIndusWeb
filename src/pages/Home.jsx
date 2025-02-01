@@ -112,9 +112,11 @@ export default function Home() {
                     Metal Jacketing Materials
                   </Button>
                 </Link>
+                <Link to={"/insulation-and-cladding-accessories"}>
                 <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="gray">
                   Insulation & Cladding Accessories
                 </Button>
+                </Link>
                 <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="blue-gray">
                   Refractory Materials
                 </Button>

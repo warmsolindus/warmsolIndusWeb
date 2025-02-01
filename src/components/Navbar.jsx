@@ -24,122 +24,122 @@ import { Link } from "react-router-dom";
 const insulationMaterial = [
   {
     title: "Ceramic Fiber Blankets",
-    path: "/ceramic-fiber-blanket",
+    path: "/insulation-materials/ceramic-fiber-blanket",
   },
   {
     title: "Cellular / Foam Glass",
-    path: "/cellular-or-foam-glass",
+    path: "/insulation-materials/cellular-or-foam-glass",
   },
   {
     title: "PIR (Polyisocyanurate)",
-    path: "/polyisocyanurate-PIR",
+    path: "/insulation-materials/polyisocyanurate-PIR",
   },
   {
     title: "PUF (Polyurethane Foam)",
-    path: "/polyurethane-foam-PUF",
+    path: "/insulation-materials/polyurethane-foam-PUF",
   },
   {
     title: "Calcium Silicate ",
-    path: "/calcium-silicate",
+    path: "/insulation-materials/calcium-silicate",
   },
   {
     title: "Perlite",
-    path: "/perlite",
+    path: "/insulation-materials/perlite",
   },
 ];
 const metalJacketing = [
   {
     title: "Aluminum Sheet with or without moisture barrier ",
-    path: "/aluminium-sheet",
+    path: "/metal-jacketing-materials/aluminium-sheet",
   },
   {
     title: "Stainless Steel Sheet",
-    path: "/stainless-steel-sheet",
+    path: "/metal-jacketing-materials/stainless-steel-sheet",
   },
   {
     title: "Perforated Sheet ",
-    path: "/perforated-sheet",
+    path: "/metal-jacketing-materials/perforated-sheet",
   },
   {
     title: "Corrugated Sheet ",
-    path: "/corrugated-sheet",
+    path: "/metal-jacketing-materials/corrugated-sheet",
   },
   {
     title: "Welded Wire mesh SS",
-    path: "/welded-wire-mesh",
+    path: "/metal-jacketing-materials/welded-wire-mesh",
   },
   {
     title: "Lead Sheet",
-    path: "",
+    path: "/metal-jacketing-materials/lead-sheet",
   },
   {
     title: "Mass Loaded Vinyl Sheet",
-    path: "",
+    path: "/metal-jacketing-materials/mass-loaded-vinyl-sheet",
   },
 ];
 
 const insAndCladAccessory = [
   {
     title: "Stainless Steel Band ",
-    path: "",
+    path: "/insulation-and-cladding-accessories/stainless-steel-band",
   },
   {
     title: "Stainless Steel Wing Seal",
-    path: "",
+    path: "/insulation-and-cladding-accessories/stainless-steel-wing-seal",
   },
   {
     title: "Stainless Steel self Tapping Screw",
-    path: "",
+    path: "/insulation-and-cladding-accessories/stainless-steel-self-tapping-screw",
   },
   {
     title: "Neoprene Washer",
-    path: "",
+    path: "/insulation-and-cladding-accessories/neoprene-washer",
   },
   {
     title: "Stainless Steel Tie Wire ",
-    path: "",
+    path: "/insulation-and-cladding-accessories/stainless-steel-tie-wire",
   },
   {
     title: "Stainless Steel Toggle Clip",
-    path: "",
+    path: "/insulation-and-cladding-accessories/stainless-steel-toggle-clip",
   },
   {
-    title: "Stainless Steel Expansion Ring",
-    path: "",
+    title: "Stainless Steel Expansion Spring",
+    path: "/insulation-and-cladding-accessories/stainless-steel-expansion-spring",
   },
   {
-    title: "Stainless Steel Blind River",
-    path: "",
+    title: "Stainless Steel Blind Rivet",
+    path: "/insulation-and-cladding-accessories/stainless-steel-blind-rivet",
   },
   {
     title: "Aluminium Blind Rivet",
-    path: "",
+    path: "/insulation-and-cladding-accessories/aluminium-blind-rivet",
   },
   {
     title: "Ceramic Tape",
-    path: "",
+    path: "/insulation-and-cladding-accessories/ceramic-tape",
   },
   {
     title: "Fiber Glass Tape",
-    path: "",
+    path: "/insulation-and-cladding-accessories/fiber-glass-tape",
   },
   {
     title: "Inspection Plug",
-    path: "",
+    path: "/insulation-and-cladding-accessories/inspection-plug",
   },
   {
     title: "Sealant and Adhesive",
-    path: "",
+    path: "/insulation-and-cladding-accessories/sealants-and-adhesives",
   },
   {
     title: "Filament Tape",
-    path: "",
+    path: "/insulation-and-cladding-accessories/filament-tape",
   },
 ];
 const refractoryMaterials = [
   {
     title: "Refractory Bricks",
-    path: "",
+    path: ""
   },
   {
     title: "Refractory Castables",
@@ -256,6 +256,7 @@ function NavListMenu() {
             open={accessoryNestedMenu}
             handler={setAccessoryNestedMenu}
           >
+            <Link to={"/insulation-and-cladding-accessories"}>
             <MenuHandler className="flex items-center justify-between">
               <MenuItem>
                 Insulation & Cladding Accessories
@@ -267,6 +268,7 @@ function NavListMenu() {
                 />
               </MenuItem>
             </MenuHandler>
+            </Link>
             <MenuList className="rounded-xl">
               {renderItems(insAndCladAccessory)}
             </MenuList>
@@ -355,6 +357,7 @@ function NavListMenu() {
             open={accessoryNestedMenu}
             handler={setAccessoryNestedMenu}
           >
+            <Link to={"/insulation-and-cladding-accessories"}>
             <MenuHandler className="flex items-center justify-between">
               <MenuItem>
                 Insulation & Cladding Accessories
@@ -366,6 +369,7 @@ function NavListMenu() {
                 />
               </MenuItem>
             </MenuHandler>
+            </Link>
             <MenuList className="block rounded-xl lg:hidden">
               {renderItems(insAndCladAccessory)}
             </MenuList>

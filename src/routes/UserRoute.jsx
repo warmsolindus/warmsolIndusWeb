@@ -15,6 +15,25 @@ import ProcurementServices from "../pages/ProcurementService";
 import PerforatedSheet from "../pages/products/PerforatedSheet";
 import WeldedWireMesh from "../pages/products/WeldedWireMesh";
 import ProductInfo from "../pages/products/ProductInfo";
+import LeadSheet from "../pages/products/LeadSheet";
+import MassLoadedVinylSheet from "../pages/products/VinylSheet";
+import StainlessSteelBand from "../pages/products/SSBand";
+import StainlessSteelWingSeal from "../pages/products/SSWingSeal";
+import NeopreneWasher from "../pages/products/NeopreneWasher";
+import StainlessSteelSelfTappingScrew from "../pages/products/SSSelfTappingScrew";
+import StainlessSteelTieWire from "../pages/products/SSTieWire";
+import InsulationAndCladdingAccessories from "../pages/InsulationAndCladdingAccessories";
+import StainlessSteelToggleClip from "../pages/products/SSToggleClip";
+import StainlessSteelBlindRivet from "../pages/products/SSBlindRivet";
+import AluminumBlindRivet from "../pages/products/ALBlindRivet";
+import CeramicTape from "../pages/products/CeramicTape";
+import FiberglassTape from "../pages/products/FiberGlassTape";
+import CalciumSilicate from "../pages/products/CaSilicate";
+import Perlite from "../pages/products/Perlite";
+import InspectionPlug from "../pages/products/InspectionPlug";
+import SealantsAdhesives from "../pages/products/SealandAndAdhesive";
+import FilamentTape from "../pages/products/FilamentTape";
+import StainlessSteelExpansionSpring from "../pages/products/SSExpansionSpring";
 
 export default function UserRoute() {
   return (
@@ -24,20 +43,39 @@ export default function UserRoute() {
       <Route path="/contact-us" element={<ContactSection />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/insulation-materials" element={<InsulationMaterials />} />
-      <Route path="/ceramic-fiber-blanket" element={<CFB />} />
-      <Route path="/cellular-or-foam-glass" element={<FoamGlass />} />
-      <Route path="/polyisocyanurate-PIR" element={<Polyisocyanurate />} />
-      <Route path="/polyurethane-foam-PUF" element={<PolyurethaneFoam />} />
-      <Route
-        path="/metal-jacketing-materials"
-        element={<MetalJacketingMaterials />}
-      />
-      <Route path="/aluminium-sheet" element={<AluminiumSheet />} />
-      <Route path="/stainless-steel-sheet" element={<StainlessSteelSheet />} />
-      <Route path="/corrugated-sheet" element={<CorrugatedSheet />} />
+      <Route path="/insulation-materials/ceramic-fiber-blanket" element={<CFB />} />
+      <Route path="/insulation-materials/cellular-or-foam-glass" element={<FoamGlass />} />
+      <Route path="/insulation-materials/polyisocyanurate-PIR" element={<Polyisocyanurate />} />
+      <Route path="/insulation-materials/polyurethane-foam-PUF" element={<PolyurethaneFoam />} />
+      <Route path="/insulation-materials/perlite" element={<Perlite />} />
+      <Route path="/insulation-materials/calcium-silicate" element={<CalciumSilicate />} />
+      <Route path="/metal-jacketing-materials" element={<MetalJacketingMaterials />} />
+      <Route path="/metal-jacketing-materials/aluminium-sheet" element={<AluminiumSheet />} />
+      <Route path="/metal-jacketing-materials/stainless-steel-sheet" element={<StainlessSteelSheet />} />
+      <Route path="/metal-jacketing-materials/corrugated-sheet" element={<CorrugatedSheet />} />
       <Route path="/procurement-services" element={<ProcurementServices />} />
-      <Route path="/perforated-sheet" element={<PerforatedSheet />} />
-      <Route path="/welded-wire-mesh" element={<WeldedWireMesh />} />
+      <Route path="/metal-jacketing-materials/perforated-sheet" element={<PerforatedSheet />} />
+      <Route path="/metal-jacketing-materials/welded-wire-mesh" element={<WeldedWireMesh />} />
+      <Route path="/metal-jacketing-materials/lead-sheet" element={<LeadSheet />} />
+      <Route path="/metal-jacketing-materials/mass-loaded-vinyl-sheet" element={<MassLoadedVinylSheet />} />
+      <Route path="/insulation-and-cladding-accessories" element={<InsulationAndCladdingAccessories />} />
+      <Route path="/insulation-and-cladding-accessories/stainless-steel-band" element={<StainlessSteelBand />} />
+      <Route path="/insulation-and-cladding-accessories/stainless-steel-wing-seal" element={<StainlessSteelWingSeal />} />
+      <Route path="/insulation-and-cladding-accessories/neoprene-washer" element={<NeopreneWasher />} />
+      <Route path="/insulation-and-cladding-accessories/stainless-steel-self-tapping-screw" element={<StainlessSteelSelfTappingScrew />} />
+      <Route path="/insulation-and-cladding-accessories/stainless-steel-tie-wire" element={<StainlessSteelTieWire />} />
+      <Route path="/insulation-and-cladding-accessories/stainless-steel-toggle-clip" element={<StainlessSteelToggleClip />} />
+      <Route path="/insulation-and-cladding-accessories/stainless-steel-expansion-spring" element={<StainlessSteelExpansionSpring />} />
+      <Route path="/insulation-and-cladding-accessories/stainless-steel-blind-rivet" element={<StainlessSteelBlindRivet />} />
+      <Route path="/insulation-and-cladding-accessories/aluminium-blind-rivet" element={<AluminumBlindRivet />} />
+      <Route path="/insulation-and-cladding-accessories/ceramic-tape" element={<CeramicTape />} />
+      <Route path="/insulation-and-cladding-accessories/fiber-glass-tape" element={<FiberglassTape />} />
+      <Route path="/insulation-and-cladding-accessories/inspection-plug" element={<InspectionPlug />} />
+      <Route path="/insulation-and-cladding-accessories/sealants-and-adhesives" element={<SealantsAdhesives />} />
+      <Route path="/insulation-and-cladding-accessories/filament-tape" element={<FilamentTape />} />
+      
+
+
       <Route path="/product-info" element={<ProductInfo />} />
     </Routes>
   );

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect } from "react";
 import { Typography, Button, Card, CardBody } from "@material-tailwind/react";
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
