@@ -35,7 +35,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-amber-200 to-light-blue-100">
+    <div className="bg-gradient-to-r from-amber-200 to-blue-gray-200">
       <NavigationbarWithDropdownMultilevelMenu />
       <ImageCarousel />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -103,21 +103,33 @@ export default function Home() {
               </Typography>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <Link to={"/insulation-materials"}>
-                  <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="blue-gray">
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="blue-gray"
+                  >
                     Insulation Materials
                   </Button>
                 </Link>
                 <Link to={"/metal-jacketing-materials"}>
-                  <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="gray">
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="gray"
+                  >
                     Metal Jacketing Materials
                   </Button>
                 </Link>
                 <Link to={"/insulation-and-cladding-accessories"}>
-                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="gray">
-                  Insulation & Cladding Accessories
-                </Button>
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="gray"
+                  >
+                    Insulation & Cladding Accessories
+                  </Button>
                 </Link>
-                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="blue-gray">
+                <Button
+                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                  color="blue-gray"
+                >
                   Refractory Materials
                 </Button>
               </div>
@@ -131,13 +143,22 @@ export default function Home() {
                 PROCUREMENT SERVICES
               </Typography>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100" color="blue-gray">
+                <Button
+                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                  color="blue-gray"
+                >
                   Pipe and fittings
                 </Button>
-                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 " color="gray">
+                <Button
+                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
+                  color="gray"
+                >
                   Electrical and instrumentation materials
                 </Button>
-                <Button className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 " color="gray">
+                <Button
+                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
+                  color="gray"
+                >
                   Hand tools and consumables
                 </Button>
               </div>
@@ -171,7 +192,7 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <Card className="mb-8 overflow-hidden">
+        <Card className="mb-8 mx-4 overflow-hidden">
           <CardBody className="p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">

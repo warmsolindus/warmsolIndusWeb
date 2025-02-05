@@ -139,15 +139,15 @@ const insAndCladAccessory = [
 const refractoryMaterials = [
   {
     title: "Refractory Bricks",
-    path: ""
+    path: "/refractory-materials/refractory-bricks"
   },
   {
     title: "Refractory Castables",
-    path: "",
+    path: "/refractory-materials/refractory-castables",
   },
   {
     title: "Mortar",
-    path: "",
+    path: "/refractory-materials/mortar",
   },
 ];
 
@@ -281,6 +281,7 @@ function NavListMenu() {
             open={refractoryNestedMenu}
             handler={setRefractoryNestedMenu}
           >
+            <Link to={"/refractory-materials"}>
             <MenuHandler className="flex items-center justify-between">
               <MenuItem>
                 Refractory Materials
@@ -292,6 +293,7 @@ function NavListMenu() {
                 />
               </MenuItem>
             </MenuHandler>
+            </Link>
             <MenuList className="rounded-xl">
               {renderItems(refractoryMaterials)}
             </MenuList>
@@ -382,6 +384,7 @@ function NavListMenu() {
             open={refractoryNestedMenu}
             handler={setRefractoryNestedMenu}
           >
+            <Link to={"/refractory-materials"}>
             <MenuHandler className="flex items-center justify-between">
               <MenuItem>
                 Refractory Materials
@@ -393,6 +396,7 @@ function NavListMenu() {
                 />
               </MenuItem>
             </MenuHandler>
+            </Link>
             <MenuList className="block rounded-xl lg:hidden">
               {renderItems(refractoryMaterials)}
             </MenuList>

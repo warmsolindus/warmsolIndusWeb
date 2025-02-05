@@ -34,6 +34,10 @@ import InspectionPlug from "../pages/products/InspectionPlug";
 import SealantsAdhesives from "../pages/products/SealandAndAdhesive";
 import FilamentTape from "../pages/products/FilamentTape";
 import StainlessSteelExpansionSpring from "../pages/products/SSExpansionSpring";
+import RefractoryMaterials from "../pages/RefractoryMaterials";
+import RefractoryBricks from "../pages/products/RefractoryBricks";
+import RefractoryCastables from "../pages/products/RefractoryCastables";
+import Mortar from "../pages/products/Mortar";
 
 export default function UserRoute() {
   return (
@@ -73,7 +77,10 @@ export default function UserRoute() {
       <Route path="/insulation-and-cladding-accessories/inspection-plug" element={<InspectionPlug />} />
       <Route path="/insulation-and-cladding-accessories/sealants-and-adhesives" element={<SealantsAdhesives />} />
       <Route path="/insulation-and-cladding-accessories/filament-tape" element={<FilamentTape />} />
-      
+      <Route path="/refractory-materials" element={<RefractoryMaterials />} />
+      <Route path="/refractory-materials/refractory-bricks" element={<RefractoryBricks />} />
+      <Route path="/refractory-materials/refractory-castables" element={<RefractoryCastables />} />
+      <Route path="/refractory-materials/mortar" element={<Mortar />} />
 
 
       <Route path="/product-info" element={<ProductInfo />} />
