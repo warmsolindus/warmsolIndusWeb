@@ -94,7 +94,7 @@
 //         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 //           {serviceCategories.map((category, index) => (
 //             <Card key={index} className="hover:shadow-lg transition-shadow">
-//               <CardBody> 
+//               <CardBody>
 //                 <Typography variant="h5" color="blue-gray" className="mb-2">
 //                   {category}
 //                 </Typography>
@@ -111,12 +111,27 @@
 //     </div>
 //   );
 
-import { useEffect } from "react"
-import { Typography, Button, Card, CardBody, CardHeader } from "@material-tailwind/react"
-import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar"
-import FooterWithSitemap from "../components/Footer"
+import { useEffect } from "react";
+import {
+  Typography,
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+} from "@material-tailwind/react";
+import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
+import FooterWithSitemap from "../components/Footer";
+import { list } from "postcss";
 
-const serviceCategories = ["Pipes & Fittings", "Electrical Materials", "Hazardous and Non-Hazardous Fittings", "Cables and Cable Ladders", "Instrumentation Tubes", "Tube Fittings for Petroleum Constructions", "Conduit and Conduit Fittings"]
+const serviceCategories = [
+  "Pipes & Fittings",
+  "Electrical Materials",
+  "Hazardous and Non-Hazardous Fittings",
+  "Cables and Cable Ladders",
+  "Instrumentation Tubes",
+  "Tube Fittings for Petroleum Constructions",
+  "Conduit and Conduit Fittings",
+];
 
 const productCategories = [
   {
@@ -161,12 +176,12 @@ const productCategories = [
     description:
       "Comprehensive range of conduits and fittings for electrical and communication cable protection in diverse environments. We offer solutions that ensure safety and longevity of your electrical systems.",
   },
-]
+];
 
 export default function ProcurementServices() {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-amber-50">
       <NavigationbarWithDropdownMultilevelMenu />
@@ -182,7 +197,11 @@ export default function ProcurementServices() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative h-full flex items-center justify-center">
-          <Typography variant="h1" color="white" className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+          <Typography
+            variant="h1"
+            color="white"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
+          >
             PROCUREMENT SERVICES
           </Typography>
         </div>
@@ -192,7 +211,12 @@ export default function ProcurementServices() {
       <div className="bg-deep-orange-800 w-full overflow-x-auto sticky top-24 z-40">
         <div className="flex flex-nowrap justify-start md:justify-center gap-5 md:gap-10 p-4 min-w-max md:min-w-0">
           {serviceCategories.map((category, index) => (
-            <Button key={index} variant="text" color="white" className="normal-case text-sm md:text-base">
+            <Button
+              key={index}
+              variant="text"
+              color="white"
+              className="normal-case text-sm md:text-base"
+            >
               {category}
             </Button>
           ))}
@@ -208,11 +232,12 @@ export default function ProcurementServices() {
                 Our Procurement Expertise
               </Typography>
               <Typography className="text-gray-700">
-                We specialize in sourcing and supplying a comprehensive range of industrial materials and equipment. Our
-                procurement services are designed to streamline your supply chain and ensure you get the highest quality
-                products at competitive prices.
+                We specialize in sourcing and supplying a comprehensive range of
+                industrial materials and equipment. Our procurement services are
+                designed to streamline your supply chain and ensure you get the
+                highest quality products at competitive prices.
               </Typography>
-            </CardBody>
+            </CardBody> 
           </Card>
           <Card>
             <CardBody>
@@ -253,8 +278,8 @@ export default function ProcurementServices() {
             </Card>
           ))}
         </div> */}
-                {/* Product Categories */}
-                <Typography variant="h3" color="blue-gray" className="mb-8 text-center">
+        {/* Product Categories */}
+        <Typography variant="h3" color="blue-gray" className="mb-8 text-center">
           Our Product Categories
         </Typography>
         <div className="space-y-8">
@@ -265,7 +290,9 @@ export default function ProcurementServices() {
                   <Typography variant="h5" color="blue-gray" className="mb-2">
                     {category.title}
                   </Typography>
-                  <Typography className="text-gray-700">{category.description}</Typography>
+                  <Typography className="text-gray-700">
+                    {category.description}
+                  </Typography>
                 </div>
                 <div className="md:w-1/2">
                   <img
@@ -282,6 +309,5 @@ export default function ProcurementServices() {
 
       <FooterWithSitemap />
     </div>
-  )
+  );
 }
-
