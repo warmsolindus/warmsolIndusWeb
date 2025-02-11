@@ -126,12 +126,14 @@ export default function Home() {
                     Insulation & Cladding Accessories
                   </Button>
                 </Link>
+                <Link to={"/refractory-materials"}>
                 <Button
                   className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
                   color="blue-gray"
                 >
                   Refractory Materials
                 </Button>
+                </Link>
               </div>
             </div>
             <div>
