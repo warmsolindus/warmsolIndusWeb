@@ -142,37 +142,37 @@ const productCategories = [
   },
   {
     title: "Electrical Materials",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/electricalMaterials.png?height=200&width=300",
     description:
       "Wide selection of electrical components for industrial and domestic use, including switchgears, transformers, control panels, and wiring accessories. We provide reliable solutions for all your electrical needs.",
   },
   {
     title: "Hazardous and Non-Hazardous Fittings",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/SafetyItems.jpg?height=200&width=300",
     description:
       "Specialized fittings designed for both hazardous and non-hazardous environments, ensuring safety and compliance in all conditions. Our products meet strict industry standards and regulations.",
   },
   {
     title: "Cables and Cable Ladders",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/cableLadders.jpeg?height=200&width=300",
     description:
       "Extensive range of cables and cable management solutions, including power cables, fiber optics, and robust cable ladder systems. We offer products that ensure efficient and organized cable installations.",
   },
   {
     title: "Instrumentation Tubes",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/instrumentTube.webp?height=200&width=300",
     description:
       "Precision instrumentation tubes for various industrial applications, ensuring accurate measurements and reliable performance. Our tubes are suitable for high-pressure and corrosive environments.",
   },
   {
     title: "Tube Fittings for Petroleum Constructions",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/FlangesValves.jpg?height=200&width=300",
     description:
       "Specialized tube fittings designed for the demanding requirements of petroleum industry constructions. Our fittings provide secure connections and resist extreme temperatures and pressures.",
   },
   {
     title: "Conduit and Conduit Fittings",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/conduit.jpeg?height=200&width=300",
     description:
       "Comprehensive range of conduits and fittings for electrical and communication cable protection in diverse environments. We offer solutions that ensure safety and longevity of your electrical systems.",
   },
@@ -294,11 +294,11 @@ export default function ProcurementServices() {
                     {category.description}
                   </Typography>
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-4/4 float-right">
                   <img
-                    src={category.image || "/placeholder.svg"}
+                    src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover"
+                    className="h-72 object-cover w-full"
                   />
                 </div>
               </div>
