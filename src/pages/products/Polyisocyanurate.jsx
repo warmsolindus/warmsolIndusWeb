@@ -82,7 +82,7 @@ export default function Polyisocyanurate() {
                   used for bonding
                 </li>
                 <li>&#10004; &nbsp; Excellent moisture resistance</li>
-                <li>&#10004; &nbsp; Temperature range of -295ºF to 300ºF</li>
+                <li>&#10004; &nbsp; Temperature range of -160ºC to 140ºC</li>
                 <li>
                   &#10004; &nbsp; Slightly more efficient insulator than
                   extruded polystyrene

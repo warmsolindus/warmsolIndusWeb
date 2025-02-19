@@ -21,7 +21,7 @@ function AboutUs() {
           <img
             src="/images/industry.jpg?height=800&width=1200"
             alt="aboutUs"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover bg-fixed"
           />
           <div className="absolute inset-0 bg-black/50"/>
         </div>

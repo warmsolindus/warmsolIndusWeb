@@ -17,12 +17,9 @@ export function ContactSection() {
     <div className="bg-amber-100">
       <NavigationbarWithDropdownMultilevelMenu />
 
-      <div className="relative h-[60vh] md:h-[80vh] w-full">
+      <div className="relative h-[20vh] md:h-[58vh] w-full">
         <div
-          className="absolute inset-0 bg-[url('/images/contactUs.jpg?height=800&width=1200')] bg-fixed bg-cover transition-transform duration-[4000ms] ease-out ${
-            imageLoaded ? 'scale-120' : 'scale-100'
-          }`}
-"
+          className="absolute inset-0 bg-[url('/images/contact_us.jpg?height=448&width=1349')] bg-fixed bg-contain"
         >
           {/* <img
             src="/images/contactUs.jpg?height=800&width=1200"
