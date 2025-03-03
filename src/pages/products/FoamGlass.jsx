@@ -58,7 +58,7 @@ export default function FoamGlass() {
             <AccordionBody className="max-w-[700px]">
               Cellular / Foam glass insulation is a lightweight, rigid material
               composed of millions of completely sealed glass cells. It is
-              manufactured by Owens Corning in a block form and then fabricated
+              manufactured in a block form and then fabricated
               into a wide range of shapes and sizes to satisfy industrial and
               commercial insulation requirements.
             </AccordionBody>
