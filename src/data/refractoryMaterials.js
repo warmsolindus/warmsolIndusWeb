@@ -19,6 +19,12 @@ const refractoryMaterials = [
     links: "/refractory-materials/ceramic-fiber-board",
   },
   {
+    imgUrl: "/images/CFcloth.png",
+    title: "Ceramic Fiber Cloth",
+    subTitle:"ceramic fiber cloth provides exceptional thermal protection in a flexible, textile format. Woven from high-quality ceramic fiber yarns, this versatile material offers outstanding heat resistance, excellent handling characteristics, and superior durability.",
+    links: "/refractory-materials/ceramic-fiber-cloth",
+  },
+  {
     imgUrl: "/images/refractoryBricks.png",
     title: "Refractory Bricks",
     subTitle:

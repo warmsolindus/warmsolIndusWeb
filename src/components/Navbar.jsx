@@ -138,6 +138,22 @@ const insAndCladAccessory = [
 ];
 const refractoryMaterials = [
   {
+    title: "Ceramic Fiber Blanket",
+    path: "/refractory-materials/ceramic-fiber-blanket"
+  },
+  {
+    title: "Ceramic Fiber Wool",
+    path: "/refractory-materials/ceramic-fiber-wool",
+  },
+  {
+    title: "Ceramic Fiber Board",
+    path: "/refractory-materials/ceramic-fiber-board",
+  },
+  {
+    title: "Ceramic Fiber Cloth",
+    path: "/refractory-materials/ceramic-fiber-cloth",
+  },
+  {
     title: "Refractory Bricks",
     path: "/refractory-materials/refractory-bricks"
   },
