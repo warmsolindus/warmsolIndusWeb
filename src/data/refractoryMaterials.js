@@ -25,6 +25,12 @@ const refractoryMaterials = [
     links: "/refractory-materials/ceramic-fiber-cloth",
   },
   {
+    imgUrl: "/images/CFrope.png",
+    title: "Ceramic Fiber Rope",
+    subTitle:"ceramic fiber rope provides exceptional thermal sealing and insulation in a flexible, resilient format. Manufactured by braiding or twisting high-quality ceramic fibers, this versatile material offers outstanding heat resistance, excellent compression recovery, and superior durability. ",
+    links: "/refractory-materials/ceramic-fiber-rope",
+  },
+  {
     imgUrl: "/images/refractoryBricks.png",
     title: "Refractory Bricks",
     subTitle:
