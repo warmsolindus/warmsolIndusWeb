@@ -13,7 +13,7 @@ const refractoryMaterials = [
     links: "/refractory-materials/ceramic-fiber-wool",
   },
   {
-    imgUrl: "/images/CFboard.jpg",
+    imgUrl: "/images/CFBoard.png",
     title: "Ceramic Fiber Board",
     subTitle:"ceramic fiber boards provide exceptional thermal insulation for high-temperature applications. Engineered for durability and performance, these lightweight, rigid boards offer excellent thermal stability, low thermal conductivity, and superior resistance to thermal shock.",
     links: "/refractory-materials/ceramic-fiber-board",
@@ -29,6 +29,12 @@ const refractoryMaterials = [
     title: "Ceramic Fiber Rope",
     subTitle:"ceramic fiber rope provides exceptional thermal sealing and insulation in a flexible, resilient format. Manufactured by braiding or twisting high-quality ceramic fibers, this versatile material offers outstanding heat resistance, excellent compression recovery, and superior durability. ",
     links: "/refractory-materials/ceramic-fiber-rope",
+  },
+  {
+    imgUrl: "/images/CFfelt.png",
+    title: "Ceramic Fiber Felt",
+    subTitle:" Our ceramic fiber felts are wet laid uniform mats impregnated with a thermosetting resin, filling the gap between ceramic fiber blankets and boards. These unique materials are compressible yet resilient, with sufficient integrity to hold their shape in formed parts or gaskets. ",
+    links: "/refractory-materials/ceramic-fiber-felt",
   },
   {
     imgUrl: "/images/refractoryBricks.png",

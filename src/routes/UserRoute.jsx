@@ -43,6 +43,7 @@ import CeramicFiberWool from "../pages/products/CeramicFiberWool";
 import CeramicFiberBoard from "../pages/products/CeramicFiberBoard";
 import CeramicFiberCloth from "../pages/products/CeramicFiberCloth";
 import CeramicFiberRope from "../pages/products/CeramicFiberRope";
+import CeramicFiberFelt from "../pages/products/CeramicFiberFelt";
 
 export default function UserRoute() {
   return (
@@ -91,7 +92,7 @@ export default function UserRoute() {
       <Route path="/refractory-materials/ceramic-fiber-board" element={<CeramicFiberBoard />} />
       <Route path="/refractory-materials/ceramic-fiber-cloth" element={<CeramicFiberCloth />} />
       <Route path="/refractory-materials/ceramic-fiber-rope" element={<CeramicFiberRope />} />
-
+      <Route path="/refractory-materials/ceramic-fiber-felt" element={<CeramicFiberFelt />} />
 
       <Route path="/product-info" element={<ProductInfo />} />
     </Routes>
