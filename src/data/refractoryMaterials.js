@@ -9,25 +9,25 @@ const refractoryMaterials = [
   {
     imgUrl: "/images/CFwool.png",
     title: "Ceramic Fiber Wool",
-    subTitle:"ceramic fiber wool provides exceptional thermal insulation with flexibility for complex applications.  Made from high-purity alumina-silica fibers, this lightweight, flexible material offers excellent thermal resistance, low heat storage, and superior handling characteristics.",
+    subTitle:"Ceramic fiber wool provides exceptional thermal insulation with flexibility for complex applications.  Made from high-purity alumina-silica fibers, this lightweight, flexible material offers excellent thermal resistance, low heat storage, and superior handling characteristics.",
     links: "/refractory-materials/ceramic-fiber-wool",
   },
   {
     imgUrl: "/images/CFBoard.png",
     title: "Ceramic Fiber Board",
-    subTitle:"ceramic fiber boards provide exceptional thermal insulation for high-temperature applications. Engineered for durability and performance, these lightweight, rigid boards offer excellent thermal stability, low thermal conductivity, and superior resistance to thermal shock.",
+    subTitle:"Ceramic fiber boards provide exceptional thermal insulation for high-temperature applications. Engineered for durability and performance, these lightweight, rigid boards offer excellent thermal stability, low thermal conductivity, and superior resistance to thermal shock.",
     links: "/refractory-materials/ceramic-fiber-board",
   },
   {
     imgUrl: "/images/CFcloth.png",
     title: "Ceramic Fiber Cloth",
-    subTitle:"ceramic fiber cloth provides exceptional thermal protection in a flexible, textile format. Woven from high-quality ceramic fiber yarns, this versatile material offers outstanding heat resistance, excellent handling characteristics, and superior durability.",
+    subTitle:"Ceramic fiber cloth provides exceptional thermal protection in a flexible, textile format. Woven from high-quality ceramic fiber yarns, this versatile material offers outstanding heat resistance, excellent handling characteristics, and superior durability.",
     links: "/refractory-materials/ceramic-fiber-cloth",
   },
   {
     imgUrl: "/images/CFrope.png",
     title: "Ceramic Fiber Rope",
-    subTitle:"ceramic fiber rope provides exceptional thermal sealing and insulation in a flexible, resilient format. Manufactured by braiding or twisting high-quality ceramic fibers, this versatile material offers outstanding heat resistance, excellent compression recovery, and superior durability. ",
+    subTitle:"Ceramic fiber rope provides exceptional thermal sealing and insulation in a flexible, resilient format. Manufactured by braiding or twisting high-quality ceramic fibers, this versatile material offers outstanding heat resistance, excellent compression recovery, and superior durability. ",
     links: "/refractory-materials/ceramic-fiber-rope",
   },
   {
@@ -35,6 +35,20 @@ const refractoryMaterials = [
     title: "Ceramic Fiber Felt",
     subTitle:" Our ceramic fiber felts are wet laid uniform mats impregnated with a thermosetting resin, filling the gap between ceramic fiber blankets and boards. These unique materials are compressible yet resilient, with sufficient integrity to hold their shape in formed parts or gaskets. ",
     links: "/refractory-materials/ceramic-fiber-felt",
+  },
+  {
+    imgUrl: "/images/insulationBricks.png",
+    title: "Insulation Bricks",
+    subTitle:
+      "insulation bricks provide exceptional thermal efficiency with outstanding structural integrity. Engineered with advanced refractory materials and precise porosity control, these lightweight yet durable bricks offer superior insulation performance in extreme temperature environments.",
+    links: "/refractory-materials/insulation-bricks",
+  },
+  {
+    imgUrl: "/images/FCbricks.png",
+    title: "Fire Clay Bricks",
+    subTitle:
+      "fire clay bricks provide dependable performance in high-temperature applications. Manufactured from high-quality fire clay with precise formulation and firing control, these traditional refractory products offer excellent thermal stability, good mechanical strength, and reliable resistance to thermal shock.",
+    links: "/refractory-materials/fire-clay-bricks",
   },
   {
     imgUrl: "/images/refractoryBricks.png",

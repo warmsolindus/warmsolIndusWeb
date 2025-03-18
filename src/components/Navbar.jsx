@@ -154,6 +154,22 @@ const refractoryMaterials = [
     path: "/refractory-materials/ceramic-fiber-cloth",
   },
   {
+    title: "Ceramic Fiber Rope",
+    path: "/refractory-materials/ceramic-fiber-rope",
+  },
+  {
+    title: "Ceramic Fiber Felt",
+    path: "/refractory-materials/ceramic-fiber-felt",
+  },
+  {
+    title: "Insulation Bricks",
+    path: "/refractory-materials/insulation-bricks",
+  },
+  {
+    title: "Fire Clay Bricks",
+    path: "/refractory-materials/fire-clay-bricks",
+  },
+  {
     title: "Refractory Bricks",
     path: "/refractory-materials/refractory-bricks"
   },
