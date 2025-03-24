@@ -46,7 +46,7 @@ export default function CeramicFiberCloth() {
       <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="container mx-auto py-8">
         <motion.div
           variants={fadeIn}
-          className="max-w-md mx-auto my-8 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl"
+          className="max-w-md mx-auto my-8 bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl"
         >
           <div className="md:flex">
             <div className="md:shrink-0">

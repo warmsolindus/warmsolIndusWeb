@@ -46,6 +46,8 @@ import CeramicFiberRope from "../pages/products/CeramicFiberRope";
 import CeramicFiberFelt from "../pages/products/CeramicFiberFelt";
 import InsulationBricks from "../pages/products/InsulationBricks";
 import FireClayBricks from "../pages/products/FireClayBricks";
+import HighAluminaRefractoryBricks from "../pages/products/HighAluminaRefractoryBricks";
+import SillimaniteBricks from "../pages/products/SillimaniteBricks";
 
 export default function UserRoute() {
   return (
@@ -97,6 +99,8 @@ export default function UserRoute() {
       <Route path="/refractory-materials/ceramic-fiber-felt" element={<CeramicFiberFelt />} />
       <Route path="/refractory-materials/insulation-bricks" element={<InsulationBricks />} />
       <Route path="/refractory-materials/fire-clay-bricks" element={<FireClayBricks />} />
+      <Route path="/refractory-materials/high-alumina-refractory-bricks" element={<HighAluminaRefractoryBricks />} />
+      <Route path="/refractory-materials/sillimanite-bricks" element={<SillimaniteBricks />} />
 
       <Route path="/product-info" element={<ProductInfo />} />
     </Routes>

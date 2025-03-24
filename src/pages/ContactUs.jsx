@@ -94,7 +94,7 @@ export function ContactSection() {
                       Mohamed Jabin
                     </Typography>
                     <Typography className="font-semibold">
-                      Office Administrative
+                      Sales Engineer
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-phone" />
