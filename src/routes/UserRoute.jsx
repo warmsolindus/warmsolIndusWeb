@@ -48,6 +48,8 @@ import InsulationBricks from "../pages/products/InsulationBricks";
 import FireClayBricks from "../pages/products/FireClayBricks";
 import HighAluminaRefractoryBricks from "../pages/products/HighAluminaRefractoryBricks";
 import SillimaniteBricks from "../pages/products/SillimaniteBricks";
+import SilicaBricks from "../pages/products/SilicaBricks";
+import MagnesiaBricks from "../pages/products/MagnesiaBricks";
 
 export default function UserRoute() {
   return (
@@ -101,6 +103,8 @@ export default function UserRoute() {
       <Route path="/refractory-materials/fire-clay-bricks" element={<FireClayBricks />} />
       <Route path="/refractory-materials/high-alumina-refractory-bricks" element={<HighAluminaRefractoryBricks />} />
       <Route path="/refractory-materials/sillimanite-bricks" element={<SillimaniteBricks />} />
+      <Route path="/refractory-materials/silica-bricks" element={<SilicaBricks />} />
+      <Route path="/refractory-materials/magnesia-bricks" element={<MagnesiaBricks />} />
 
       <Route path="/product-info" element={<ProductInfo />} />
     </Routes>

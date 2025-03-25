@@ -64,6 +64,20 @@ const refractoryMaterials = [
       "Sillimanite Bricks provide exceptional performance in applications requiring superior thermal shock resistance and stability. Manufactured from high-quality sillimanite minerals (Al₂SiO₅), these specialized refractory products offer excellent load-bearing capacity at elevated temperatures, outstanding volume stability, and remarkable resistance to thermal cycling.",
     links: "/refractory-materials/sillimanite-bricks",
   },
+  {
+    imgUrl: "/images/SilicaBricks.png",
+    title: "Silica Bricks",
+    subTitle:
+      "Silica Bricks provide outstanding performance in high-temperature applications requiring excellent load-bearing capacity and volume stability. Manufactured with high-purity silica (greater than 93% SiO₂), these specialized refractory products offer exceptional resistance to acidic slags, and remarkable dimensional stability after initial expansion.",
+    links: "/refractory-materials/silica-bricks",
+  },
+  {
+    imgUrl: "/images/MagnesiaBricks.png",
+    title: "Magnesia Bricks",
+    subTitle:
+      "magnesia bricks provide exceptional performance in applications requiring superior resistance to basic slags and extreme temperatures. Manufactured with high-purity magnesium oxide (MgO), these specialized refractory products offer outstanding chemical stability, excellent thermal conductivity, and remarkable resistance to corrosion in basic environments.",
+    links: "/refractory-materials/magnesia-bricks",
+  },
   // {
   //   imgUrl: "/images/refractoryBricks.png",
   //   title: "Refractory Bricks",
