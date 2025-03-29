@@ -170,17 +170,45 @@ const refractoryMaterials = [
     path: "/refractory-materials/fire-clay-bricks",
   },
   {
-    title: "Refractory Bricks",
-    path: "/refractory-materials/refractory-bricks"
+    title: "High Alumina Refractory Bricks",
+    path: "/refractory-materials/high-alumina-refractory-bricks",
   },
   {
-    title: "Refractory Castables",
-    path: "/refractory-materials/refractory-castables",
+    title: "Sillimanite Bricks",
+    path: "/refractory-materials/sillimanite-bricks",
   },
   {
-    title: "Mortar",
-    path: "/refractory-materials/mortar",
+    title: "Silica Bricks",
+    path: "/refractory-materials/silica-bricks",
   },
+  {
+    title: "Magnesia Bricks",
+    path: "/refractory-materials/magnesia-bricks",
+  },
+  {
+    title: "Acid Proof Bricks",
+    path: "/refractory-materials/acid-proof-bricks",
+  },
+  {
+    title: "Insulating Castables",
+    path: "/refractory-materials/insulating-castables",
+  },
+  {
+    title: "Dense Refractory Castables",
+    path: "/refractory-materials/dense-refractory-castables",
+  },
+  // {
+  //   title: "Refractory Bricks",
+  //   path: "/refractory-materials/refractory-bricks"
+  // },
+  // {
+  //   title: "Refractory Castables",
+  //   path: "/refractory-materials/refractory-castables",
+  // },
+  // {
+  //   title: "Mortar",
+  //   path: "/refractory-materials/mortar",
+  // },
 ];
 
 function NavListMenu() {
