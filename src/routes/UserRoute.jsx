@@ -50,6 +50,9 @@ import HighAluminaRefractoryBricks from "../pages/products/HighAluminaRefractory
 import SillimaniteBricks from "../pages/products/SillimaniteBricks";
 import SilicaBricks from "../pages/products/SilicaBricks";
 import MagnesiaBricks from "../pages/products/MagnesiaBricks";
+import AcidProofBricks from "../pages/products/AcidProofBricks";
+import InsulatingCastables from "../pages/products/InsulatingCastables";
+import DenseRefractoryCastable from "../pages/products/DenseRefractoryCastables";
 
 export default function UserRoute() {
   return (
@@ -105,6 +108,9 @@ export default function UserRoute() {
       <Route path="/refractory-materials/sillimanite-bricks" element={<SillimaniteBricks />} />
       <Route path="/refractory-materials/silica-bricks" element={<SilicaBricks />} />
       <Route path="/refractory-materials/magnesia-bricks" element={<MagnesiaBricks />} />
+      <Route path="/refractory-materials/acid-proof-bricks" element={<AcidProofBricks />} />
+      <Route path="/refractory-materials/insulating-castables" element={<InsulatingCastables />} />
+      <Route path="/refractory-materials/dense-refractory-castables" element={<DenseRefractoryCastable />} />
 
       <Route path="/product-info" element={<ProductInfo />} />
     </Routes>

@@ -78,6 +78,27 @@ const refractoryMaterials = [
       "magnesia bricks provide exceptional performance in applications requiring superior resistance to basic slags and extreme temperatures. Manufactured with high-purity magnesium oxide (MgO), these specialized refractory products offer outstanding chemical stability, excellent thermal conductivity, and remarkable resistance to corrosion in basic environments.",
     links: "/refractory-materials/magnesia-bricks",
   },
+  {
+    imgUrl: "/images/AcidProofBricks.png",
+    title: "Acid Proof Bricks",
+    subTitle:
+      "Acid Proof Bricks provide exceptional resistance to chemical attack in highly corrosive environments. Manufactured from carefully selected raw materials and fired at high temperatures, these specialized ceramic products offer outstanding durability, excellent impermeability, and superior resistance to acids, alkalis, and solvents.",
+    links: "/refractory-materials/acid-proof-bricks",
+  },
+  {
+    imgUrl: "/images/InsulatingCastables.png",
+    title: "Insulating Castables",
+    subTitle:
+      "insulating castables provide exceptional thermal efficiency with the versatility of cast-in-place installation. Engineered with lightweight aggregates and advanced binder systems, these specialized refractory materials offer excellent thermal insulation, good mechanical strength, and superior installation flexibility.",
+    links: "/refractory-materials/insulating-castables",
+  },
+  {
+    imgUrl: "/images/denseCastables.png",
+    title: "Dense Refractory Castables",
+    subTitle:
+      "dense refractory castables provide exceptional performance in the most demanding high-temperature applications. Engineered with carefully selected aggregates and advanced binder systems. Available in various formulations including low cement, high alumina, and self-flowing types",
+    links: "/refractory-materials/dense-refractory-castables",
+  },
   // {
   //   imgUrl: "/images/refractoryBricks.png",
   //   title: "Refractory Bricks",
