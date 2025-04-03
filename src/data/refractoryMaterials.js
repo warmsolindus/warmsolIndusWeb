@@ -99,6 +99,13 @@ const refractoryMaterials = [
       "dense refractory castables provide exceptional performance in the most demanding high-temperature applications. Engineered with carefully selected aggregates and advanced binder systems. Available in various formulations including low cement, high alumina, and self-flowing types",
     links: "/refractory-materials/dense-refractory-castables",
   },
+  {
+    imgUrl: "/images/RammingMass.png",
+    title: "Ramming Mass",
+    subTitle:
+      "Ramming Mass provides exceptional performance in high-temperature applications requiring custom-shaped monolithic linings. Engineered with carefully selected aggregates and binders, this versatile refractory material offers excellent thermal stability, superior mechanical strength.",
+    links: "/refractory-materials/ramming-mass",
+  },
   // {
   //   imgUrl: "/images/refractoryBricks.png",
   //   title: "Refractory Bricks",
