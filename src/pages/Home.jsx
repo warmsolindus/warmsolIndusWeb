@@ -227,7 +227,7 @@ export default function Home() {
                   Join the many businesses that trust Warmsol Industries for
                   their insulation, metal jacketing, refractory, and procurement
                   needs. Together, we can build stronger, more efficient, and
-                  sustainable industrial systems
+                  sustainable industrial system
                 </Typography>
               </div>
             </div>
