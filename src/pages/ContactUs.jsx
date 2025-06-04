@@ -91,7 +91,7 @@ export function ContactSection() {
                   </Typography>
                   <div className="py-2">
                     <Typography className="font-semibold">
-                      Mohamed Jabin
+                      Riyas A S
                     </Typography>
                     <Typography className="font-semibold">
                       Sales Engineer
