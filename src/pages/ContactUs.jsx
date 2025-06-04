@@ -98,7 +98,7 @@ export function ContactSection() {
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-phone" />
-                      <a href="tel:+971 56 4944247"> +971 56 4944247</a>
+                      <a href="tel:+971 56 4944247"> +971 56 5963316</a>
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-envelope" />{" "}
