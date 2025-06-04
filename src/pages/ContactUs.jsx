@@ -94,7 +94,7 @@ export function ContactSection() {
                       Riyas A S
                     </Typography>
                     <Typography className="font-semibold">
-                      Sales Engineer
+                      Business Development Manager
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-phone" />
@@ -103,7 +103,7 @@ export function ContactSection() {
                     <Typography className="font-semibold">
                       <i className="fa fa-envelope" />{" "}
                       <a href="mailto:sales@warmsolindus.com">
-                        sales@warmsolindus.com
+                        bdm@warmsolindus.com
                       </a>
                     </Typography>
                   </div>
