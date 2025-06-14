@@ -35,7 +35,7 @@ const insulationAndCladdingAccessories = [
         links: "/insulation-and-cladding-accessories/stainless-steel-tie-wire",
     },
     {
-        imgUrl: "/images/ssToggleClip.webp",
+        imgUrl: "/images/ToggleLatches.jpg",
         title: "Stainless Steel Toggle Clip",
         subTitle:
           "Stainless steel toggle clips offer exceptional strength, corrosion resistance, and ease of use for a wide range of fastening applications. Engineered for durability and quick installation, these toggle clips are ideal for various industrial, marine, and outdoor projects requiring secure and adjustable fastening solutions. ",
