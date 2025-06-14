@@ -71,7 +71,7 @@ const insulationAndCladdingAccessories = [
     },
     {
         imgUrl: "/images/fiberglasstape.png",
-        title: "Fber Glass Tape",
+        title: "Fiber Glass Tape",
         subTitle:
           "Fiberglass tape offers exceptional strength, durability, and thermal resistance for a wide range of applications. Engineered for versatility and ease of use, this fiberglass tape is ideal for various industrial, construction, and DIY projects requiring reliable reinforcement and insulation.",
           links: "/insulation-and-cladding-accessories/fiber-glass-tape",
