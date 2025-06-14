@@ -26,7 +26,7 @@ export default function StainlessSteelToggleClip() {
             <div className="md:shrink-0">
               <img
                 className="h-72 w-full object-cover md:h-full md:w-72 scale-95 hover:scale-105 duration-700"
-                src="/images/ssToggleClip.webp?height=288&width=288"
+                src="/images/ToggleLatches.jpg?height=288&width=288"
                 alt="Stainless Steel Toggle Clip"
               />
             </div>
