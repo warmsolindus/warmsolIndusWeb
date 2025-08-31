@@ -82,6 +82,9 @@ export function ContactSection() {
                     <Typography className="font-semibold">
                       United Arab Emirates
                     </Typography>
+                    <Typography className="font-semibold">
+                      VAT: 105054616500003
+                    </Typography>
                   </div>
                   <Typography
                     variant="h5"
