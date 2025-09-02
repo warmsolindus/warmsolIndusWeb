@@ -80,7 +80,7 @@ export function ContactSection() {
                     </Typography>
                     <Typography className="font-semibold">Sharjah ,</Typography>
                     <Typography className="font-semibold">
-                      United Arab Emirates
+                      United Arab Emirates VAT
                     </Typography>
                   </div>
                   <Typography
