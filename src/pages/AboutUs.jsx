@@ -3,7 +3,6 @@ import {
   Card,
   CardBody,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 import FooterWithSitemap from "../components/Footer";
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
@@ -13,16 +12,24 @@ function AboutUs() {
     window.scrollTo(0, 0);
   }, []);
 
-  // state for modal
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // certificate images
+  // put your 4 A4 certificate image paths here
   const certificates = [
     "/images/cert1.jpg",
     "/images/cert2.jpg",
     "/images/cert3.jpg",
     "/images/cert4.jpg",
   ];
+
+  // close modal on ESC
+  useEffect(() => {
+    function onKey(e) {
+      if (e.key === "Escape") setSelectedImage(null);
+    }
+    if (selectedImage) window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedImage]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
@@ -107,10 +114,7 @@ function AboutUs() {
               >
                 Our Mission
               </Typography>
-              <Typography
-                variant="paragraph"
-                className="text-base text-gray-700"
-              >
+              <Typography variant="paragraph" className="text-base text-gray-700">
                 At WarmSol Industries, our mission is to deliver exceptional
                 insulation materials that ensure:
               </Typography>
@@ -132,33 +136,22 @@ function AboutUs() {
               >
                 Our Vision
               </Typography>
-              <Typography
-                variant="paragraph"
-                className="text-base text-gray-700"
-              >
+              <Typography variant="paragraph" className="text-base text-gray-700">
                 We aspire to become the most trusted partner in the insulation
                 industry by:
               </Typography>
               <ul className="list-image-[url(/images/tick2.jpg)] list-outside mt-2 pl-4 text-gray-700">
-                <li>
-                  Providing top-tier insulation products for industrial and
-                  commercial spaces
-                </li>
+                <li>Providing top-tier insulation products for industrial and commercial spaces</li>
                 <li>Offering unparalleled professional knowledge and expertise</li>
-                <li>
-                  Delivering exceptional customer service at every touchpoint
-                </li>
-                <li>
-                  Upholding the highest ethical standards in all our business
-                  practices
-                </li>
+                <li>Delivering exceptional customer service at every touchpoint</li>
+                <li>Upholding the highest ethical standards in all our business practices</li>
                 <li>Continuously innovating to meet evolving market needs</li>
               </ul>
             </CardBody>
           </Card>
         </div>
 
-        {/* Certificates Section - CHANGED PART */}
+        {/* ===== Certificates Section (thumbnails + hover-zoom + modal) ===== */}
         <Card className="overflow-hidden">
           <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
             <Typography
@@ -168,30 +161,29 @@ function AboutUs() {
             >
               Recognitions & Certifications
             </Typography>
-            <Typography
-              variant="paragraph"
-              className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto"
-            >
-              We are proud to be recognized by government authorities for our
-              excellence and commitment to quality. Here are some of our
-              certifications:
+
+            <Typography variant="paragraph" className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto">
+              We are proud to be recognized by government authorities for our excellence and commitment to quality. Click any thumbnail to view full A4 certificate.
             </Typography>
 
-            {/* Thumbnail Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-              {certificates.map((src, index) => (
+              {certificates.map((src, idx) => (
                 <div
-                  key={index}
-                  className="cursor-pointer group relative"
+                  key={idx}
+                  className="group relative cursor-pointer overflow-hidden rounded-lg"
                   onClick={() => setSelectedImage(src)}
+                  aria-hidden="true"
                 >
+                  {/* thumbnail with hover-zoom */}
                   <img
                     src={src}
-                    alt={`Certificate ${index + 1}`}
-                    className="w-full h-48 object-cover rounded-lg shadow-md group-hover:opacity-80 transition"
+                    alt={`Certificate ${idx + 1}`}
+                    className="w-full h-48 object-cover rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white font-medium rounded-lg">
-                    View
+                  {/* overlay on hover */}
+                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold">
+                    <div className="bg-black/40 px-3 py-1 rounded">View</div>
                   </div>
                 </div>
               ))}
@@ -199,21 +191,76 @@ function AboutUs() {
           </CardBody>
         </Card>
 
-        {/* Modal */}
+        {/* ===== Our Promise to You (restored last card) ===== */}
+        <Card className="overflow-hidden mt-8">
+          <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
+            <Typography variant="h3" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold text-center">
+              Our Promise to You
+            </Typography>
+            <Typography variant="paragraph" className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto">
+              At WarmSol Industries, we are committed to excellence in every aspect of our business. Our promise to you includes:
+            </Typography>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+              <div className="text-center">
+                <img src="/images/quality.png" className="w-24 mx-auto" alt="Quality Assurance"/>
+                <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
+                  Quality Assurance
+                </Typography>
+                <Typography variant="small" className="text-gray-700">
+                  Rigorous testing and quality control for all our products
+                </Typography>
+              </div>
+              <div className="text-center">
+                <img src="/images/support.png" className="w-24 mx-auto" alt="Expert Support"/>
+                <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
+                  Expert Support
+                </Typography>
+                <Typography variant="small" className="text-gray-700">
+                  Dedicated technical assistance throughout your project
+                </Typography>
+              </div>
+              <div className="text-center">
+                <img src="/images/sustainable.png" className="w-28 mx-auto" alt="Sustainable Practices"/>
+                <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
+                  Sustainable Practices
+                </Typography>
+                <Typography variant="small" className="text-gray-700">
+                  Eco-friendly solutions and responsible manufacturing
+                </Typography>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+
+        {/* ===== Modal for full-size certificate ===== */}
         {selectedImage && (
-          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-            <div className="relative bg-white rounded-lg shadow-lg max-w-4xl w-full">
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70"
+            role="dialog"
+            aria-modal="true"
+            onClick={() => setSelectedImage(null)} // click backdrop to close
+          >
+            <div
+              className="relative bg-white rounded-lg shadow-lg max-w-5xl w-full max-h-[95vh] overflow-auto p-4"
+              onClick={(e) => e.stopPropagation()} // prevent backdrop close when clicking inside
+            >
               <button
-                className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600"
                 onClick={() => setSelectedImage(null)}
+                aria-label="Close"
+                className="absolute top-3 right-3 text-white bg-red-500 hover:bg-red-600 px-3 py-1 rounded-full z-10"
               >
                 ✕
               </button>
-              <img
-                src={selectedImage}
-                alt="Full certificate"
-                className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
-              />
+
+              {/* Centered image: respect A4 aspect, use object-contain */}
+              <div className="flex items-center justify-center">
+                <img
+                  src={selectedImage}
+                  alt="Full certificate"
+                  className="object-contain max-h-[85vh] max-w-full"
+                />
+              </div>
             </div>
           </div>
         )}
@@ -223,4 +270,5 @@ function AboutUs() {
     </div>
   );
 }
+
 export default AboutUs;
