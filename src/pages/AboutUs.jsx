@@ -163,7 +163,7 @@ function AboutUs() {
             </Typography>
 
             <Typography variant="paragraph" className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              We are proud to be recognized by government authorities for our excellence and commitment to quality. Click any thumbnail to view full A4 certificate.
+              We are proud to be recognized by numerous authorities for our excellence and commitment to quality, environmental management, and health & safety. Click on each certificate to view it in detail.
             </Typography>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8">
