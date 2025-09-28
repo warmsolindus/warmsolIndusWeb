@@ -31,7 +31,7 @@ function AboutUs() {
             color="white"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
-            ABOUT WARMSOLLL INDUSTRIES
+            ABOUT WARMSOL INDUSTRIES
           </Typography>
         </div>
       </div>
