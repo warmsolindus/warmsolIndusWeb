@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   Card,
   CardBody,
@@ -12,23 +12,17 @@ function AboutUs() {
     window.scrollTo(0, 0);
   }, []);
 
-  // use index so we can navigate prev/next
-  const [selectedIndex, setSelectedIndex] = useState(null);
-
-  // only 3 certificates
   const certificates = [
     "/images/cert1.jpg",
     "/images/cert2.jpg",
     "/images/cert3.jpg",
   ];
 
-  // open modal by index
-  const openAt = (idx) => setSelectedIndex(idx);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
-  // close modal
+  const openAt = (idx) => setSelectedIndex(idx);
   const closeModal = () => setSelectedIndex(null);
 
-  // navigate
   const showPrev = (e) => {
     if (e) e.stopPropagation();
     setSelectedIndex((i) => {
@@ -44,7 +38,7 @@ function AboutUs() {
     });
   };
 
-  // keyboard: ESC to close, arrows to navigate
+  // keyboard nav
   useEffect(() => {
     function onKey(e) {
       if (selectedIndex === null) return;
@@ -55,6 +49,55 @@ function AboutUs() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [selectedIndex]);
+
+  // prevent body scroll when modal open
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = prev || "";
+      };
+    }
+  }, [selectedIndex]);
+
+  // swipe handling
+  const touchStartX = useRef(null);
+  const touchCurrentX = useRef(null);
+  const touchActive = useRef(false);
+  const SWIPE_THRESHOLD = 50; // px
+
+  const onTouchStart = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
+    touchActive.current = true;
+    touchStartX.current = e.touches[0].clientX;
+    touchCurrentX.current = touchStartX.current;
+  };
+
+  const onTouchMove = (e) => {
+    if (!touchActive.current || !e.touches || e.touches.length === 0) return;
+    touchCurrentX.current = e.touches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (!touchActive.current || touchStartX.current === null || touchCurrentX.current === null) {
+      touchActive.current = false;
+      return;
+    }
+    const dx = touchCurrentX.current - touchStartX.current;
+    if (Math.abs(dx) > SWIPE_THRESHOLD) {
+      if (dx < 0) {
+        // swipe left -> next
+        showNext();
+      } else {
+        // swipe right -> prev
+        showPrev();
+      }
+    }
+    touchActive.current = false;
+    touchStartX.current = null;
+    touchCurrentX.current = null;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
@@ -261,17 +304,17 @@ function AboutUs() {
         {/* Modal */}
         {selectedIndex !== null && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95"
             onClick={closeModal}
             role="dialog"
             aria-modal="true"
           >
-            {/* image container (relative) so buttons align with image */}
+            {/* container that holds image and controls */}
             <div
               className="relative max-w-5xl w-full max-h-[95vh] flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* LEFT ARROW */}
+              {/* left arrow */}
               <button
                 onClick={showPrev}
                 className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
@@ -283,12 +326,19 @@ function AboutUs() {
                 </svg>
               </button>
 
-              {/* IMAGE & close button top-right of image */}
-              <div className="relative">
-                {/* smaller lighter close button placed over image top-right */}
+              {/* image wrapper - attach touch handlers here for mobile swipe */}
+              <div
+                className="relative"
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+                onTouchCancel={onTouchEnd}
+                style={{ touchAction: "pan-y" }} // allow vertical scroll if needed
+              >
+                {/* small translucent close button placed at top-right corner of the image */}
                 <button
                   onClick={closeModal}
-                  className="absolute -top-3 -right-3 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 md:p-2"
+                  className="absolute -top-3 -right-3 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 md:p-2"
                   aria-label="Close"
                   title="Close"
                 >
@@ -302,9 +352,14 @@ function AboutUs() {
                   alt={`Certificate ${selectedIndex + 1}`}
                   className="object-contain max-h-[85vh] max-w-full rounded-md shadow-lg"
                 />
+
+                {/* page indicator */}
+                <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-black/40 text-white text-sm px-3 py-1 rounded">
+                  {selectedIndex + 1} / {certificates.length}
+                </div>
               </div>
 
-              {/* RIGHT ARROW */}
+              {/* right arrow */}
               <button
                 onClick={showNext}
                 className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
