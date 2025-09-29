@@ -312,7 +312,7 @@ function AboutUs() {
         {/* Modal (full images, dark backdrop, swipe + arrows + small close on image corner) */}
         {selectedIndex !== null && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/45"
             onClick={closeModal}
             role="dialog"
             aria-modal="true"
