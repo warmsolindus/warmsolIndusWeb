@@ -12,12 +12,20 @@ function AboutUs() {
     window.scrollTo(0, 0);
   }, []);
 
-  const certificates = [
+  // thumbnails (small previews) and full-size certificates
+  const certificateThumbs = [
+    "/images/iso1.jpg",
+    "/images/iso2.jpg",
+    "/images/iso3.jpg",
+  ];
+
+  const certificateFull = [
     "/images/cert1.jpg",
     "/images/cert2.jpg",
     "/images/cert3.jpg",
   ];
 
+  // selected index for modal (null = closed)
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const openAt = (idx) => setSelectedIndex(idx);
@@ -27,18 +35,18 @@ function AboutUs() {
     if (e) e.stopPropagation();
     setSelectedIndex((i) => {
       if (i === null) return null;
-      return (i - 1 + certificates.length) % certificates.length;
+      return (i - 1 + certificateFull.length) % certificateFull.length;
     });
   };
   const showNext = (e) => {
     if (e) e.stopPropagation();
     setSelectedIndex((i) => {
       if (i === null) return null;
-      return (i + 1) % certificates.length;
+      return (i + 1) % certificateFull.length;
     });
   };
 
-  // keyboard nav
+  // keyboard nav (ESC / left / right)
   useEffect(() => {
     function onKey(e) {
       if (selectedIndex === null) return;
@@ -61,7 +69,7 @@ function AboutUs() {
     }
   }, [selectedIndex]);
 
-  // swipe handling
+  // swipe handling for mobile
   const touchStartX = useRef(null);
   const touchCurrentX = useRef(null);
   const touchActive = useRef(false);
@@ -222,7 +230,7 @@ function AboutUs() {
           </Card>
         </div>
 
-        {/* Certificates Section */}
+        {/* Certificates Section (using thumbnail images) */}
         <Card className="overflow-hidden">
           <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
             <Typography
@@ -234,19 +242,19 @@ function AboutUs() {
             </Typography>
 
             <Typography variant="paragraph" className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              We are proud to be recognized by government authorities for our excellence and commitment to quality. Click any thumbnail to view full A4 certificate.
+              We are proud to be recognized by government authorities for our excellence and commitment to quality. Tap any thumbnail to view the full certificate.
             </Typography>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-              {certificates.map((src, idx) => (
+              {certificateThumbs.map((thumb, idx) => (
                 <div
                   key={idx}
                   className="group relative cursor-pointer overflow-hidden rounded-lg"
                   onClick={() => openAt(idx)}
                 >
                   <img
-                    src={src}
-                    alt={`Certificate ${idx + 1}`}
+                    src={thumb}
+                    alt={`Certificate preview ${idx + 1}`}
                     className="w-full h-48 object-cover rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -301,7 +309,7 @@ function AboutUs() {
           </CardBody>
         </Card>
 
-        {/* Modal */}
+        {/* Modal (full images, dark backdrop, swipe + arrows + small close on image corner) */}
         {selectedIndex !== null && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95"
@@ -309,12 +317,11 @@ function AboutUs() {
             role="dialog"
             aria-modal="true"
           >
-            {/* container that holds image and controls */}
             <div
               className="relative max-w-5xl w-full max-h-[95vh] flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* left arrow */}
+              {/* Left arrow */}
               <button
                 onClick={showPrev}
                 className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
@@ -326,16 +333,16 @@ function AboutUs() {
                 </svg>
               </button>
 
-              {/* image wrapper - attach touch handlers here for mobile swipe */}
+              {/* Image wrapper with touch handlers */}
               <div
                 className="relative"
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
                 onTouchCancel={onTouchEnd}
-                style={{ touchAction: "pan-y" }} // allow vertical scroll if needed
+                style={{ touchAction: "pan-y" }}
               >
-                {/* small translucent close button placed at top-right corner of the image */}
+                {/* Close button positioned over the image's top-right corner */}
                 <button
                   onClick={closeModal}
                   className="absolute -top-3 -right-3 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 md:p-2"
@@ -348,18 +355,18 @@ function AboutUs() {
                 </button>
 
                 <img
-                  src={certificates[selectedIndex]}
+                  src={certificateFull[selectedIndex]}
                   alt={`Certificate ${selectedIndex + 1}`}
                   className="object-contain max-h-[85vh] max-w-full rounded-md shadow-lg"
                 />
 
                 {/* page indicator */}
                 <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-black/40 text-white text-sm px-3 py-1 rounded">
-                  {selectedIndex + 1} / {certificates.length}
+                  {selectedIndex + 1} / {certificateFull.length}
                 </div>
               </div>
 
-              {/* right arrow */}
+              {/* Right arrow */}
               <button
                 onClick={showNext}
                 className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
