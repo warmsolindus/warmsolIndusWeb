@@ -12,23 +12,49 @@ function AboutUs() {
     window.scrollTo(0, 0);
   }, []);
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  // use index so we can navigate prev/next
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
-  // only 3 certificates now
+  // only 3 certificates
   const certificates = [
     "/images/cert1.jpg",
     "/images/cert2.jpg",
     "/images/cert3.jpg",
   ];
 
-  // close modal on ESC
+  // open modal by index
+  const openAt = (idx) => setSelectedIndex(idx);
+
+  // close modal
+  const closeModal = () => setSelectedIndex(null);
+
+  // navigate
+  const showPrev = (e) => {
+    if (e) e.stopPropagation();
+    setSelectedIndex((i) => {
+      if (i === null) return null;
+      return (i - 1 + certificates.length) % certificates.length;
+    });
+  };
+  const showNext = (e) => {
+    if (e) e.stopPropagation();
+    setSelectedIndex((i) => {
+      if (i === null) return null;
+      return (i + 1) % certificates.length;
+    });
+  };
+
+  // keyboard: ESC to close, arrows to navigate
   useEffect(() => {
     function onKey(e) {
-      if (e.key === "Escape") setSelectedImage(null);
+      if (selectedIndex === null) return;
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "ArrowRight") showNext();
     }
-    if (selectedImage) window.addEventListener("keydown", onKey);
+    window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [selectedImage]);
+  }, [selectedIndex]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
@@ -56,7 +82,7 @@ function AboutUs() {
       </div>
 
       <div className="px-4 py-12">
-        {/* About Section */}
+        {/* About Card */}
         <Card className="mb-8 overflow-hidden">
           <CardBody className="p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
@@ -165,7 +191,7 @@ function AboutUs() {
             </Typography>
 
             <Typography variant="paragraph" className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              We are proud to be recognized by numerous authorities for our excellence and commitment to quality, environmental management, and health & safety. Click on each certificate to view it in detail.
+              We are proud to be recognized by government authorities for our excellence and commitment to quality. Click any thumbnail to view full A4 certificate.
             </Typography>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
@@ -173,12 +199,13 @@ function AboutUs() {
                 <div
                   key={idx}
                   className="group relative cursor-pointer overflow-hidden rounded-lg"
-                  onClick={() => setSelectedImage(src)}
+                  onClick={() => openAt(idx)}
                 >
                   <img
                     src={src}
                     alt={`Certificate ${idx + 1}`}
                     className="w-full h-48 object-cover rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold">
                     <div className="bg-black/40 px-3 py-1 rounded">View</div>
@@ -232,28 +259,62 @@ function AboutUs() {
         </Card>
 
         {/* Modal */}
-        {selectedImage && (
+        {selectedIndex !== null && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
-            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
+            onClick={closeModal}
+            role="dialog"
+            aria-modal="true"
           >
+            {/* image container (relative) so buttons align with image */}
             <div
               className="relative max-w-5xl w-full max-h-[95vh] flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* LEFT ARROW */}
               <button
-                onClick={() => setSelectedImage(null)}
-                aria-label="Close"
-                className="absolute top-3 right-3 text-white bg-red-500 hover:bg-red-600 px-3 py-1 rounded-full z-10"
+                onClick={showPrev}
+                className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
+                aria-label="Previous"
+                title="Previous"
               >
-                ✕
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
               </button>
 
-              <img
-                src={selectedImage}
-                alt="Full certificate"
-                className="object-contain max-h-[90vh] max-w-full rounded-lg shadow-lg"
-              />
+              {/* IMAGE & close button top-right of image */}
+              <div className="relative">
+                {/* smaller lighter close button placed over image top-right */}
+                <button
+                  onClick={closeModal}
+                  className="absolute -top-3 -right-3 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 md:p-2"
+                  aria-label="Close"
+                  title="Close"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+
+                <img
+                  src={certificates[selectedIndex]}
+                  alt={`Certificate ${selectedIndex + 1}`}
+                  className="object-contain max-h-[85vh] max-w-full rounded-md shadow-lg"
+                />
+              </div>
+
+              {/* RIGHT ARROW */}
+              <button
+                onClick={showNext}
+                className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
+                aria-label="Next"
+                title="Next"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         )}
