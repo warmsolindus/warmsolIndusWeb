@@ -33,6 +33,17 @@ export default function Home() {
     // "/placeholder.svg?height=80&width=160",
     // "/placeholder.svg?height=80&width=160"
   ];
+const certificateImages = [
+  { id: 1, src: "/images/certificate1.jpg", alt: "Govt Certificate 1" },
+  { id: 2, src: "/images/certificate2.jpg", alt: "Govt Certificate 2" },
+  { id: 3, src: "/images/certificate3.jpg", alt: "Govt Certificate 3" },
+  { id: 4, src: "/images/certificate4.jpg", alt: "Govt Certificate 4" },
+];
+const [showModal, setShowModal] = React.useState(false);
+const [activeImage, setActiveImage] = React.useState(null);
+
+const openModal = (img) => { setActiveImage(img); setShowModal(true); };
+const closeModal = () => { setShowModal(false); setActiveImage(null); };
 
   return (
     <div className="bg-gradient-to-r from-amber-200 to-blue-gray-200">
@@ -230,6 +241,62 @@ export default function Home() {
                   sustainable industrial system
                 </Typography>
               </div>
+//ADDITION//
+              <div className="w-full mt-8">
+  <Typography variant="h5" color="blue-gray" className="mb-2 font-semibold text-center md:text-left">
+    Certificates & Recognitions
+  </Typography>
+  <Typography variant="small" className="mb-4 text-gray-700 text-center md:text-left">
+    We are proud to be recognized by numerous authorities for our excellence and commitment to quality, environmental management, and health & safety.
+    Click on each certificate to view it in detail.
+  </Typography>
+  <div className="flex flex-wrap gap-6 justify-center md:justify-start">
+    {certificateImages.map(img => (
+      <div
+        key={img.id}
+        className="rounded shadow hover:ring-2 ring-blue-400 border bg-white cursor-pointer overflow-hidden transition-all duration-200 w-28 h-40 flex items-center justify-center"
+        tabIndex={0}
+        aria-label={`View ${img.alt}`}
+        onClick={() => openModal(img)}
+        style={{ minWidth: '96px', minHeight: '142px' }}
+      >
+        <img
+          src={img.src}
+          alt={img.alt}
+          className="object-cover w-full h-full"
+          style={{ maxWidth: '100%', maxHeight: '100%' }}
+        />
+      </div>
+    ))}
+  </div>
+  {showModal && (
+    <div
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50"
+      onClick={closeModal}
+    >
+      <div
+        className="relative bg-white rounded-lg shadow-lg p-4 max-w-4xl w-[90vw] max-h-[90vh] flex flex-col"
+        onClick={e => e.stopPropagation()}
+      >
+        <button
+          className="absolute top-3 right-4 text-3xl font-bold text-gray-700 hover:text-blue-800 focus:outline-none"
+          onClick={closeModal}
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <img
+          src={activeImage?.src}
+          alt={activeImage?.alt}
+          className="w-full h-auto max-h-[70vh] object-contain mx-auto pt-8"
+        />
+        <p className="mt-4 text-lg text-center text-blue-gray-900 font-semibold">{activeImage?.alt}</p>
+      </div>
+    </div>
+  )}
+</div>
+
+              //ADTN//
             </div>
           </CardBody>
         </Card>
