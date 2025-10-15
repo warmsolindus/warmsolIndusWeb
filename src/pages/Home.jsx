@@ -1,246 +1,90 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
-  Typography,
-  Button,
   Card,
   CardBody,
+  Typography,
 } from "@material-tailwind/react";
-import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
-import { Link } from "react-router-dom";
-import { ImageCarousel } from "../components/Carousel";
-import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 
-export default function Home() {
+function AboutUs() {
+  const certificates = ["/images/cert1.jpg", "/images/cert2.jpg", "/images/cert3.jpg"];
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [currentImage, setCurrentImage] = React.useState(0);
+
+  const openModal = (index) => {
+    setCurrentImage(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
+
+  const nextImage = () =>
+    setCurrentImage((prev) => (prev + 1) % certificates.length);
+
+  const prevImage = () =>
+    setCurrentImage((prev) => (prev - 1 + certificates.length) % certificates.length);
+
+  // Swipe support for mobile
+  React.useEffect(() => {
+    let startX = 0;
+    const handleTouchStart = (e) => (startX = e.touches[0].clientX);
+    const handleTouchEnd = (e) => {
+      if (!startX) return;
+      const diff = e.changedTouches[0].clientX - startX;
+      if (diff > 50) prevImage();
+      if (diff < -50) nextImage();
+      startX = 0;
+    };
+
+    if (isModalOpen) {
+      window.addEventListener("touchstart", handleTouchStart);
+      window.addEventListener("touchend", handleTouchEnd);
+    }
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [isModalOpen]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const certificateImages = [
-    "/images/cert1.jpg",
-    "/images/cert2.jpg",
-    "/images/cert3.jpg",
-  ];
-
-  const openImage = (index) => {
-    setSelectedImage(certificateImages[index]);
-    setCurrentIndex(index);
-  };
-
-  const closeModal = () => setSelectedImage(null);
-
-  const showNext = () =>
-    setCurrentIndex((prev) => (prev + 1) % certificateImages.length);
-
-  const showPrev = () =>
-    setCurrentIndex((prev) =>
-      prev === 0 ? certificateImages.length - 1 : prev - 1
-    );
-
-  // Mobile swipe handling
-  const handleTouchStart = (e) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
-  const handleTouchEnd = (e) => {
-    if (!touchStartX) return;
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (diff > 50) showNext();
-    if (diff < -50) showPrev();
-    setTouchStartX(null);
-  };
-  const [touchStartX, setTouchStartX] = useState(null);
-
-  const industries = [
-    { name: "Oil & Gas", image: "/images/oil-gas.png" },
-    { name: "Petrochemical", image: "/images/petrochemical.png" },
-    { name: "Fertilizer", image: "/images/fertilizer.png" },
-    { name: "Steel", image: "/images/steel.png" },
-    { name: "Water Treatment", image: "/images/water-treatment.png" },
-    { name: "Power Generation", image: "/images/power-generation.png" },
-  ];
-
-  const clients = ["/images/ANCclient.jpg?height=160&width=320"];
-
   return (
-    <div className="bg-gradient-to-r from-amber-200 to-blue-gray-200">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
       <NavigationbarWithDropdownMultilevelMenu />
-      <ImageCarousel />
 
-      {/* ABOUT SECTION */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="max-w-3xl mx-auto">
-          <Typography variant="h4" className="mb-4 text-center sm:text-left">
-            ABOUT US
-          </Typography>
-          <Typography
-            variant="paragraph"
-            className="mb-6 tracking-wider sm:text-left"
-          >
-            Welcome to Warmsol Industries, your trusted partner in premium
-            industrial solutions. With a steadfast commitment to excellence, we
-            specialize in providing top-tier Insulation Materials, Metal
-            Jacketing Materials and Accessories, and Refractory Materials,
-            alongside Comprehensive Procurement Services tailored to meet the
-            unique demands of our clients.
-          </Typography>
-          <div className="text-center sm:text-left">
-            <Link to={"/about-us"}>
-              <Button
-                className="rounded-full py-2 px-4 animate-bounce shadow-blue-500/50"
-                color="deep-orange"
-              >
-                View More!
-              </Button>
-            </Link>
-          </div>
+      <div className="relative h-[60vh] md:h-[80vh] w-full">
+        <div className="absolute inset-0">
+          <img
+            src="/images/industry.jpg?height=800&width=1200"
+            alt="aboutUs"
+            className="h-full w-full object-cover bg-fixed"
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
-
-        <div className="max-w-3xl mx-auto mt-12">
+        <div className="relative h-full flex items-center justify-center">
           <Typography
-            variant="h6"
-            color="deep-purple"
-            className="mb-4 text-center sm:text-left"
+            variant="h1"
+            color="white"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
-            WHO WE ARE?
-          </Typography>
-          <Typography
-            variant="paragraph"
-            className="tracking-wider text-center sm:text-left"
-          >
-            At Warmsol Industries, we are driven by a passion for innovation and
-            quality. Our expertise lies in delivering products and services that
-            enhance operational efficiency, ensure durability, and provide
-            cost-effective solutions for industries worldwide. Whether
-            safeguarding systems from heat loss or ensuring structural integrity
-            with high-performance refractory materials, our solutions are
-            engineered to excel under the most challenging conditions.
+            ABOUT WARMSOL INDUSTRIES
           </Typography>
         </div>
       </div>
 
-      {/* WHAT WE DO */}
-      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg6.png?react')] bg-fixed bg-repeat rounded-lg">
-        <div className="max-w-7xl mx-auto">
-          <Typography variant="h3" className="mb-8 text-center" color="white">
-            WHAT WE DO?
-          </Typography>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <Typography
-                variant="h4"
-                color="white"
-                className="mb-4 font-bold text-center md:text-left"
-              >
-                MANUFACTURING DIVISION
-              </Typography>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Link to={"/insulation-materials"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="blue-gray"
-                  >
-                    Insulation Materials
-                  </Button>
-                </Link>
-                <Link to={"/metal-jacketing-materials"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="gray"
-                  >
-                    Metal Jacketing Materials
-                  </Button>
-                </Link>
-                <Link to={"/insulation-and-cladding-accessories"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="gray"
-                  >
-                    Insulation & Cladding Accessories
-                  </Button>
-                </Link>
-                <Link to={"/refractory-materials"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="blue-gray"
-                  >
-                    Refractory Materials
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <Typography
-                variant="h4"
-                color="white"
-                className="mb-4 font-bold text-center md:text-left"
-              >
-                PROCUREMENT SERVICES
-              </Typography>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Button
-                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                  color="blue-gray"
-                >
-                  Pipe and fittings
-                </Button>
-                <Button
-                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
-                  color="gray"
-                >
-                  Electrical and instrumentation materials
-                </Button>
-                <Button
-                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
-                  color="gray"
-                >
-                  Hand tools and consumables
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* WHO WE SERVE */}
-      <div className="bg-gray-300 py-12 px-4 sm:px-6 lg:px-8 rounded-lg mx-4 my-12">
-        <Typography variant="h3" color="blue-gray" className="text-center mb-8">
-          WHO WE SERVE?
-        </Typography>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          {industries.map((industry, index) => (
-            <Card key={index} className="w-full">
-              <CardBody className="flex flex-col items-center rounded-lg hover:bg-gray-200">
-                <img
-                  src={industry.image}
-                  alt={`${industry.name} icon`}
-                  className="w-20 h-20 mb-4"
-                />
-                <Typography
-                  variant="h6"
-                  color="blue-gray"
-                  className="text-center"
-                >
-                  {industry.name}
-                </Typography>
-              </CardBody>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      {/* WHY CHOOSE US + ADDITION */}
-      <div>
-        <Card className="mb-8 mx-4 overflow-hidden">
+      <div className="px-4 py-12">
+        <Card className="mb-8 overflow-hidden">
           <CardBody className="p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">
                 <img
-                  src="/images/why.jpg?height=300&width=400"
+                  src="/images/aboutus.png?height=300&width=400"
                   alt="WarmSol Industries Facility"
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg shadow-lg brightness-75"
                 />
               </div>
               <div className="w-full md:w-1/2">
@@ -249,87 +93,222 @@ export default function Home() {
                   color="blue-gray"
                   className="mb-4 text-2xl md:text-3xl font-semibold"
                 >
-                  WHY CHOOSE US?
+                  Leading the Way in Insulation Solutions
                 </Typography>
-
-                <ul className="list-disc list-inside mb-4 text-gray-700">
-                  <li>Extensive industry expertise</li>
-                  <li>Commitment to quality and safety standards</li>
-                  <li>Reliable and timely delivery</li>
-                  <li>Innovative and cost-effective solutions</li>
-                  <li>Unwavering dedication to customer success</li>
-                </ul>
                 <Typography
                   variant="paragraph"
                   className="mb-4 text-base md:text-lg text-gray-700"
                 >
-                  Join the many businesses that trust Warmsol Industries for
-                  their insulation, metal jacketing, refractory, and procurement
-                  needs. Together, we can build stronger, more efficient, and
-                  sustainable industrial systems.
+                  WarmSol Industries stands at the forefront of insulation
+                  technology, manufacturing and distributing world-class products
+                  that meet the most demanding industry standards. Our
+                  comprehensive range includes:
                 </Typography>
+                <ul className="list-image-[url(/images/tick2.jpg)] list-outside mb-4 pl-4 text-gray-700">
+                  <li>Hot and Cold insulation materials</li>
+                  <li>Cladding and Jacketing solutions</li>
+                  <li>Essential insulation accessories</li>
+                  <li>Refractory materials</li>
+                  <li>Procurement services</li>
+                </ul>
+                <Typography
+                  variant="paragraph"
+                  className="text-base md:text-lg text-gray-700"
+                >
+                  With expertise and a commitment to innovation, we are your
+                  trusted partner in achieving efficient, effective, and
+                  sustainable insulation solutions for both large-scale
+                  industrial projects and commercial spaces.
+                </Typography>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
 
-                {/* ADDITION HERE */}
-                <div className="mt-8">
-                  <Typography
-                    variant="h5"
-                    color="blue-gray"
-                    className="mb-4 font-semibold text-center md:text-left"
-                  >
-                    Recognitions & Certifications
-                  </Typography>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
-                    {certificateImages.map((src, index) => (
-                      <img
-                        key={index}
-                        src={src}
-                        alt={`Certificate ${index + 1}`}
-                        onClick={() => openImage(index)}
-                        className="w-48 md:w-56 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
-                      />
-                    ))}
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <Card className="overflow-hidden">
+            <CardBody className="p-6">
+              <Typography
+                variant="h3"
+                color="blue-gray"
+                className="mb-4 text-xl md:text-2xl font-semibold"
+              >
+                Our Mission
+              </Typography>
+              <Typography variant="paragraph" className="text-base text-gray-700">
+                At WarmSol Industries, our mission is to deliver exceptional
+                insulation materials that ensure:
+              </Typography>
+              <ul className="list-image-[url(/images/tick2.jpg)] list-outside mt-2 pl-4 text-gray-700">
+                <li>Optimal energy efficiency</li>
+                <li>Enhanced safety in various applications</li>
+                <li>Long-lasting durability in diverse environments</li>
+                <li>Sustainable solutions for a greener future</li>
+              </ul>
+            </CardBody>
+          </Card>
+
+          <Card className="overflow-hidden">
+            <CardBody className="p-6">
+              <Typography
+                variant="h3"
+                color="blue-gray"
+                className="mb-4 text-xl md:text-2xl font-semibold"
+              >
+                Our Vision
+              </Typography>
+              <Typography variant="paragraph" className="text-base text-gray-700">
+                We aspire to become the most trusted partner in the insulation
+                industry by:
+              </Typography>
+              <ul className="list-image-[url(/images/tick2.jpg)] list-outside mt-2 pl-4 text-gray-700">
+                <li>
+                  Providing top-tier insulation products for industrial and
+                  commercial spaces
+                </li>
+                <li>Offering unparalleled professional knowledge and expertise</li>
+                <li>Delivering exceptional customer service at every touchpoint</li>
+                <li>
+                  Upholding the highest ethical standards in all our business
+                  practices
+                </li>
+                <li>Continuously innovating to meet evolving market needs</li>
+              </ul>
+            </CardBody>
+          </Card>
+        </div>
+
+        {/* Recognition Certificates Section */}
+        <Card className="overflow-hidden">
+          <CardBody className="p-8 bg-gradient-to-r from-orange-100 to-amber-100">
+            <Typography
+              variant="h3"
+              color="blue-gray"
+              className="mb-6 text-2xl md:text-3xl font-semibold text-center"
+            >
+              Recognition Certificates
+            </Typography>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {certificates.map((src, index) => (
+                <div
+                  key={index}
+                  className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md"
+                  onClick={() => openModal(index)}
+                >
+                  <img
+                    src={src}
+                    alt={`Certificate ${index + 1}`}
+                    className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
+              ))}
+            </div>
+
+            {isModalOpen && (
+              <div
+                className="fixed inset-0 flex items-center justify-center bg-black/80 z-50 animate-fadeIn"
+                onClick={closeModal}
+              >
+                <div
+                  className="relative max-w-3xl w-full px-4"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-2 right-2 text-gray-300 hover:text-white text-xl md:text-2xl"
+                  >
+                    ✕
+                  </button>
+
+                  <img
+                    src={certificates[currentImage]}
+                    alt={`Certificate ${currentImage + 1}`}
+                    className="w-full max-h-[90vh] object-contain rounded-lg shadow-lg transition-opacity duration-500 opacity-100"
+                  />
+
+                  <button
+                    onClick={prevImage}
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-white text-3xl"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-white text-3xl"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+            )}
+          </CardBody>
+        </Card>
+
+        {/* Last Card */}
+        <Card className="overflow-hidden">
+          <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
+            <Typography
+              variant="h3"
+              color="blue-gray"
+              className="mb-4 text-2xl md:text-3xl font-semibold text-center"
+            >
+              Our Promise to You
+            </Typography>
+            <Typography
+              variant="paragraph"
+              className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto"
+            >
+              At WarmSol Industries, we are committed to excellence in every
+              aspect of our business. Our promise to you includes:
+            </Typography>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+              <div className="text-center">
+                <img src="images/quality.png" className="w-24 mx-auto" />
+                <Typography
+                  variant="h6"
+                  color="blue-gray"
+                  className="mb-2 font-semibold"
+                >
+                  Quality Assurance
+                </Typography>
+                <Typography variant="small" className="text-gray-700">
+                  Rigorous testing and quality control for all our products
+                </Typography>
+              </div>
+              <div className="text-center">
+                <img src="images/support.png" className="w-24 mx-auto" />
+                <Typography
+                  variant="h6"
+                  color="blue-gray"
+                  className="mb-2 font-semibold"
+                >
+                  Expert Support
+                </Typography>
+                <Typography variant="small" className="text-gray-700">
+                  Dedicated technical assistance throughout your project
+                </Typography>
+              </div>
+              <div className="text-center">
+                <img src="images/sustainable.png" className="w-28 mx-auto" />
+                <Typography
+                  variant="h6"
+                  color="blue-gray"
+                  className="mb-2 font-semibold"
+                >
+                  Sustainable Practices
+                </Typography>
+                <Typography variant="small" className="text-gray-700">
+                  Eco-friendly solutions and responsible manufacturing
+                </Typography>
               </div>
             </div>
           </CardBody>
         </Card>
       </div>
-
-      {/* MODAL VIEWER */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 flex items-center justify-center bg-black/80 z-50"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          <button
-            onClick={closeModal}
-            className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl"
-          >
-            <XMarkIcon className="w-6 h-6" />
-          </button>
-          <button
-            onClick={showPrev}
-            className="absolute left-4 text-gray-300 hover:text-white"
-          >
-            <ChevronLeftIcon className="w-10 h-10" />
-          </button>
-          <img
-            src={certificateImages[currentIndex]}
-            alt="Certificate"
-            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain"
-          />
-          <button
-            onClick={showNext}
-            className="absolute right-4 text-gray-300 hover:text-white"
-          >
-            <ChevronRightIcon className="w-10 h-10" />
-          </button>
-        </div>
-      )}
-
       <FooterWithSitemap />
     </div>
   );
 }
+
+export default AboutUs;
