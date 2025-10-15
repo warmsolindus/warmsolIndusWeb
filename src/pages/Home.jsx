@@ -34,10 +34,10 @@ export default function Home() {
     // "/placeholder.svg?height=80&width=160"
   ];
 const certificateImages = [
-  { id: 1, src: "/images/certificate1.jpg", alt: "Govt Certificate 1" },
-  { id: 2, src: "/images/certificate2.jpg", alt: "Govt Certificate 2" },
-  { id: 3, src: "/images/certificate3.jpg", alt: "Govt Certificate 3" },
-  { id: 4, src: "/images/certificate4.jpg", alt: "Govt Certificate 4" },
+  { id: 1, src: "/images/cert1.jpg", alt: "Govt Certificate 1" },
+  { id: 2, src: "/images/cert2.jpg", alt: "Govt Certificate 2" },
+  { id: 3, src: "/images/cert3.jpg", alt: "Govt Certificate 3" },
+
 ];
 const [showModal, setShowModal] = React.useState(false);
 const [activeImage, setActiveImage] = React.useState(null);
@@ -241,7 +241,7 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
                   sustainable industrial system
                 </Typography>
               </div>
-//ADDITION//
+//ADDITION
               <div className="w-full mt-8">
   <Typography variant="h5" color="blue-gray" className="mb-2 font-semibold text-center md:text-left">
     Certificates & Recognitions
@@ -296,7 +296,7 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
   )}
 </div>
 
-              //ADTN//
+              //ADTN
             </div>
           </CardBody>
         </Card>
