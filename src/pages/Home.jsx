@@ -1,22 +1,58 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Typography,
   Button,
   Card,
   CardBody,
-  Carousel,
-  CarouselContent,
-  CarouselItem,
 } from "@material-tailwind/react";
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
 import { Link } from "react-router-dom";
 import { ImageCarousel } from "../components/Carousel";
+import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const certificateImages = [
+    "/images/iso1.jpg",
+    "/images/iso2.jpg",
+    "/images/iso3.jpg",
+  ];
+
+  const openImage = (index) => {
+    setSelectedImage(certificateImages[index]);
+    setCurrentIndex(index);
+  };
+
+  const closeModal = () => setSelectedImage(null);
+
+  const showNext = () =>
+    setCurrentIndex((prev) => (prev + 1) % certificateImages.length);
+
+  const showPrev = () =>
+    setCurrentIndex((prev) =>
+      prev === 0 ? certificateImages.length - 1 : prev - 1
+    );
+
+  // Mobile swipe handling
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+  const handleTouchEnd = (e) => {
+    if (!touchStartX) return;
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (diff > 50) showNext();
+    if (diff < -50) showPrev();
+    setTouchStartX(null);
+  };
+  const [touchStartX, setTouchStartX] = useState(null);
+
   const industries = [
     { name: "Oil & Gas", image: "/images/oil-gas.png" },
     { name: "Petrochemical", image: "/images/petrochemical.png" },
@@ -25,30 +61,15 @@ export default function Home() {
     { name: "Water Treatment", image: "/images/water-treatment.png" },
     { name: "Power Generation", image: "/images/power-generation.png" },
   ];
-  const clients = [
-    "/images/ANCclient.jpg?height=160&width=320",
-    // "/placeholder.svg?height=80&width=160",
-    // "/placeholder.svg?height=80&width=160",
-    // "/placeholder.svg?height=80&width=160",
-    // "/placeholder.svg?height=80&width=160",
-    // "/placeholder.svg?height=80&width=160"
-  ];
-const certificateImages = [
-  { id: 1, src: "/images/cert1.jpg", alt: "Govt Certificate 1" },
-  { id: 2, src: "/images/cert2.jpg", alt: "Govt Certificate 2" },
-  { id: 3, src: "/images/cert3.jpg", alt: "Govt Certificate 3" },
 
-];
-const [showModal, setShowModal] = React.useState(false);
-const [activeImage, setActiveImage] = React.useState(null);
-
-const openModal = (img) => { setActiveImage(img); setShowModal(true); };
-const closeModal = () => { setShowModal(false); setActiveImage(null); };
+  const clients = ["/images/ANCclient.jpg?height=160&width=320"];
 
   return (
     <div className="bg-gradient-to-r from-amber-200 to-blue-gray-200">
       <NavigationbarWithDropdownMultilevelMenu />
       <ImageCarousel />
+
+      {/* ABOUT SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-3xl mx-auto">
           <Typography variant="h4" className="mb-4 text-center sm:text-left">
@@ -76,6 +97,7 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
             </Link>
           </div>
         </div>
+
         <div className="max-w-3xl mx-auto mt-12">
           <Typography
             variant="h6"
@@ -98,6 +120,8 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
           </Typography>
         </div>
       </div>
+
+      {/* WHAT WE DO */}
       <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg6.png?react')] bg-fixed bg-repeat rounded-lg">
         <div className="max-w-7xl mx-auto">
           <Typography variant="h3" className="mb-8 text-center" color="white">
@@ -138,12 +162,12 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
                   </Button>
                 </Link>
                 <Link to={"/refractory-materials"}>
-                <Button
-                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                  color="blue-gray"
-                >
-                  Refractory Materials
-                </Button>
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="blue-gray"
+                  >
+                    Refractory Materials
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -179,6 +203,8 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
           </div>
         </div>
       </div>
+
+      {/* WHO WE SERVE */}
       <div className="bg-gray-300 py-12 px-4 sm:px-6 lg:px-8 rounded-lg mx-4 my-12">
         <Typography variant="h3" color="blue-gray" className="text-center mb-8">
           WHO WE SERVE?
@@ -204,6 +230,8 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
           ))}
         </div>
       </div>
+
+      {/* WHY CHOOSE US + ADDITION */}
       <div>
         <Card className="mb-8 mx-4 overflow-hidden">
           <CardBody className="p-8">
@@ -238,110 +266,68 @@ const closeModal = () => { setShowModal(false); setActiveImage(null); };
                   Join the many businesses that trust Warmsol Industries for
                   their insulation, metal jacketing, refractory, and procurement
                   needs. Together, we can build stronger, more efficient, and
-                  sustainable industrial system
+                  sustainable industrial systems.
                 </Typography>
-              </div>
-//ADDITION
-              <div className="w-full mt-8">
-  <Typography variant="h5" color="blue-gray" className="mb-2 font-semibold text-center md:text-left">
-    Certificates & Recognitions
-  </Typography>
-  <Typography variant="small" className="mb-4 text-gray-700 text-center md:text-left">
-    We are proud to be recognized by numerous authorities for our excellence and commitment to quality, environmental management, and health & safety.
-    Click on each certificate to view it in detail.
-  </Typography>
-  <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-    {certificateImages.map(img => (
-      <div
-        key={img.id}
-        className="rounded shadow hover:ring-2 ring-blue-400 border bg-white cursor-pointer overflow-hidden transition-all duration-200 w-28 h-40 flex items-center justify-center"
-        tabIndex={0}
-        aria-label={`View ${img.alt}`}
-        onClick={() => openModal(img)}
-        style={{ minWidth: '96px', minHeight: '142px' }}
-      >
-        <img
-          src={img.src}
-          alt={img.alt}
-          className="object-cover w-full h-full"
-          style={{ maxWidth: '100%', maxHeight: '100%' }}
-        />
-      </div>
-    ))}
-  </div>
-  {showModal && (
-    <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50"
-      onClick={closeModal}
-    >
-      <div
-        className="relative bg-white rounded-lg shadow-lg p-4 max-w-4xl w-[90vw] max-h-[90vh] flex flex-col"
-        onClick={e => e.stopPropagation()}
-      >
-        <button
-          className="absolute top-3 right-4 text-3xl font-bold text-gray-700 hover:text-blue-800 focus:outline-none"
-          onClick={closeModal}
-          aria-label="Close"
-        >
-          ×
-        </button>
-        <img
-          src={activeImage?.src}
-          alt={activeImage?.alt}
-          className="w-full h-auto max-h-[70vh] object-contain mx-auto pt-8"
-        />
-        <p className="mt-4 text-lg text-center text-blue-gray-900 font-semibold">{activeImage?.alt}</p>
-      </div>
-    </div>
-  )}
-</div>
 
-              //ADTN
+                {/* ADDITION HERE */}
+                <div className="mt-8">
+                  <Typography
+                    variant="h5"
+                    color="blue-gray"
+                    className="mb-4 font-semibold text-center md:text-left"
+                  >
+                    Recognitions & Certifications
+                  </Typography>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
+                    {certificateImages.map((src, index) => (
+                      <img
+                        key={index}
+                        src={src}
+                        alt={`Certificate ${index + 1}`}
+                        onClick={() => openImage(index)}
+                        className="w-48 md:w-56 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </CardBody>
         </Card>
       </div>
-      {/* <div>
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="mb-12 text-center">
-              <Typography
-                variant="h3"
-                color="blue-gray"
-                className="mb-2 font-semibold uppercase tracking-wider"
-              >
-                OUR CLIENTS
-              </Typography>
-              <Typography variant="h5" color="deep-purple">
-                TRUSTED BY INDUSTRY LEADERS
-              </Typography>
-            </div>
-            <div className="flex justify-center overflow-x-auto gap-8 py-4 mx-auto">
-              {clients.map((client, index) => (
-                <img
-                  key={index}
-                  src={client}
-                  alt={`Client ${index + 1}`}
-                  className="h-40 w-80 object-contain flex-shrink-0"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      </div> */}
 
-      {/* <div className="bg-orange-900 py-24 sm:py-32">
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
-    <h2 className="text-center text-lg/8 font-semibold text-white">Trusted by the world’s most innovative teams</h2>
-    <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-      <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/transistor-logo-white.svg" alt="Transistor"/>
-      <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/reform-logo-white.svg" alt="Reform"/>
-      <img className="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/tuple-logo-white.svg" alt="Tuple"/>
-      <img className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-white.svg" alt="SavvyCal"/>
-      <img className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/statamic-logo-white.svg" alt="Statamic"/>
-    </div>
-  </div>
-</div> */}
+      {/* MODAL VIEWER */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black/80 z-50"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <button
+            onClick={closeModal}
+            className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl"
+          >
+            <XMarkIcon className="w-6 h-6" />
+          </button>
+          <button
+            onClick={showPrev}
+            className="absolute left-4 text-gray-300 hover:text-white"
+          >
+            <ChevronLeftIcon className="w-10 h-10" />
+          </button>
+          <img
+            src={certificateImages[currentIndex]}
+            alt="Certificate"
+            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain"
+          />
+          <button
+            onClick={showNext}
+            className="absolute right-4 text-gray-300 hover:text-white"
+          >
+            <ChevronRightIcon className="w-10 h-10" />
+          </button>
+        </div>
+      )}
 
       <FooterWithSitemap />
     </div>
