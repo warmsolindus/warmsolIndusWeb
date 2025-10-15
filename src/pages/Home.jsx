@@ -20,9 +20,9 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const certificateImages = [
-    "/images/iso1.jpg",
-    "/images/iso2.jpg",
-    "/images/iso3.jpg",
+    "/images/cert1.jpg",
+    "/images/cert2.jpg",
+    "/images/cert3.jpg",
   ];
 
   const openImage = (index) => {
