@@ -9,11 +9,7 @@ import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
 import { Link } from "react-router-dom";
 import { ImageCarousel } from "../components/Carousel";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/solid";
+import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   useEffect(() => {
@@ -22,25 +18,16 @@ export default function Home() {
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [fadeIn, setFadeIn] = useState(false);
   const [touchStartX, setTouchStartX] = useState(null);
 
-  const certificateImages = [
-    "/images/iso1.jpg",
-    "/images/iso2.jpg",
-    "/images/iso3.jpg",
-  ];
+  const certificateImages = ["/images/cert1.jpg", "/images/cert2.jpg", "/images/cert3.jpg"];
 
   const openImage = (index) => {
     setSelectedImage(certificateImages[index]);
     setCurrentIndex(index);
-    setTimeout(() => setFadeIn(true), 10); // trigger fade-in
   };
 
-  const closeModal = () => {
-    setFadeIn(false);
-    setTimeout(() => setSelectedImage(null), 200); // fade-out before closing
-  };
+  const closeModal = () => setSelectedImage(null);
 
   const showNext = () =>
     setCurrentIndex((prev) => (prev + 1) % certificateImages.length);
@@ -50,10 +37,8 @@ export default function Home() {
       prev === 0 ? certificateImages.length - 1 : prev - 1
     );
 
-  // Mobile swipe handling
-  const handleTouchStart = (e) => {
-    setTouchStartX(e.touches[0].clientX);
-  };
+  // Swipe for mobile
+  const handleTouchStart = (e) => setTouchStartX(e.touches[0].clientX);
   const handleTouchEnd = (e) => {
     if (!touchStartX) return;
     const diff = touchStartX - e.changedTouches[0].clientX;
@@ -89,7 +74,11 @@ export default function Home() {
             className="mb-6 tracking-wider sm:text-left"
           >
             Welcome to Warmsol Industries, your trusted partner in premium
-            industrial solutions...
+            industrial solutions. With a steadfast commitment to excellence, we
+            specialize in providing top-tier Insulation Materials, Metal
+            Jacketing Materials and Accessories, and Refractory Materials,
+            alongside Comprehensive Procurement Services tailored to meet the
+            unique demands of our clients.
           </Typography>
           <div className="text-center sm:text-left">
             <Link to={"/about-us"}>
@@ -102,7 +91,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
         <div className="max-w-3xl mx-auto mt-12">
           <Typography
             variant="h6"
@@ -115,7 +103,13 @@ export default function Home() {
             variant="paragraph"
             className="tracking-wider text-center sm:text-left"
           >
-            At Warmsol Industries, we are driven by a passion for innovation...
+            At Warmsol Industries, we are driven by a passion for innovation and
+            quality. Our expertise lies in delivering products and services that
+            enhance operational efficiency, ensure durability, and provide
+            cost-effective solutions for industries worldwide. Whether
+            safeguarding systems from heat loss or ensuring structural integrity
+            with high-performance refractory materials, our solutions are
+            engineered to excel under the most challenging conditions.
           </Typography>
         </div>
       </div>
@@ -126,7 +120,80 @@ export default function Home() {
           <Typography variant="h3" className="mb-8 text-center" color="white">
             WHAT WE DO?
           </Typography>
-          {/* ...content omitted for brevity */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <Typography
+                variant="h4"
+                color="white"
+                className="mb-4 font-bold text-center md:text-left"
+              >
+                MANUFACTURING DIVISION
+              </Typography>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <Link to={"/insulation-materials"}>
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="blue-gray"
+                  >
+                    Insulation Materials
+                  </Button>
+                </Link>
+                <Link to={"/metal-jacketing-materials"}>
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="gray"
+                  >
+                    Metal Jacketing Materials
+                  </Button>
+                </Link>
+                <Link to={"/insulation-and-cladding-accessories"}>
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="gray"
+                  >
+                    Insulation & Cladding Accessories
+                  </Button>
+                </Link>
+                <Link to={"/refractory-materials"}>
+                  <Button
+                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                    color="blue-gray"
+                  >
+                    Refractory Materials
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div>
+              <Typography
+                variant="h4"
+                color="white"
+                className="mb-4 font-bold text-center md:text-left"
+              >
+                PROCUREMENT SERVICES
+              </Typography>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <Button
+                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
+                  color="blue-gray"
+                >
+                  Pipe and fittings
+                </Button>
+                <Button
+                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
+                  color="gray"
+                >
+                  Electrical and instrumentation materials
+                </Button>
+                <Button
+                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
+                  color="gray"
+                >
+                  Hand tools and consumables
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -157,14 +224,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* WHY CHOOSE US + CERTIFICATES */}
+      {/* WHY CHOOSE US */}
       <div>
         <Card className="mb-8 mx-4 overflow-hidden">
           <CardBody className="p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">
                 <img
-                  src="/images/why.jpg"
+                  src="/images/why.jpg?height=300&width=400"
                   alt="WarmSol Industries Facility"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
@@ -177,7 +244,6 @@ export default function Home() {
                 >
                   WHY CHOOSE US?
                 </Typography>
-
                 <ul className="list-disc list-inside mb-4 text-gray-700">
                   <li>Extensive industry expertise</li>
                   <li>Commitment to quality and safety standards</li>
@@ -185,27 +251,36 @@ export default function Home() {
                   <li>Innovative and cost-effective solutions</li>
                   <li>Unwavering dedication to customer success</li>
                 </ul>
+                <Typography
+                  variant="paragraph"
+                  className="mb-4 text-base md:text-lg text-gray-700"
+                >
+                  Join the many businesses that trust Warmsol Industries for
+                  their insulation, metal jacketing, refractory, and procurement
+                  needs. Together, we can build stronger, more efficient, and
+                  sustainable industrial system
+                </Typography>
+              </div>
 
-                {/* Certificates Thumbnails */}
-                <div className="mt-8">
-                  <Typography
-                    variant="h5"
-                    color="blue-gray"
-                    className="mb-4 font-semibold text-center md:text-left"
-                  >
-                    Recognitions & Certifications
-                  </Typography>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
-                    {certificateImages.map((src, index) => (
-                      <img
-                        key={index}
-                        src={src}
-                        alt={`Certificate ${index + 1}`}
-                        onClick={() => openImage(index)}
-                        className="w-48 md:w-56 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
-                      />
-                    ))}
-                  </div>
+              {/* ADDITION HERE */}
+              <div className="w-full mt-8">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-4 font-semibold text-center md:text-left"
+                >
+                  Recognitions & Certifications
+                </Typography>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
+                  {certificateImages.map((src, index) => (
+                    <img
+                      key={index}
+                      src={src}
+                      alt={`Certificate ${index + 1}`}
+                      onClick={() => openImage(index)}
+                      className="w-48 md:w-56 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -216,36 +291,27 @@ export default function Home() {
       {/* MODAL VIEWER */}
       {selectedImage && (
         <div
-          className={`fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity duration-300 ${
-            fadeIn ? "opacity-100" : "opacity-0"
-          } z-50`}
+          className="fixed inset-0 flex items-center justify-center bg-black/80 z-50 animate-fadeIn"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Close Button */}
           <button
             onClick={closeModal}
-            className="absolute top-6 right-6 text-gray-300 hover:text-white bg-black/40 p-1 rounded-full"
+            className="absolute top-3 right-3 text-gray-300 hover:text-white text-xl"
           >
-            <XMarkIcon className="w-5 h-5" />
+            <XMarkIcon className="w-6 h-6" />
           </button>
-
-          {/* Prev Button */}
           <button
             onClick={showPrev}
             className="absolute left-4 text-gray-300 hover:text-white"
           >
             <ChevronLeftIcon className="w-10 h-10" />
           </button>
-
-          {/* Image */}
           <img
             src={certificateImages[currentIndex]}
             alt="Certificate"
-            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain transition-opacity duration-300"
+            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain transition-opacity duration-300 opacity-100"
           />
-
-          {/* Next Button */}
           <button
             onClick={showNext}
             className="absolute right-4 text-gray-300 hover:text-white"
@@ -258,4 +324,13 @@ export default function Home() {
       <FooterWithSitemap />
     </div>
   );
+}
+
+/* Add this animation in your global CSS file (index.css or tailwind.css) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
 }
