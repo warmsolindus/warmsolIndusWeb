@@ -54,12 +54,14 @@ import AcidProofBricks from "../pages/products/AcidProofBricks";
 import InsulatingCastables from "../pages/products/InsulatingCastables";
 import DenseRefractoryCastable from "../pages/products/DenseRefractoryCastables";
 import RammingMass from "../pages/products/RammingMass";
-
+import home2 from "../pages/home2";
 export default function UserRoute() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
+
+      <Route path="/home2" element={<home2 />} />
       <Route path="/contact-us" element={<ContactSection />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/insulation-materials" element={<InsulationMaterials />} />
