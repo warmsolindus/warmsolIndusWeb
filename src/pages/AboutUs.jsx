@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect } from "react";
 import {
   Card,
   CardBody,
@@ -11,115 +11,19 @@ function AboutUs() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // thumbnails (small previews) and full-size certificates
-  const certificateThumbs = [
-    "/images/iso1.jpg",
-    "/images/iso2.jpg",
-    "/images/iso3.jpg",
-  ];
-
-  const certificateFull = [
-    "/images/cert1.jpg",
-    "/images/cert2.jpg",
-    "/images/cert3.jpg",
-  ];
-
-  // selected index for modal (null = closed)
-  const [selectedIndex, setSelectedIndex] = useState(null);
-
-  const openAt = (idx) => setSelectedIndex(idx);
-  const closeModal = () => setSelectedIndex(null);
-
-  const showPrev = (e) => {
-    if (e) e.stopPropagation();
-    setSelectedIndex((i) => {
-      if (i === null) return null;
-      return (i - 1 + certificateFull.length) % certificateFull.length;
-    });
-  };
-  const showNext = (e) => {
-    if (e) e.stopPropagation();
-    setSelectedIndex((i) => {
-      if (i === null) return null;
-      return (i + 1) % certificateFull.length;
-    });
-  };
-
-  // keyboard nav (ESC / left / right)
-  useEffect(() => {
-    function onKey(e) {
-      if (selectedIndex === null) return;
-      if (e.key === "Escape") closeModal();
-      if (e.key === "ArrowLeft") showPrev();
-      if (e.key === "ArrowRight") showNext();
-    }
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [selectedIndex]);
-
-  // prevent body scroll when modal open
-  useEffect(() => {
-    if (selectedIndex !== null) {
-      const prev = document.body.style.overflow;
-      document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.overflow = prev || "";
-      };
-    }
-  }, [selectedIndex]);
-
-  // swipe handling for mobile
-  const touchStartX = useRef(null);
-  const touchCurrentX = useRef(null);
-  const touchActive = useRef(false);
-  const SWIPE_THRESHOLD = 50; // px
-
-  const onTouchStart = (e) => {
-    if (!e.touches || e.touches.length === 0) return;
-    touchActive.current = true;
-    touchStartX.current = e.touches[0].clientX;
-    touchCurrentX.current = touchStartX.current;
-  };
-
-  const onTouchMove = (e) => {
-    if (!touchActive.current || !e.touches || e.touches.length === 0) return;
-    touchCurrentX.current = e.touches[0].clientX;
-  };
-
-  const onTouchEnd = () => {
-    if (!touchActive.current || touchStartX.current === null || touchCurrentX.current === null) {
-      touchActive.current = false;
-      return;
-    }
-    const dx = touchCurrentX.current - touchStartX.current;
-    if (Math.abs(dx) > SWIPE_THRESHOLD) {
-      if (dx < 0) {
-        // swipe left -> next
-        showNext();
-      } else {
-        // swipe right -> prev
-        showPrev();
-      }
-    }
-    touchActive.current = false;
-    touchStartX.current = null;
-    touchCurrentX.current = null;
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
-      <NavigationbarWithDropdownMultilevelMenu />
+          
+<div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
+    <NavigationbarWithDropdownMultilevelMenu />
 
-      {/* Hero */}
-      <div className="relative h-[60vh] md:h-[80vh] w-full">
+    <div className="relative h-[60vh] md:h-[80vh] w-full" >
         <div className="absolute inset-0 ">
           <img
             src="/images/industry.jpg?height=800&width=1200"
             alt="aboutUs"
             className="h-full w-full object-cover bg-fixed"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/50"/>
         </div>
         <div className="relative h-full flex items-center justify-center">
           <Typography
@@ -133,33 +37,26 @@ function AboutUs() {
       </div>
 
       <div className="px-4 py-12">
-        {/* About Card */}
+        {/* <Typography variant="h1" color="blue-gray" className="mb-6 text-2xl md:text-3xl lg:text-4xl text-center font-extrabold">
+          About WARMSOL
+        </Typography> */}
+        
         <Card className="mb-8 overflow-hidden">
           <CardBody className="p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/2">
-                <img
-                  src="/images/aboutus.png?height=300&width=400"
-                  alt="WarmSol Industries Facility"
+                <img 
+                  src="/images/aboutus.png?height=300&width=400" 
+                  alt="WarmSol Industries Facility" 
                   className="w-full h-auto rounded-lg shadow-lg brightness-75"
                 />
               </div>
               <div className="w-full md:w-1/2">
-                <Typography
-                  variant="h2"
-                  color="blue-gray"
-                  className="mb-4 text-2xl md:text-3xl font-semibold"
-                >
+                <Typography variant="h2" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold">
                   Leading the Way in Insulation Solutions
                 </Typography>
-                <Typography
-                  variant="paragraph"
-                  className="mb-4 text-base md:text-lg text-gray-700"
-                >
-                  WarmSol Industries stands at the forefront of insulation
-                  technology, manufacturing and distributing world-class
-                  products that meet the most demanding industry standards. Our
-                  comprehensive range includes:
+                <Typography variant="paragraph" className="mb-4 text-base md:text-lg text-gray-700">
+                  WarmSol Industries stands at the forefront of insulation technology, manufacturing and distributing world-class products that meet the most demanding industry standards. Our comprehensive range includes:
                 </Typography>
                 <ul className="list-image-[url(/images/tick2.jpg)] list-outside mb-4 pl-4 text-gray-700">
                   <li>Hot and Cold insulation materials</li>
@@ -168,34 +65,22 @@ function AboutUs() {
                   <li>Refractory materials</li>
                   <li>Procurement services</li>
                 </ul>
-                <Typography
-                  variant="paragraph"
-                  className="text-base md:text-lg text-gray-700"
-                >
-                  With expertise and a commitment to innovation, we are your
-                  trusted partner in achieving efficient, effective, and
-                  sustainable insulation solutions for both large-scale
-                  industrial projects and commercial spaces.
+                <Typography variant="paragraph" className="text-base md:text-lg text-gray-700">
+                  With expertise and a commitment to innovation, we are your trusted partner in achieving efficient, effective, and sustainable insulation solutions for both large-scale industrial projects and commercial spaces.
                 </Typography>
               </div>
             </div>
           </CardBody>
         </Card>
 
-        {/* Mission + Vision */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <Card className="overflow-hidden">
             <CardBody className="p-6">
-              <Typography
-                variant="h3"
-                color="blue-gray"
-                className="mb-4 text-xl md:text-2xl font-semibold"
-              >
+              <Typography variant="h3" color="blue-gray" className="mb-4 text-xl md:text-2xl font-semibold">
                 Our Mission
               </Typography>
               <Typography variant="paragraph" className="text-base text-gray-700">
-                At WarmSol Industries, our mission is to deliver exceptional
-                insulation materials that ensure:
+                At WarmSol Industries, our mission is to deliver exceptional insulation materials that ensure:
               </Typography>
               <ul className="list-image-[url(/images/tick2.jpg)] list-outside mt-2 pl-4 text-gray-700">
                 <li>Optimal energy efficiency</li>
@@ -208,16 +93,11 @@ function AboutUs() {
 
           <Card className="overflow-hidden">
             <CardBody className="p-6">
-              <Typography
-                variant="h3"
-                color="blue-gray"
-                className="mb-4 text-xl md:text-2xl font-semibold"
-              >
+              <Typography variant="h3" color="blue-gray" className="mb-4 text-xl md:text-2xl font-semibold">
                 Our Vision
               </Typography>
               <Typography variant="paragraph" className="text-base text-gray-700">
-                We aspire to become the most trusted partner in the insulation
-                industry by:
+                We aspire to become the most trusted partner in the insulation industry by:
               </Typography>
               <ul className="list-image-[url(/images/tick2.jpg)] list-outside mt-2 pl-4 text-gray-700">
                 <li>Providing top-tier insulation products for industrial and commercial spaces</li>
@@ -229,46 +109,8 @@ function AboutUs() {
             </CardBody>
           </Card>
         </div>
-
-        {/* Certificates Section (using thumbnail images) */}
+//need the change//
         <Card className="overflow-hidden">
-          <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
-            <Typography
-              variant="h3"
-              color="blue-gray"
-              className="mb-4 text-2xl md:text-3xl font-semibold text-center"
-            >
-              Recognitions & Certifications
-            </Typography>
-
-            <Typography variant="paragraph" className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto">
-              We are proud to be recognized by government authorities for our excellence and commitment to quality. Tap any thumbnail to view the full certificate.
-            </Typography>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-              {certificateThumbs.map((thumb, idx) => (
-                <div
-                  key={idx}
-                  className="group relative cursor-pointer overflow-hidden rounded-lg"
-                  onClick={() => openAt(idx)}
-                >
-                  <img
-                    src={thumb}
-                    alt={`Certificate preview ${idx + 1}`}
-                    className="w-full h-48 object-cover rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-semibold">
-                    <div className="bg-black/40 px-3 py-1 rounded">View</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardBody>
-        </Card>
-
-        {/* Our Promise Card */}
-        <Card className="overflow-hidden mt-8">
           <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
             <Typography variant="h3" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold text-center">
               Our Promise to You
@@ -276,10 +118,9 @@ function AboutUs() {
             <Typography variant="paragraph" className="text-base md:text-lg text-gray-700 text-center max-w-3xl mx-auto">
               At WarmSol Industries, we are committed to excellence in every aspect of our business. Our promise to you includes:
             </Typography>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               <div className="text-center">
-                <img src="/images/quality.png" className="w-24 mx-auto" alt="Quality Assurance"/>
+                <img src="images/quality.png" className="w-24 mx-auto"/>
                 <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
                   Quality Assurance
                 </Typography>
@@ -288,7 +129,7 @@ function AboutUs() {
                 </Typography>
               </div>
               <div className="text-center">
-                <img src="/images/support.png" className="w-24 mx-auto" alt="Expert Support"/>
+                <img src="images/support.png" className="w-24 mx-auto"/>
                 <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
                   Expert Support
                 </Typography>
@@ -297,7 +138,7 @@ function AboutUs() {
                 </Typography>
               </div>
               <div className="text-center">
-                <img src="/images/sustainable.png" className="w-28 mx-auto" alt="Sustainable Practices"/>
+                <img src="images/sustainable.png" className="w-28 mx-auto"/>
                 <Typography variant="h6" color="blue-gray" className="mb-2 font-semibold">
                   Sustainable Practices
                 </Typography>
@@ -308,83 +149,10 @@ function AboutUs() {
             </div>
           </CardBody>
         </Card>
-
-        {/* Modal (full images, dark backdrop, swipe + arrows + small close on image corner) */}
-        {selectedIndex !== null && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/55"
-            onClick={closeModal}
-            role="dialog"
-            aria-modal="true"
-          >
-            <div
-              className="relative max-w-5xl w-full max-h-[95vh] flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Left arrow */}
-              <button
-                onClick={showPrev}
-                className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
-                aria-label="Previous"
-                title="Previous"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              {/* Image wrapper with touch handlers */}
-              <div
-                className="relative"
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
-                onTouchCancel={onTouchEnd}
-                style={{ touchAction: "pan-y" }}
-              >
-                {/* Close button positioned over the image's top-right corner */}
-                <button
-                  onClick={closeModal}
-                  className="absolute -top-3 -right-3 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full p-1.5 md:p-2"
-                  aria-label="Close"
-                  title="Close"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-
-                <img
-                  src={certificateFull[selectedIndex]}
-                  alt={`Certificate ${selectedIndex + 1}`}
-                  className="object-contain max-h-[85vh] max-w-full rounded-md shadow-lg"
-                />
-
-                {/* page indicator */}
-                <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-black/40 text-white text-sm px-3 py-1 rounded">
-                  {selectedIndex + 1} / {certificateFull.length}
-                </div>
-              </div>
-
-              {/* Right arrow */}
-              <button
-                onClick={showNext}
-                className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 md:p-3 backdrop-blur-sm"
-                aria-label="Next"
-                title="Next"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        )}
       </div>
-
       <FooterWithSitemap />
     </div>
+  
   );
 }
-
 export default AboutUs;
