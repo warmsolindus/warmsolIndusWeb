@@ -60,8 +60,7 @@ export default function UserRoute() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
-
-      <Route path="/Homee" element={<Homee />} />
+      <Route path="/homee" element={<Homee />} />
       <Route path="/contact-us" element={<ContactSection />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/insulation-materials" element={<InsulationMaterials />} />
