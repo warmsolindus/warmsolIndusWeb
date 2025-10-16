@@ -21,22 +21,45 @@ export function ContactSection() {
         <div
           className="absolute inset-0 bg-[url('/images/contact_us.jpg?height=448&width=1349')] bg-fixed bg-contain"
         >
-          {/* <img
-            src="/images/contactUs.jpg?height=800&width=1200"
-            alt="Warehouse"
-            className="h-full w-full object-cover"
-          /> */}
           <div className="absolute inset-0 bg-black/50" />
         </div>
-        <div className="relative h-full flex items-center justify-center">
+        <div className="relative h-full flex flex-col items-center justify-center text-center text-white">
           <Typography
             variant="h1"
             color="white"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold"
           >
             CONTACT US
           </Typography>
-          {/* email and phone*/}
+
+          {/* email and phone */}
+          <div className="mt-4 space-y-1">
+            <Typography className="text-sm md:text-lg text-gray-200">
+              Email:{" "}
+              <a
+                href="mailto:sales@warmsolindus.com"
+                className="text-blue-200 hover:text-white transition-colors"
+              >
+                sales@warmsolindus.com
+              </a>
+            </Typography>
+            <Typography className="text-sm md:text-lg text-gray-200">
+              Mob:{" "}
+              <a
+                href="tel:+966581858426"
+                className="text-blue-200 hover:text-white transition-colors"
+              >
+                +966 58 185 8426
+              </a>
+              ,{" "}
+              <a
+                href="tel:+971565963163"
+                className="text-blue-200 hover:text-white transition-colors"
+              >
+                +971 56 596 33163
+              </a>
+            </Typography>
+          </div>
         </div>
       </div>
 
@@ -96,11 +119,11 @@ export function ContactSection() {
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-phone" />
-                      <a href="tel:+971 56 4944247"> +971 56 5963316</a>
+                      <a href="tel:+971565963316"> +971 56 5963316</a>
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-envelope" />{" "}
-                      <a href="mailto:sales@warmsolindus.com">
+                      <a href="mailto:bdm@warmsolindus.com">
                         bdm@warmsolindus.com
                       </a>
                     </Typography>
@@ -131,9 +154,7 @@ export function ContactSection() {
               <div></div>
             </div>
 
-            <form
-              className="flex flex-col gap-4 bg-white rounded-lg p-8 "
-            >
+            <form className="flex flex-col gap-4 bg-white rounded-lg p-8 ">
               <div>
                 <Typography className="mb-4 !text-base lg:!text-2xl font-bold">
                   Contact Us
