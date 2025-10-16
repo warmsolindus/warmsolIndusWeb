@@ -91,9 +91,6 @@ export function ContactSection() {
                   </Typography>
                   <div className="py-2">
                     <Typography className="font-semibold">
-                      Riyas A S
-                    </Typography>
-                    <Typography className="font-semibold">
                       Business Development Manager
                     </Typography>
                     <Typography className="font-semibold">
