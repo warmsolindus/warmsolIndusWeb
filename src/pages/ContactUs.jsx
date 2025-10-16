@@ -89,8 +89,7 @@ export function ContactSection() {
                     variant="h5"
                     className="py-4 !text-base lg:!text-2xl"
                   >
-                    <i className="fa fa-building text-2xl" /> &nbsp; FIND US AT
-                    OFFICE
+                    <i className="fa fa-building text-2xl" /> &nbsp; Corporate Office
                   </Typography>
                   <div className="py-4">
                     <Typography className="font-semibold">
@@ -105,6 +104,15 @@ export function ContactSection() {
                     <Typography className="font-semibold">Sharjah ,</Typography>
                     <Typography className="font-semibold">
                       United Arab Emirates
+                    </Typography>
+                    <Typography className="font-semibold">
+                      <i className="fa fa-envelope" />{" "}
+                      <a
+                        href="mailto:sales.uae@warmsolindus.com"
+                        className="hover:underline"
+                      >
+                        sales.uae@warmsolindus.com
+                      </a>
                     </Typography>
                   </div>
                   <Typography
