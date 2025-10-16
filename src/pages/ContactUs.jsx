@@ -36,6 +36,9 @@ export function ContactSection() {
           >
             CONTACT US
           </Typography>
+           <Typography className="mb-10 font-normal !text-lg lg:mb-20 mx-auto max-w-3xl !text-white-500">
+            CONTACT US
+          </Typography>
         </div>
       </div>
 
