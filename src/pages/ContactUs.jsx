@@ -34,7 +34,7 @@ export function ContactSection() {
             color="white"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
-            CONTACT US
+            CONTACT USs
           </Typography>
         </div>
       </div>
