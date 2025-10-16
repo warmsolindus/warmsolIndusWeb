@@ -21,11 +21,6 @@ export function ContactSection() {
         <div
           className="absolute inset-0 bg-[url('/images/contact_us.jpg?height=448&width=1349')] bg-fixed bg-contain"
         >
-          {/* <img
-            src="/images/contactUs.jpg?height=800&width=1200"
-            alt="Warehouse"
-            className="h-full w-full object-cover"
-          /> */}
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative h-full flex items-center justify-center">
@@ -91,14 +86,11 @@ export function ContactSection() {
                   </Typography>
                   <div className="py-2">
                     <Typography className="font-semibold">
-                      Riyas A S
-                    </Typography>
-                    <Typography className="font-semibold">
                       Business Development Manager
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-phone" />
-                      <a href="tel:+971 56 4944247"> +971 56 5963316</a>
+                      <a href="tel:+971565963316"> +971 56 5963316</a>
                     </Typography>
                     <Typography className="font-semibold">
                       <i className="fa fa-envelope" />{" "}
@@ -130,17 +122,19 @@ export function ContactSection() {
                   </div>
                 </div>
               </div>
-              <div></div>
             </div>
 
-            <form
-              className="flex flex-col gap-4 bg-white rounded-lg p-8 "
-            >
+            <form className="flex flex-col gap-4 bg-white rounded-lg p-8 ">
               <div>
-                <Typography className="mb-4 !text-base lg:!text-2xl font-bold">
+                <Typography className="mb-2 !text-base lg:!text-2xl font-bold">
                   Contact Us
                 </Typography>
+                <div className="mb-6 text-sm lg:text-base text-gray-700">
+                  <p>Email: <a href="mailto:sales@warmsolindus.com" className="text-blue-700 hover:underline">sales@warmsolindus.com</a></p>
+                  <p>Mob: <a href="tel:+966581858426" className="text-blue-700 hover:underline">+966 58 185 8426</a>, <a href="tel:+971565963316" className="text-blue-700 hover:underline">+971 56 596 33163</a></p>
+                </div>
               </div>
+
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Typography
