@@ -34,7 +34,7 @@ export function ContactSection() {
             color="white"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
-            CONTACT USs
+            CONTACT US
           </Typography>
         </div>
       </div>
@@ -90,6 +90,9 @@ export function ContactSection() {
                     <i className="fa fa-phone text-2xl" color="deep-orange" /> &nbsp; GIVE US A RING
                   </Typography>
                   <div className="py-2">
+                    <Typography className="font-semibold">
+                      Riyas A S
+                    </Typography>
                     <Typography className="font-semibold">
                       Business Development Manager
                     </Typography>
