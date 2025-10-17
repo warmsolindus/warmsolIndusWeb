@@ -336,5 +336,7 @@ export default function Home() {
     </button>
   </div>
 )}
+      <FooterWithSitemap />
+    </div>
   );
 }
