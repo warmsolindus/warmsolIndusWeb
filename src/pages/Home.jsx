@@ -210,7 +210,7 @@ export default function Home() {
                   color="blue-gray"
                   className="mb-4 text-2xl md:text-3xl font-semibold"
                 >
-				//why chosse//
+				
                   WHY CHOOSE US?
                 </Typography>
 
@@ -231,7 +231,7 @@ export default function Home() {
                   sustainable industrial system
                 </Typography>
               </div>
-			  //ADDITION HERE//
+			  
             </div>
           </CardBody>
         </Card>
