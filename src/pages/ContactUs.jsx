@@ -34,33 +34,37 @@ export function ContactSection() {
           </Typography>
 
           {/* email and phone */}
-          <div className="mt-4 space-y-1">
-            <Typography className="text-sm md:text-lg text-gray-200">
-              Email:{" "}
-              <a
-                href="mailto:sales@warmsolindus.com"
-                className="text-blue-200 hover:text-white transition-colors"
-              >
-                sales@warmsolindus.com
-              </a>
-            </Typography>
-            <Typography className="text-sm md:text-lg text-gray-200">
-              Mob:{" "}
-              <a
-                href="tel:+966581858426"
-                className="text-blue-200 hover:text-white transition-colors"
-              >
-                +966 58 185 8426
-              </a>
-              ,{" "}
-              <a
-                href="tel:+971565963163"
-                className="text-blue-200 hover:text-white transition-colors"
-              >
-                +971 56 596 33163
-              </a>
-            </Typography>
-          </div>
+          {/* email and phone */}
+<div className="mt-4 flex flex-col items-center space-y-2 text-gray-200">
+  <div className="flex items-center space-x-2 text-sm md:text-lg">
+    <i className="fa fa-envelope" /> 
+    <span>Email:</span>
+    <a
+      href="mailto:sales@warmsolindus.com"
+      className="text-blue-200 hover:text-white transition-colors"
+    >
+      sales@warmsolindus.com
+    </a>
+  </div>
+  <div className="flex items-center space-x-2 text-sm md:text-lg">
+    <i className="fa fa-phone" /> 
+    <span>Mob:</span>
+    <a
+      href="tel:+966581858426"
+      className="text-blue-200 hover:text-white transition-colors"
+    >
+      +966 58 185 8426
+    </a>
+    <span>,</span>
+    <a
+      href="tel:+971565963163"
+      className="text-blue-200 hover:text-white transition-colors"
+    >
+      +971 56 596 33163
+    </a>
+  </div>
+</div>
+
         </div>
       </div>
 
