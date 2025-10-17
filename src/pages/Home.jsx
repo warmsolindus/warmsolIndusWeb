@@ -301,39 +301,40 @@ export default function Home() {
       </div>
 
       {/* MODAL VIEWER */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 flex items-center justify-center bg-black/80 z-50 animate-fadeIn"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          <button
-            onClick={closeModal}
-            className="absolute top-3 right-3 text-gray-300 hover:text-white text-xl"
-          >
-            <XMarkIcon className="w-6 h-6" />
-          </button>
-          <button
-            onClick={showPrev}
-            className="absolute left-4 text-gray-300 hover:text-white"
-          >
-            <ChevronLeftIcon className="w-10 h-10" />
-          </button>
-          <img
-            src={certificateImages[currentIndex]}
-            alt="Certificate"
-            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain transition-opacity duration-300 opacity-100"
-          />
-          <button
-            onClick={showNext}
-            className="absolute right-4 text-gray-300 hover:text-white"
-          >
-            <ChevronRightIcon className="w-10 h-10" />
-          </button>
-        </div>
-      )}
+{selectedImage && (
+  <div
+    className="fixed inset-0 flex items-center justify-center bg-black/80 z-50"
+    onTouchStart={handleTouchStart}
+    onTouchEnd={handleTouchEnd}
+  >
+    <button
+      onClick={showPrev}
+      className="absolute left-4 text-gray-300 hover:text-white"
+    >
+      <ChevronLeftIcon className="w-10 h-10" />
+    </button>
 
-      <FooterWithSitemap />
+    <div className="relative">
+      <img
+        src={certificateImages[currentIndex]}
+        alt="Certificate"
+        className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain"
+      />
+      <button
+        onClick={closeModal}
+        className="absolute top-2 right-2 text-gray-300 hover:text-white p-1 bg-black/40 rounded-full"
+      >
+        <XMarkIcon className="w-6 h-6" />
+      </button>
     </div>
+
+    <button
+      onClick={showNext}
+      className="absolute right-4 text-gray-300 hover:text-white"
+    >
+      <ChevronRightIcon className="w-10 h-10" />
+    </button>
+  </div>
+)}
   );
 }
