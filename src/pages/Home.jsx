@@ -280,7 +280,7 @@ export default function Home() {
                     color="blue-gray"
                     className="mb-4 font-semibold text-center md:text-left"
                   >
-                    Recognitions & Certifications
+                        We are Certified
                   </Typography>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
                     {certificateImages.map((src, index) => (
@@ -289,7 +289,7 @@ export default function Home() {
                         src={src}
                         alt={`Certificate ${index + 1}`}
                         onClick={() => openImage(index)}
-                        className="w-48 md:w-56 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
+                        className="w-40 md:w-48 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
                       />
                     ))}
                   </div>
