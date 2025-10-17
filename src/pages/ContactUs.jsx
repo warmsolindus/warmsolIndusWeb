@@ -32,13 +32,10 @@ export function ContactSection() {
           >
             CONTACT US
           </Typography>
-
-          {/* email and phone */}
           {/* email and phone */}
 <div className="mt-4 flex flex-col items-center space-y-2 text-gray-200">
   <div className="flex items-center space-x-2 text-sm md:text-lg">
-    <i className="fa fa-envelope" /> 
-    <span>Email:</span>
+    <i className="fa fa-envelope" />
     <a
       href="mailto:sales@warmsolindus.com"
       className="text-blue-200 hover:text-white transition-colors"
@@ -48,7 +45,6 @@ export function ContactSection() {
   </div>
   <div className="flex items-center space-x-2 text-sm md:text-lg">
     <i className="fa fa-phone" /> 
-    <span>Mob:</span>
     <a
       href="tel:+966581858426"
       className="text-blue-200 hover:text-white transition-colors"
