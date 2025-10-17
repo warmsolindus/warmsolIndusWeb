@@ -37,6 +37,18 @@ export default function Home() {
       prev === 0 ? certificateImages.length - 1 : prev - 1
     );
 
+  // Keyboard support
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!selectedImage) return;
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage]);
+
   // Swipe for mobile
   const handleTouchStart = (e) => setTouchStartX(e.touches[0].clientX);
   const handleTouchEnd = (e) => {
@@ -228,7 +240,7 @@ export default function Home() {
       <div>
         <Card className="mb-8 mx-4 overflow-hidden">
           <CardBody className="p-8">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/2">
                 <img
                   src="/images/why.jpg?height=300&width=400"
@@ -260,27 +272,27 @@ export default function Home() {
                   needs. Together, we can build stronger, more efficient, and
                   sustainable industrial system
                 </Typography>
-              </div>
 
-              {/* ADDITION HERE */}
-              <div className="w-full mt-8">
-                <Typography
-                  variant="h5"
-                  color="blue-gray"
-                  className="mb-4 font-semibold text-center md:text-left"
-                >
-                  Recognitions & Certifications
-                </Typography>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
-                  {certificateImages.map((src, index) => (
-                    <img
-                      key={index}
-                      src={src}
-                      alt={`Certificate ${index + 1}`}
-                      onClick={() => openImage(index)}
-                      className="w-48 md:w-56 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
-                    />
-                  ))}
+                {/* ADDITION HERE */}
+                <div className="w-full mt-8">
+                  <Typography
+                    variant="h5"
+                    color="blue-gray"
+                    className="mb-4 font-semibold text-center md:text-left"
+                  >
+                    Recognitions & Certifications
+                  </Typography>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
+                    {certificateImages.map((src, index) => (
+                      <img
+                        key={index}
+                        src={src}
+                        alt={`Certificate ${index + 1}`}
+                        onClick={() => openImage(index)}
+                        className="w-48 md:w-56 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
