@@ -17,6 +17,7 @@ export function ContactSection() {
     <div className="bg-amber-100">
       <NavigationbarWithDropdownMultilevelMenu />
 
+      {/* Banner */}
       <div className="relative h-[20vh] md:h-[58vh] w-full">
         <div
           className="absolute inset-0 bg-[url('/images/contact_us.jpg?height=448&width=1349')] bg-fixed bg-contain"
@@ -63,6 +64,7 @@ export function ContactSection() {
         </div>
       </div>
 
+      {/* Main Section */}
       <section className="px-8 py-8 lg:py-16">
         <div className="container mx-auto text-center">
           <Typography
@@ -77,7 +79,9 @@ export function ContactSection() {
             technical assistance, or suggestions for improvement, our team is
             eager to hear from you.
           </Typography>
+
           <div className="grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-2 items-start text-start">
+            {/* Left Info */}
             <div>
               <div>
                 <Typography className="">
@@ -159,9 +163,9 @@ export function ContactSection() {
                   </div>
                 </div>
               </div>
-              <div></div>
             </div>
 
+            {/* Contact Form */}
             <form className="flex flex-col gap-4 bg-white rounded-lg p-8 ">
               <div>
                 <Typography className="mb-4 !text-base lg:!text-2xl font-bold">
@@ -259,8 +263,69 @@ export function ContactSection() {
               </Button>
             </form>
           </div>
+
+          {/* Our Regional Presence */}
+          <div className="mt-16">
+            <Typography
+              variant="h5"
+              className="mb-10 !text-2xl font-bold text-center"
+            >
+              Our Regional Presence
+            </Typography>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* KSA */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography variant="h6" className="font-semibold mb-2">
+                  KSA
+                </Typography>
+                <Typography className="mb-2 text-gray-700 text-sm">
+                  Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist, Al Jubail, KSA
+                </Typography>
+                <Typography className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.ksa@warmsolindus.com">
+                    sales.ksa@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
+
+              {/* QATAR */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography variant="h6" className="font-semibold mb-2">
+                  QATAR
+                </Typography>
+                <Typography className="mb-2 text-gray-700 text-sm">
+                  Building no 2, Zone 25, Street 890, Abha Street, Doha - Qatar
+                </Typography>
+                <Typography className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.qatar@warmsolindus.com">
+                    sales.qatar@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
+
+              {/* INDIA */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography variant="h6" className="font-semibold mb-2">
+                  INDIA
+                </Typography>
+                <Typography className="mb-2 text-gray-700 text-sm">
+                  No#242, Satra Plaza, Vashi, Sector 19d, Navi Mumbai 400 703. Maharashtra
+                </Typography>
+                <Typography className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.in@warmsolindus.com">
+                    sales.in@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
       <FooterWithSitemap />
     </div>
   );
