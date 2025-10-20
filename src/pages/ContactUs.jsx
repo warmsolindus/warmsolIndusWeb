@@ -14,7 +14,7 @@ export function ContactSection() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="bg-amber-100">
+    <div className="bg-gradient-to-r from-amber-200 to-blue-gray-200">
       <NavigationbarWithDropdownMultilevelMenu />
 
       {/* Banner */}
