@@ -119,6 +119,8 @@ export function ContactSection() {
                       </a>
                     </Typography>
                   </div>
+
+                  {/* COMMENTED AS PER REQUEST
                   <Typography
                     variant="h5"
                     className="py-4 !text-base lg:!text-2xl"
@@ -160,7 +162,7 @@ export function ContactSection() {
                     <IconButton className="rounded bg-[#333333] hover:shadow-[#333333]/20 focus:shadow-[#333333]/20 active:shadow-[#333333]/10">
                       <i className="fab fa-github text-lg" />
                     </IconButton>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
