@@ -109,7 +109,6 @@ function AboutUs() {
             </CardBody>
           </Card>
         </div>
-//need the change//
         <Card className="overflow-hidden">
           <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
             <Typography variant="h3" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold text-center">
