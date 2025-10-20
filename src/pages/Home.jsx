@@ -270,7 +270,7 @@ export default function Home() {
                   Join the many businesses that trust Warmsol Industries for
                   their insulation, metal jacketing, refractory, and procurement
                   needs. Together, we can build stronger, more efficient, and
-                  sustainable industrial system
+                  sustainable industrial systems.
                 </Typography>
 
                 {/* ADDITION HERE */}
@@ -280,18 +280,35 @@ export default function Home() {
                     color="blue-gray"
                     className="mb-4 font-semibold text-center md:text-left"
                   >
-                        We are Certified
+                    We are Certified
                   </Typography>
+
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
-                    {certificateImages.map((src, index) => (
-                      <img
-                        key={index}
-                        src={src}
-                        alt={`Certificate ${index + 1}`}
-                        onClick={() => openImage(index)}
-                        className="w-40 md:w-48 h-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
-                      />
-                    ))}
+                    {certificateImages.map((src, index) => {
+                      const thumbnailImages = [
+                        "/images/iso1.jpg",
+                        "/images/iso2.jpg",
+                        "/images/iso3.jpg",
+                      ];
+                      return (
+                        <div
+                          key={index}
+                          className="relative group w-40 md:w-48 h-auto rounded-lg shadow-md cursor-pointer overflow-hidden"
+                          onClick={() => openImage(index)}
+                        >
+                          <img
+                            src={thumbnailImages[index]}
+                            alt={`Certificate Thumbnail ${index + 1}`}
+                            className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <button className="bg-white text-gray-800 font-semibold py-1 px-3 rounded-full">
+                              View
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -301,41 +318,42 @@ export default function Home() {
       </div>
 
       {/* MODAL VIEWER */}
-{selectedImage && (
-  <div
-    className="fixed inset-0 flex items-center justify-center bg-black/80 z-50"
-    onTouchStart={handleTouchStart}
-    onTouchEnd={handleTouchEnd}
-  >
-    <button
-      onClick={showPrev}
-      className="absolute left-4 text-gray-300 hover:text-white"
-    >
-      <ChevronLeftIcon className="w-10 h-10" />
-    </button>
+      {selectedImage && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black/80 z-50"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <button
+            onClick={showPrev}
+            className="absolute left-4 text-gray-300 hover:text-white"
+          >
+            <ChevronLeftIcon className="w-10 h-10" />
+          </button>
 
-    <div className="relative">
-      <img
-        src={certificateImages[currentIndex]}
-        alt="Certificate"
-        className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain"
-      />
-      <button
-        onClick={closeModal}
-        className="absolute top-2 right-2 text-gray-300 hover:text-white p-1 bg-black/40 rounded-full"
-      >
-        <XMarkIcon className="w-6 h-6" />
-      </button>
-    </div>
+          <div className="relative">
+            <img
+              src={certificateImages[currentIndex]}
+              alt="Certificate"
+              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain"
+            />
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-gray-300 hover:text-white p-1 bg-black/40 rounded-full"
+            >
+              <XMarkIcon className="w-6 h-6" />
+            </button>
+          </div>
 
-    <button
-      onClick={showNext}
-      className="absolute right-4 text-gray-300 hover:text-white"
-    >
-      <ChevronRightIcon className="w-10 h-10" />
-    </button>
-  </div>
-)}
+          <button
+            onClick={showNext}
+            className="absolute right-4 text-gray-300 hover:text-white"
+          >
+            <ChevronRightIcon className="w-10 h-10" />
+          </button>
+        </div>
+      )}
+
       <FooterWithSitemap />
     </div>
   );
