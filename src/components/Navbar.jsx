@@ -230,6 +230,13 @@ const refractoryMaterials = [
   //   path: "/refractory-materials/mortar",
   // },
 ];
+const sheetMetal = [
+  {
+    title: "Aluminum Sheet with or without moisture barrier ",
+    path: "/sheet-metal",
+  },
+];
+
 
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
