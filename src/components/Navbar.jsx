@@ -395,12 +395,7 @@ function NavListMenu() {
               <MenuHandler className="flex items-center justify-between">
                 <MenuItem>
                   Sheet Metal Hand Tools
-                  <ChevronUpIcon
-                    strokeWidth={2.5}
-                    className={`h-3.5 w-3.5 transition-transform ${
-                      isMenuOpen ? "rotate-90" : ""
-                    }`}
-                  />
+                  
                 </MenuItem>
               </MenuHandler>
             </Link>
