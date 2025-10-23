@@ -378,6 +378,32 @@ function NavListMenu() {
               {renderItems(refractoryMaterials)}
             </MenuList>
           </Menu>
+ {/* New menu item start */}
+ <Menu
+            placement="right-start"
+            allowHover
+            offset={15}
+            open={metalNestedMenu}
+            handler={setMetalNestedMenu}
+          >
+            <Link to={"/metal-jacketing-materials"}>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Metal Jacketing Materials
+                  <ChevronUpIcon
+                    strokeWidth={2.5}
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      isMenuOpen ? "rotate-90" : ""
+                    }`}
+                  />
+                </MenuItem>
+              </MenuHandler>
+            </Link>
+            <MenuList className="rounded-xl">
+              {renderItems(metalJacketing)}
+            </MenuList>
+          </Menu>
+          {/* New menu item end */}
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
