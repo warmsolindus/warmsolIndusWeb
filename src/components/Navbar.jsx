@@ -237,6 +237,7 @@ function NavListMenu() {
   const [metalNestedMenu, setMetalNestedMenu] = React.useState(false);
   const [accessoryNestedMenu, setAccessoryNestedMenu] = React.useState(false);
   const [refractoryNestedMenu, setRefractoryNestedMenu] = React.useState(false);
+  const [sheetmetalNestedMenu, setSheetmetalNestedMenu] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = (menu) =>
     menu.map(({ title, path }, key) => (
