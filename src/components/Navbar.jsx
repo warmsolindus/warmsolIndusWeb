@@ -388,8 +388,8 @@ function NavListMenu() {
             placement="right-start"
             allowHover
             offset={15}
-            open={sheetmetalNestedMenu}
-            handler={setSheetmetalNestedMenu}
+           // open={sheetmetalNestedMenu}
+          //  handler={setSheetmetalNestedMenu}
           >
             <Link to={"/sheet-metal"}>
               <MenuHandler className="flex items-center justify-between">
