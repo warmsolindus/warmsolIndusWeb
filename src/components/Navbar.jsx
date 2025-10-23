@@ -383,13 +383,13 @@ function NavListMenu() {
             placement="right-start"
             allowHover
             offset={15}
-            open={metalNestedMenu}
-            handler={setMetalNestedMenu}
+            open={sheetmetalNestedMenu}
+            handler={setSheetmetalNestedMenu}
           >
-            <Link to={"/metal-jacketing-materials"}>
+            <Link to={"/sheet-metal"}>
               <MenuHandler className="flex items-center justify-between">
                 <MenuItem>
-                  Metal Jacketing Materials
+                  Sheet Metal Hand Tools
                   <ChevronUpIcon
                     strokeWidth={2.5}
                     className={`h-3.5 w-3.5 transition-transform ${
@@ -400,7 +400,7 @@ function NavListMenu() {
               </MenuHandler>
             </Link>
             <MenuList className="rounded-xl">
-              {renderItems(metalJacketing)}
+              {renderItems(sheetMetal)}
             </MenuList>
           </Menu>
           {/* New menu item end */}
@@ -507,6 +507,32 @@ function NavListMenu() {
               {renderItems(refractoryMaterials)}
             </MenuList>
           </Menu>
+
+<Menu
+            placement="bottom"
+            allowHover
+            offset={6}
+            open={sheetmetalNestedMenu}
+            handler={setSheetmetalNestedMenu}
+          >
+            <Link to={"/sheet-metal"}>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Sheet Metal Hand Tools
+                  <ChevronUpIcon
+                    strokeWidth={2.5}
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      isMenuOpen ? "rotate-90" : ""
+                    }`}
+                  />
+                </MenuItem>
+              </MenuHandler>
+            </Link>
+            <MenuList className="block rounded-xl lg:hidden">
+              {renderItems(sheetMetal)}
+            </MenuList>
+          </Menu>
+          
         </Collapse>
       </div>
     </React.Fragment>
