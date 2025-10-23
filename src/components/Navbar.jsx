@@ -231,10 +231,7 @@ const refractoryMaterials = [
   // },
 ];
 const sheetMetal = [
-  {
-    title: "Aluminum Sheet with or without moisture barrier ",
-    path: "/sheet-metal",
-  },
+  
 ];
 
 
