@@ -23,6 +23,10 @@ import { Link } from "react-router-dom";
 
 const insulationMaterial = [
   {
+    title: "Aerogel Blankets",
+    path: "/insulation-materials/aerogel-blanket",
+  },
+  {
     title: "Ceramic Fiber Blankets",
     path: "/insulation-materials/ceramic-fiber-blanket",
   },
@@ -75,6 +79,22 @@ const metalJacketing = [
   {
     title: "Mass Loaded Vinyl Sheet",
     path: "/metal-jacketing-materials/mass-loaded-vinyl-sheet",
+  },
+   {
+    title: "Aluminium Stucco",
+    path: "/metal-jacketing-materials/aluminium-stucco",
+  },
+   {
+    title: "Aluminized Steel",
+    path: "/metal-jacketing-materials/aluminized-steel",
+  },
+   {
+    title: "Galvanized Steel",
+    path: "/metal-jacketing-materials/galvanized-steel",
+  },
+   {
+    title: "Aluzinc",
+    path: "/metal-jacketing-materials/aluzinc",
   },
 ];
 
