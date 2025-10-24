@@ -100,12 +100,12 @@ const metalJacketing = [
 
 const insAndCladAccessory = [
   {
-    title: "Stainless Steel Band ",
-    path: "/insulation-and-cladding-accessories/stainless-steel-band",
-  },
-  {
     title: "Stainless Steel Wing Seal",
     path: "/insulation-and-cladding-accessories/stainless-steel-wing-seal",
+  },
+       {
+    title: "Mass Loaded Vinyl Sheet",
+    path: "/insulation-and-cladding-accessories/mass-loaded-vinyl-sheet",
   },
   {
     title: "Stainless Steel self Tapping Screw",
@@ -231,6 +231,35 @@ const refractoryMaterials = [
   // },
 ];
 const sheetMetal = [
+
+    {
+     title: "Silicon Coated Cloth",
+     path: "/sheet-metals/silicon-coated-cloth",
+    },
+  {
+     title: "High Silica Cloth",
+     path: "/sheet-metals/hight-silica-cloth",
+    },
+   {
+     title: "Heat Textured Silica Cloth",
+     path: "/sheet-metals/heat-textured-silica-cloth",
+    },
+{
+     title: "Sewing Threads",
+     path: "/sheet-metals/sewing-threads",
+    },
+  {
+     title: "Lacing Hooks, Anchors",
+     path: "/sheet-metals/lacing-hooks",
+    },
+  {
+     title: "Quilting Pins",
+     path: "/sheet-metals/quilting-pins",
+    },
+  {
+     title: "Sheet Metal Hand Tools",
+     path: "/sheet-metals/sheet-metal-hand-tools",
+    },
   
 ];
 
@@ -388,14 +417,19 @@ function NavListMenu() {
             placement="right-start"
             allowHover
             offset={15}
-           // open={sheetmetalNestedMenu}
-          //  handler={setSheetmetalNestedMenu}
+            open={sheetmetalNestedMenu}
+            handler={setSheetmetalNestedMenu}
           >
             <Link to={"/sheet-metal"}>
               <MenuHandler className="flex items-center justify-between">
                 <MenuItem>
-                  Sheet Metal Hand Tools
-                  
+                  High Temperature Fabrics & Accessories
+                  <ChevronUpIcon
+                  strokeWidth={2.5}
+                  className={`h-3.5 w-3.5 transition-transform ${
+                    isMenuOpen ? "rotate-90" : ""
+                  }`}
+                />
                 </MenuItem>
               </MenuHandler>
             </Link>
@@ -518,7 +552,7 @@ function NavListMenu() {
             <Link to={"/sheet-metal"}>
               <MenuHandler className="flex items-center justify-between">
                 <MenuItem>
-                  Sheet Metal Hand Tools
+                  High Temperature Fabrics & Accessories
                   <ChevronUpIcon
                     strokeWidth={2.5}
                     className={`h-3.5 w-3.5 transition-transform ${
