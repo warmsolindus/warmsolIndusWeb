@@ -1,54 +1,55 @@
 const sheetMetal = [
   {
-    imgUrl: "/images/almWMB.jpg",
-    title: "Aluminium sheet with or without moisture barrier",
+    imgUrl: "/images/shm1.jpg",
+    title: " Silicon Coated Cloth",
     subTitle:
-      "Aluminium exhibits moderate strength and very good corrosion resistance which makes it an ideal metal to use for jacketing on mechanical insulation systems. ",
-    links: "/metal-jacketing-materials/aluminium-sheet",
+      " A silicon-coated cloth is a base fabric, typically fiberglass, with a silicone rubber coating applied to one or both sides to enhance properties like high-temperature resistance, chemicaland oil resistance, water repellency, and durability",
+    links: "/sheet-metal/#",
   },
 
   {
-    imgUrl: "/images/stainless-steel-coil.jpg",
-    title: "Stainless steel sheet with or without moisture barrier",
+    imgUrl: "/images/shm2.jpg",
+    title: " High Silica Cloth",
     subTitle:
-      " Stainless steel sheets are versatile and durable materials widely used in industrial, architectural, and decorative applications.",
-    links: "/metal-jacketing-materials/stainless-steel-sheet",
+      " High Silica fabric also commonly known as silica cloth is a special breed of glass fiber fabric characterized by its high temperature resistance. Woven Silica Fabrics are widely used for applications that require high heat
+ resistance, as well as abrasion and/or chemical resistance",
+    links: "/sheet-metal/#",
   },
   {
-    imgUrl: "/images/corrugatedSheet.png",
-    title: "Corrugated Sheet",
+    imgUrl: "/images/shm3.jpg",
+    title: " Heat Textured Silica Cloth",
     subTitle:
       "Corrugated sheets are manufactured for enhanced strength, rigidity, and durability applications. Available in Aluminium and Stainless Steel varients",
-    links: "/metal-jacketing-materials/corrugated-sheet",
+    links: "/sheet-metal/#",
   },
   {
-    imgUrl: "/images/perforated-stainless-steel-sheets.jpg",
-    title: "Perforated sheet",
+    imgUrl: "/images/shm4.jpg",
+    title: "Sewing Threads",
     subTitle:
       "Stainless steel Perforated sheets are durable and versatile materials with precision-cut holes. ",
-    links: "/metal-jacketing-materials/perforated-sheet",
+    links: "/sheet-metal/#",
   },
   {
-    imgUrl: "/images/welded-wire-mesh-SS.jpg",
-    title: "Welded Wire Mesh (Stainless Steel)",
+    imgUrl: "/images/shm5.jpg",
+    title: "Lacing Hooks, Anchors",
     subTitle:
       "Stainless steel welded wire mesh is a highly versatile and durable material that serves a wide range of industrial and commercial applications.  ",
-    links: "/metal-jacketing-materials/welded-wire-mesh",
+    links: "/sheet-metal/#",
   },
   {
-    imgUrl: "/images/leadSheetR.jpg",
-    title: "Lead Sheet",
+    imgUrl: "/images/shm6.jpg",
+    title: "Quilting Pins",
     subTitle:
       "Lead sheets are versatile and widely used products that are known for their durability, resistance to corrosion, and malleability. They are primarily composed of pure lead, which provides excellent radiation shielding, soundproofing, and waterproofing properties.",
-    links: "/metal-jacketing-materials/lead-sheet",
+    links: "/sheet-metal/#",
   },
   {
-    imgUrl: "/images/MLVS.jpg",
-    title: "Mass Loaded Vinyl Sheet",
+    imgUrl: "/images/shm7.jpg",
+    title: "Sheet Metal Hand Tools",
     subTitle:
       "Mass loaded vinyl sheets are high-density, flexible materials designed for superior sound insulation. These versatile sheets effectively reduce noise transmission in various applications, from construction to automotive industries.",
-    links: "/metal-jacketing-materials/mass-loaded-vinyl-sheet",
+    links: "/sheet-metal/#",
   },
 ];
 
-export default metalJacketingMaterials;
+export default sheetMetal;
