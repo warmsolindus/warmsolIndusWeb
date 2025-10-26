@@ -50,6 +50,19 @@ const insulationMaterial = [
     title: "Perlite",
     path: "/insulation-materials/perlite",
   },
+  
+  {
+    title: "Phinolic Insulation",
+    path: "/insulation-materials/#",
+  },
+  {
+    title: "Mineral Fiber Wool",
+    path: "/insulation-materials/#",
+  },
+  {
+    title: "Elastomeric Insualtion",
+    path: "/insulation-materials/#",
+  },
 ];
 const metalJacketing = [
   {
