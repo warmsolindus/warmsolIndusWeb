@@ -60,7 +60,7 @@ const insulationMaterial = [
     path: "/insulation-materials/#",
   },
   {
-    title: "Elastomeric Insualtion",
+    title: "Elastomeric Insulation",
     path: "/insulation-materials/#",
   },
 ];
