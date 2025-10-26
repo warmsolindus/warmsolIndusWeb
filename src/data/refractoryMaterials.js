@@ -153,8 +153,7 @@ const refractoryMaterials = [
      imgUrl: "/images/rm4.jpg",
      title: "Ceramic Boards",
      subTitle:
-       " It is used to build or repair or insulate combustion chambers, Target Walls, Boiler Wall Insulation, Internal Baffle of Wood Stove, Ceramic Liners, Heat Shields, Baffle Replacement, Floor Insulation, Furnaces, Ovens, Stoves, Torch Firings, Forges, Kilns, and Evaporators & refractory
- applications",
+       " It is used to build or repair or insulate combustion chambers, Target Walls, Boiler Wall Insulation, Internal Baffle of Wood Stove, Ceramic Liners, Heat Shields, Baffle Replacement, Floor Insulation, Furnaces, Ovens, Stoves, Torch Firings, Forges, Kilns, and Evaporators & refractory applications",
      links: "/refractory-materials/#",
    },
   {
