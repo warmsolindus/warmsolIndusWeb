@@ -49,6 +49,28 @@ const metalJacketingMaterials = [
       "Mass loaded vinyl sheets are high-density, flexible materials designed for superior sound insulation. These versatile sheets effectively reduce noise transmission in various applications, from construction to automotive industries.",
     links: "/metal-jacketing-materials/mass-loaded-vinyl-sheet",
   },
+
+  {
+    imgUrl: "/images/stucco.jpg",
+    title: "Aluminium Stucco",
+    subTitle:
+      " Aluminium Stucco Sheet, is a highly versatile and decorative material suitable for a wide range of applications. With its distinctive textured pattern, this sheet offers not only a visually appealing finish but also increased rigidity, making it a popular choice for industrial, commercial, and decorative projects",
+    links: "/metal-jacketing-materials/#",
+  },
+  {
+    imgUrl: "/images/alusteel.jpg",
+    title: "Aluminized Steel",
+    subTitle:
+      " Aluminised steel is used as protective jacketing (cladding) over thermal and acoustic insulation. It is available as Aluminized Steel Type 1 & Type 2.. Provides high tensile and impact strength, with high corrosion resistance.",
+    links: "/metal-jacketing-materials/#",
+  },
+  {
+    imgUrl: "/images/galsteel.jpg",
+    title: " Galvanized Steel",
+    subTitle:
+      "Galvanized steel insulation jacketing protects thermal insulation on pipes and equipment, particularly in corrosive industrial environments like petrochemical plants and HVAC industry, providing robust physical protection, fire resistance, and corrosion resistance due to its zinc coating.",
+    links: "/metal-jacketing-materials/#",
+  },
 ];
 
 export default metalJacketingMaterials;
