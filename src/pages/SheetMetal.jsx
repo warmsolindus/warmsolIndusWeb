@@ -10,7 +10,7 @@ import {
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
 import Card from "../components/Cards";
-import metalJacketingMaterials from "../data/sheetMetal";
+import sheetMetal from "../data/sheetMetal";
 export default function sheetMetal() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -42,7 +42,7 @@ export default function sheetMetal() {
             color="white"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
-            METAL JACKETING MATERIALS
+            HIGH TEMPERATURE FABRICS & ACCESSORIES
           </Typography>
         </div>
       </div>
