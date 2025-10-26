@@ -11,8 +11,7 @@ const sheetMetal = [
     imgUrl: "/images/shm2.jpg",
     title: " High Silica Cloth",
     subTitle:
-      " High Silica fabric also commonly known as silica cloth is a special breed of glass fiber fabric characterized by its high temperature resistance. Woven Silica Fabrics are widely used for applications that require high heat
- resistance, as well as abrasion and/or chemical resistance",
+      " High Silica fabric also commonly known as silica cloth is a special breed of glass fiber fabric characterized by its high temperature resistance. Woven Silica Fabrics are widely used for applications that require high heat resistance, as well as abrasion and/or chemical resistance",
     links: "/sheet-metal/#",
   },
   {
