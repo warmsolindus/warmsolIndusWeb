@@ -127,6 +127,45 @@ const refractoryMaterials = [
        "Mortar products offer exceptional bonding strength, durability, and versatility for a wide range of construction applications. Engineered to meet various project requirements, our mortars ensure reliable performance in masonry work, tile setting, and more.",
      links: "/refractory-materials/mortar",
    },
+
+  {
+     imgUrl: "/images/rm1.jpg",
+     title: "Ceramic Modules",
+     subTitle:
+       "Ceramic fiber modules are used for hightemperature thermal refractory in industrial settings such as furnaces, kilns, and power plants",
+     links: "/refractory-materials/#",
+   },
+  {
+     imgUrl: "/images/rm2.jpg",
+     title: " Ceramic Textiles Tapes & Ropes",
+     subTitle:
+       "Ceramic tapes and ropes are high-temp: refractory materials made from refractory ceramic fiber, offer excellent thermal resistance, often up to 1260°C , and are used for sealing, gasketing, thermal insulation, and as protective screens in industrial",
+     links: "/refractory-materials/#",
+   },
+  {
+     imgUrl: "/images/rm3.jpg",
+     title: "Ceramic Paper",
+     subTitle:
+       "Ceramic Fiber Blanket is manufactured from spun ceramic fiber and is needled to provide exceptional handling strength for high temperature refractory applications.",
+     links: "/refractory-materials/#",
+   },
+  {
+     imgUrl: "/images/rm4.jpg",
+     title: "Ceramic Boards",
+     subTitle:
+       " It is used to build or repair or insulate combustion chambers, Target Walls, Boiler Wall Insulation, Internal Baffle of Wood Stove, Ceramic Liners, Heat Shields, Baffle Replacement, Floor Insulation, Furnaces, Ovens, Stoves, Torch Firings, Forges, Kilns, and Evaporators & refractory
+ applications",
+     links: "/refractory-materials/#",
+   },
+  {
+     imgUrl: "/images/rm5.jpg",
+     title: "Refractory Anchor",
+     subTitle:
+       " Refractory anchor is a metal component welded to the steel shell (the casing) of a furnace, boiler, duct, or other equipment. Its primary function is to mechanically secure the refractory lining (e.g., castable cement, plastic refractory, or ceramic fiber modules) to the structure",
+     links: "/refractory-materials/#",
+   },
+
+  
 ];
 
 export default refractoryMaterials;
