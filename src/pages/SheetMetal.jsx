@@ -10,8 +10,8 @@ import {
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
 import Card from "../components/Cards";
-import sheetMetal from "../data/sheetMetal";
-export default function SheetMetal() {
+import SheetMetal from "../data/sheetMetal";
+export default function sheetMetal() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
