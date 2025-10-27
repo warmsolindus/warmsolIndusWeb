@@ -173,7 +173,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="w-full md:w-1/2">
                 <img
-                  src="/images/why.jpg?height=300&width=400"
+                  src="/images/why.jpg?height=210&width=280"
                   alt="WarmSol Industries Facility"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
