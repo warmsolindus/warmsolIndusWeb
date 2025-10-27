@@ -227,20 +227,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* WHY CHOOSE US */}
-      <div>
-        <Card className="mb-8 mx-4 overflow-hidden">
-          <CardBody className="p-8">
-            <div className="flex flex-col md:flex-row items-start gap-8">
-              <div className="w-full md:w-1/2">
-                <img
-                  src="/images/why.jpg?height=300&width=400"
-                  alt="WarmSol Industries Facility"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
-              </div>
-
- {/* CERTIFICATE SECTION (NEW) */}
+      {/* ✅ NEW CERTIFICATE SECTION - NOW ABOVE WHY CHOOSE US */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-200 rounded-lg mx-4 mb-12">
         <Typography variant="h3" color="blue-gray" className="text-center mb-10">
           We Are Certified
@@ -274,6 +261,39 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* WHY CHOOSE US */}
+      <div>
+        <Card className="mb-8 mx-4 overflow-hidden">
+          <CardBody className="p-8">
+            <div className="flex flex-col md:flex-row items-start gap-8">
+              <div className="w-full md:w-1/2">
+                <img
+                  src="/images/why.jpg?height=300&width=400"
+                  alt="WarmSol Industries Facility"
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="w-full md:w-1/2">
+                <Typography variant="h2" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold">
+                  WHY CHOOSE US?
+                </Typography>
+                <ul className="list-disc list-inside mb-4 text-gray-700">
+                  <li>Extensive industry expertise</li>
+                  <li>Commitment to quality and safety standards</li>
+                  <li>Reliable and timely delivery</li>
+                  <li>Innovative and cost-effective solutions</li>
+                  <li>Unwavering dedication to customer success</li>
+                </ul>
+                <Typography variant="paragraph" className="mb-4 text-base md:text-lg text-gray-700">
+                  Join the many businesses that trust Warmsol Industries for
+                  their insulation, metal jacketing, refractory, and procurement needs.
+                </Typography>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
       </div>
 
       {/* MODAL VIEWER */}
@@ -312,32 +332,6 @@ export default function Home() {
           </button>
         </div>
       )}
-
-
-
-              
-              <div className="w-full md:w-1/2">
-                <Typography variant="h2" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold">
-                  WHY CHOOSE US?
-                </Typography>
-                <ul className="list-disc list-inside mb-4 text-gray-700">
-                  <li>Extensive industry expertise</li>
-                  <li>Commitment to quality and safety standards</li>
-                  <li>Reliable and timely delivery</li>
-                  <li>Innovative and cost-effective solutions</li>
-                  <li>Unwavering dedication to customer success</li>
-                </ul>
-                <Typography variant="paragraph" className="mb-4 text-base md:text-lg text-gray-700">
-                  Join the many businesses that trust Warmsol Industries for
-                  their insulation, metal jacketing, refractory, and procurement needs.
-                </Typography>
-              </div>
-            </div>
-          </CardBody>
-        </Card>
-      </div>
-
-     
 
       <FooterWithSitemap />
     </div>
