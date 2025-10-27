@@ -21,6 +21,25 @@ export default function Home() {
   const [touchStartX, setTouchStartX] = useState(null);
 
   const certificateImages = ["/images/cert1.jpg", "/images/cert2.jpg", "/images/cert3.jpg"];
+  const thumbnailImages = ["/images/iso1.jpg", "/images/iso2.jpg", "/images/iso3.jpg"];
+
+  const certificateDetails = [
+    {
+      title: "ISO 9001:2015 - Quality Management",
+      description:
+        "Warmsol Industries is certified under ISO 9001:2015 for maintaining the highest standards in quality management systems.",
+    },
+    {
+      title: "ISO 14001:2015 - Environmental Management",
+      description:
+        "We are committed to sustainable practices and environmental protection through our ISO 14001:2015 certification.",
+    },
+    {
+      title: "ISO 45001:2018 - Occupational Health & Safety",
+      description:
+        "Our ISO 45001:2018 certification reflects our dedication to a safe and healthy work environment for all employees.",
+    },
+  ];
 
   const openImage = (index) => {
     setSelectedImage(certificateImages[index]);
@@ -68,8 +87,6 @@ export default function Home() {
     { name: "Power Generation", image: "/images/power-generation.png" },
   ];
 
-  const clients = ["/images/ANCclient.jpg?height=160&width=320"];
-
   return (
     <div className="bg-gradient-to-r from-amber-200 to-blue-gray-200">
       <NavigationbarWithDropdownMultilevelMenu />
@@ -103,6 +120,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
         <div className="max-w-3xl mx-auto mt-12">
           <Typography
             variant="h6"
@@ -118,16 +136,13 @@ export default function Home() {
             At Warmsol Industries, we are driven by a passion for innovation and
             quality. Our expertise lies in delivering products and services that
             enhance operational efficiency, ensure durability, and provide
-            cost-effective solutions for industries worldwide. Whether
-            safeguarding systems from heat loss or ensuring structural integrity
-            with high-performance refractory materials, our solutions are
-            engineered to excel under the most challenging conditions.
+            cost-effective solutions for industries worldwide.
           </Typography>
         </div>
       </div>
 
       {/* WHAT WE DO */}
-      <div className=" w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg6.png?react')] bg-fixed bg-repeat rounded-lg">
+      <div className="w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg6.png?react')] bg-fixed bg-repeat rounded-lg">
         <div className="max-w-7xl mx-auto">
           <Typography variant="h3" className="mb-8 text-center" color="white">
             WHAT WE DO?
@@ -143,39 +158,28 @@ export default function Home() {
               </Typography>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <Link to={"/insulation-materials"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="blue-gray"
-                  >
+                  <Button color="blue-gray" className="rounded-full mb-2 hover:scale-105">
                     Insulation Materials
                   </Button>
                 </Link>
                 <Link to={"/metal-jacketing-materials"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="gray"
-                  >
+                  <Button color="gray" className="rounded-full mb-2 hover:scale-105">
                     Metal Jacketing Materials
                   </Button>
                 </Link>
                 <Link to={"/insulation-and-cladding-accessories"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="gray"
-                  >
+                  <Button color="gray" className="rounded-full mb-2 hover:scale-105">
                     Insulation & Cladding Accessories
                   </Button>
                 </Link>
                 <Link to={"/refractory-materials"}>
-                  <Button
-                    className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                    color="blue-gray"
-                  >
+                  <Button color="blue-gray" className="rounded-full mb-2 hover:scale-105">
                     Refractory Materials
                   </Button>
                 </Link>
               </div>
             </div>
+
             <div>
               <Typography
                 variant="h4"
@@ -185,22 +189,13 @@ export default function Home() {
                 PROCUREMENT SERVICES
               </Typography>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Button
-                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100"
-                  color="blue-gray"
-                >
+                <Button color="blue-gray" className="rounded-full mb-2 hover:scale-105">
                   Pipe and fittings
                 </Button>
-                <Button
-                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
-                  color="gray"
-                >
+                <Button color="gray" className="rounded-full mb-2 hover:scale-105">
                   Electrical and instrumentation materials
                 </Button>
-                <Button
-                  className="rounded-full mb-2 hover:scale-105 focus:scale-105 focus:shadow-none active:scale-100 "
-                  color="gray"
-                >
+                <Button color="gray" className="rounded-full mb-2 hover:scale-105">
                   Hand tools and consumables
                 </Button>
               </div>
@@ -220,14 +215,10 @@ export default function Home() {
               <CardBody className="flex flex-col items-center rounded-lg hover:bg-gray-200">
                 <img
                   src={industry.image}
-                  alt={`${industry.name} icon`}
+                  alt={industry.name}
                   className="w-20 h-20 mb-4"
                 />
-                <Typography
-                  variant="h6"
-                  color="blue-gray"
-                  className="text-center"
-                >
+                <Typography variant="h6" color="blue-gray" className="text-center">
                   {industry.name}
                 </Typography>
               </CardBody>
@@ -249,11 +240,7 @@ export default function Home() {
                 />
               </div>
               <div className="w-full md:w-1/2">
-                <Typography
-                  variant="h2"
-                  color="blue-gray"
-                  className="mb-4 text-2xl md:text-3xl font-semibold"
-                >
+                <Typography variant="h2" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold">
                   WHY CHOOSE US?
                 </Typography>
                 <ul className="list-disc list-inside mb-4 text-gray-700">
@@ -263,58 +250,50 @@ export default function Home() {
                   <li>Innovative and cost-effective solutions</li>
                   <li>Unwavering dedication to customer success</li>
                 </ul>
-                <Typography
-                  variant="paragraph"
-                  className="mb-4 text-base md:text-lg text-gray-700"
-                >
+                <Typography variant="paragraph" className="mb-4 text-base md:text-lg text-gray-700">
                   Join the many businesses that trust Warmsol Industries for
-                  their insulation, metal jacketing, refractory, and procurement
-                  needs. Together, we can build stronger, more efficient, and
-                  sustainable industrial systems.
+                  their insulation, metal jacketing, refractory, and procurement needs.
                 </Typography>
-
-                {/* ADDITION HERE */}
-                <div className="w-full mt-8">
-                  <Typography
-                    variant="h5"
-                    color="blue-gray"
-                    className="mb-4 font-semibold text-center md:text-left"
-                  >
-                    We are Certified
-                  </Typography>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center">
-                    {certificateImages.map((src, index) => {
-                      const thumbnailImages = [
-                        "/images/iso1.jpg",
-                        "/images/iso2.jpg",
-                        "/images/iso3.jpg",
-                      ];
-                      return (
-                        <div
-                          key={index}
-                          className="relative group w-40 md:w-48 h-auto rounded-lg shadow-md cursor-pointer overflow-hidden"
-                          onClick={() => openImage(index)}
-                        >
-                          <img
-                            src={thumbnailImages[index]}
-                            alt={`Certificate Thumbnail ${index + 1}`}
-                            className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                            <button className="bg-white text-gray-800 font-semibold py-1 px-3 rounded-full">
-                              View
-                            </button>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
               </div>
             </div>
           </CardBody>
         </Card>
+      </div>
+
+      {/* CERTIFICATE SECTION (NEW) */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-200 rounded-lg mx-4 mb-12">
+        <Typography variant="h3" color="blue-gray" className="text-center mb-10">
+          We Are Certified
+        </Typography>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
+          {certificateDetails.map((cert, index) => (
+            <div
+              key={index}
+              className="text-center group cursor-pointer"
+              onClick={() => openImage(index)}
+            >
+              <div className="relative w-52 md:w-64 h-auto rounded-lg shadow-md overflow-hidden mx-auto">
+                <img
+                  src={thumbnailImages[index]}
+                  alt={cert.title}
+                  className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                  <button className="bg-white text-gray-800 font-semibold py-1 px-3 rounded-full">
+                    View
+                  </button>
+                </div>
+              </div>
+              <Typography variant="h6" color="blue-gray" className="mt-4 font-semibold">
+                {cert.title}
+              </Typography>
+              <Typography variant="small" color="gray" className="mt-2 px-4">
+                {cert.description}
+              </Typography>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* MODAL VIEWER */}
