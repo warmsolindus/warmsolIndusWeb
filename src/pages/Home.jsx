@@ -142,67 +142,7 @@ export default function Home() {
       </div>
 
       {/* WHAT WE DO */}
-      <div className="w-[98%] mx-auto px-4 sm:px-6 py-12 lg:px-8 bg-[url('/images/bg6.png?react')] bg-fixed bg-repeat rounded-lg">
-        <div className="max-w-7xl mx-auto">
-          <Typography variant="h3" className="mb-8 text-center" color="white">
-            WHAT WE DO?
-          </Typography>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <Typography
-                variant="h4"
-                color="white"
-                className="mb-4 font-bold text-center md:text-left"
-              >
-                MANUFACTURING DIVISION
-              </Typography>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Link to={"/insulation-materials"}>
-                  <Button color="blue-gray" className="rounded-full mb-2 hover:scale-105">
-                    Insulation Materials
-                  </Button>
-                </Link>
-                <Link to={"/metal-jacketing-materials"}>
-                  <Button color="gray" className="rounded-full mb-2 hover:scale-105">
-                    Metal Jacketing Materials
-                  </Button>
-                </Link>
-                <Link to={"/insulation-and-cladding-accessories"}>
-                  <Button color="gray" className="rounded-full mb-2 hover:scale-105">
-                    Insulation & Cladding Accessories
-                  </Button>
-                </Link>
-                <Link to={"/refractory-materials"}>
-                  <Button color="blue-gray" className="rounded-full mb-2 hover:scale-105">
-                    Refractory Materials
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <Typography
-                variant="h4"
-                color="white"
-                className="mb-4 font-bold text-center md:text-left"
-              >
-                PROCUREMENT SERVICES
-              </Typography>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <Button color="blue-gray" className="rounded-full mb-2 hover:scale-105">
-                  Pipe and fittings
-                </Button>
-                <Button color="gray" className="rounded-full mb-2 hover:scale-105">
-                  Electrical and instrumentation materials
-                </Button>
-                <Button color="gray" className="rounded-full mb-2 hover:scale-105">
-                  Hand tools and consumables
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
       {/* WHO WE SERVE */}
       <div className="bg-gray-300 py-12 px-4 sm:px-6 lg:px-8 rounded-lg mx-4 my-12">
@@ -263,38 +203,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* WHY CHOOSE US */}
-      <div>
-        <Card className="mb-8 mx-4 overflow-hidden">
-          <CardBody className="p-8">
-            <div className="flex flex-col md:flex-row items-start gap-8">
-              <div className="w-full md:w-1/2">
-                <img
-                  src="/images/why.jpg?height=300&width=400"
-                  alt="WarmSol Industries Facility"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="w-full md:w-1/2">
-                <Typography variant="h2" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold">
-                  WHY CHOOSE US?
-                </Typography>
-                <ul className="list-disc list-inside mb-4 text-gray-700">
-                  <li>Extensive industry expertise</li>
-                  <li>Commitment to quality and safety standards</li>
-                  <li>Reliable and timely delivery</li>
-                  <li>Innovative and cost-effective solutions</li>
-                  <li>Unwavering dedication to customer success</li>
-                </ul>
-                <Typography variant="paragraph" className="mb-4 text-base md:text-lg text-gray-700">
-                  Join the many businesses that trust Warmsol Industries for
-                  their insulation, metal jacketing, refractory, and procurement needs.
-                </Typography>
-              </div>
-            </div>
-          </CardBody>
-        </Card>
-      </div>
+     
 
       {/* MODAL VIEWER */}
       {selectedImage && (
