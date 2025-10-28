@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react"; // MODIFIED: Added useRef and useState
-import emailjs from "@emailjs/browser"; // ADDED: EmailJS library
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Button,
   Input,
   Textarea,
   Typography,
-  IconButton,
+  IconButton, // This import was in your original code, but IconButton isn't used in the form area. I'll leave it in case your Navbar or Footer needs it.
 } from "@material-tailwind/react";
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
@@ -15,20 +15,20 @@ export function ContactSection() {
     window.scrollTo(0, 0);
   }, []);
 
-  // ADDED: Refs and state for the form
+  // Refs and state for the form
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
   const [sendError, setSendError] = useState(null);
 
-  // ADDED: EmailJS send function
+  // EmailJS send function
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
     setSendSuccess(false);
     setSendError(null);
 
-    // --- REPLACE WITH YOUR EMAILJS IDs ---
+    // --- EMAILJS IDs ---
     const serviceID = "service_dkbko0m";
     const templateID = "template_rgbtdt9";
     const publicKey = "CY8UbZhw_TAHCCFEF";
@@ -130,7 +130,8 @@ export function ContactSection() {
                     variant="h5"
                     className="py-4 !text-base lg:!text-2xl"
                   >
-                    <i className="fa fa-building text-2xl" /> &nbsp; Corporate Office
+                    <i className="fa fa-building text-2xl" /> &nbsp; Corporate
+                    Office
                   </Typography>
                   <div className="py-4">
                     <Typography className="font-semibold">
@@ -156,15 +157,15 @@ export function ContactSection() {
                       </a>
                     </Typography>
                   </div>
-                  {/* ... (rest of your info section remains the same) ... */}
+                  {/* ... (Your commented-out code was here) ... */}
                 </div>
               </div>
             </div>
 
-            {/* MODIFIED Contact Form */}
+            {/* Contact Form */}
             <form
-              ref={form} // ADDED: Form ref
-              onSubmit={sendEmail} // ADDED: Submit handler
+              ref={form}
+              onSubmit={sendEmail}
               className="flex flex-col gap-4 bg-white rounded-lg p-8 "
             >
               <div>
@@ -184,8 +185,8 @@ export function ContactSection() {
                     color="purple"
                     size="lg"
                     placeholder="First Name"
-                    name="user_fname" // MODIFIED: Name attribute
-                    required // ADDED: Basic validation
+                    name="user_fname" // Name attribute for EmailJS
+                    required
                     className="focus:border-t-purple-700"
                     containerProps={{
                       className: "min-w-full",
@@ -206,8 +207,8 @@ export function ContactSection() {
                     color="purple"
                     size="lg"
                     placeholder="Last Name"
-                    name="user_lname" // MODIFIED: Name attribute
-                    required // ADDED: Basic validation
+                    name="user_lname" // Name attribute for EmailJS
+                    required
                     className="focus:border-t-purple-700"
                     containerProps={{
                       className: "!min-w-full",
@@ -219,7 +220,7 @@ export function ContactSection() {
                 </div>
               </div>
 
-              {/* MODIFIED: Put Email and Mobile in a grid */}
+              {/* Email and Mobile Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Typography
@@ -232,9 +233,9 @@ export function ContactSection() {
                     color="purple"
                     size="lg"
                     placeholder="name@email.com"
-                    name="user_email" // MODIFIED: Name attribute
-                    type="email" // ADDED: Email type validation
-                    required // ADDED: Basic validation
+                    name="user_email" // Name attribute for EmailJS
+                    type="email"
+                    required
                     className="focus:border-t-purple-700"
                     containerProps={{
                       className: "!min-w-full",
@@ -245,7 +246,7 @@ export function ContactSection() {
                   />
                 </div>
 
-                {/* ADDED: Mobile Number Field */}
+                {/* NEW Mobile Number Field */}
                 <div>
                   <Typography
                     variant="small"
@@ -257,9 +258,9 @@ export function ContactSection() {
                     color="purple"
                     size="lg"
                     placeholder="+1 234 567 890"
-                    name="user_mobile" // ADDED: Name attribute
-                    type="tel" // ADDED: Telephone type
-                    required // ADDED: Basic validation
+                    name="user_mobile" // Name attribute for EmailJS
+                    type="tel"
+                    required
                     className="focus:border-t-purple-700"
                     containerProps={{
                       className: "!min-w-full",
@@ -282,8 +283,8 @@ export function ContactSection() {
                   rows={6}
                   color="purple"
                   placeholder="Message"
-                  name="message" // MODIFIED: Name attribute
-                  required // ADDED: Basic validation
+                  name="message" // Name attribute for EmailJS
+                  required
                   className="focus:border-t-purple-700"
                   containerProps={{
                     className: "!min-w-full",
@@ -294,15 +295,15 @@ export function ContactSection() {
                 />
               </div>
               <Button
-                type="submit" // MODIFIED: Changed to type="submit"
+                type="submit"
                 className="w-full hover:scale-105"
                 color="gray"
-                disabled={isSending} // ADDED: Disable button while sending
+                disabled={isSending}
               >
                 {isSending ? "Sending..." : "Send Message"}
               </Button>
 
-              {/* ADDED: Success and Error Messages */}
+              {/* Success and Error Messages */}
               {sendSuccess && (
                 <Typography color="green" className="text-center font-medium">
                   Message sent successfully!
@@ -316,13 +317,7 @@ export function ContactSection() {
             </form>
           </div>
 
-          {/* ... (rest of your component remains the same) ... */}
-          <div className="mt-16">
-            <Typography
-      _variant="h5"
-              className="mb-10 !text-2xl font-bold text-center"
-            >
-             {/* Our Regional Presence */}
+          {/* Our Regional Presence */}
           <div className="mt-16">
             <Typography
               variant="h5"
