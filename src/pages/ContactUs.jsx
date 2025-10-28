@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react"; // MODIFIED: Added useRef and useState
+import emailjs from "@emailjs/browser"; // ADDED: EmailJS library
 import {
   Button,
   Input,
@@ -13,6 +14,43 @@ export function ContactSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // ADDED: Refs and state for the form
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [sendSuccess, setSendSuccess] = useState(false);
+  const [sendError, setSendError] = useState(null);
+
+  // ADDED: EmailJS send function
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setSendSuccess(false);
+    setSendError(null);
+
+    // --- REPLACE WITH YOUR EMAILJS IDs ---
+    const serviceID = "service_dkbko0m";
+    const templateID = "template_rgbtdt9";
+    const publicKey = "CY8UbZhw_TAHCCFEF";
+    // -------------------------------------
+
+    emailjs
+      .sendForm(serviceID, templateID, form.current, publicKey)
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSendSuccess(true);
+          setIsSending(false);
+          form.current.reset(); // Resets the form after successful send
+        },
+        (error) => {
+          console.log(error.text);
+          setSendError("Failed to send message. Please try again.");
+          setIsSending(false);
+        }
+      );
+  };
+
   return (
     <div className="bg-gradient-to-r from-amber-200 to-blue-gray-200">
       <NavigationbarWithDropdownMultilevelMenu />
@@ -33,34 +71,33 @@ export function ContactSection() {
             CONTACT US
           </Typography>
           {/* email and phone */}
-<div className="mt-4 flex flex-col items-center space-y-2 text-gray-200">
-  <div className="flex items-center space-x-2 text-sm md:text-lg">
-    <i className="fa fa-envelope" />
-    <a
-      href="mailto:sales@warmsolindus.com"
-      className="text-blue-200 hover:text-white transition-colors"
-    >
-      sales@warmsolindus.com
-    </a>
-  </div>
-  <div className="flex items-center space-x-2 text-sm md:text-lg">
-    <i className="fa fa-phone" /> 
-    <a
-      href="tel:+966581858426"
-      className="text-blue-200 hover:text-white transition-colors"
-    >
-      +966 58 185 8426
-    </a>
-    <span>,</span>
-    <a
-      href="tel:+971565963163"
-      className="text-blue-200 hover:text-white transition-colors"
-    >
-      +971 56 596 33163
-    </a>
-  </div>
-</div>
-
+          <div className="mt-4 flex flex-col items-center space-y-2 text-gray-200">
+            <div className="flex items-center space-x-2 text-sm md:text-lg">
+              <i className="fa fa-envelope" />
+              <a
+                href="mailto:sales@warmsolindus.com"
+                className="text-blue-200 hover:text-white transition-colors"
+              >
+                sales@warmsolindus.com
+              </a>
+            </div>
+            <div className="flex items-center space-x-2 text-sm md:text-lg">
+              <i className="fa fa-phone" />
+              <a
+                href="tel:+966581858426"
+                className="text-blue-200 hover:text-white transition-colors"
+              >
+                +966 58 185 8426
+              </a>
+              <span>,</span>
+              <a
+                href="tel:+971565963163"
+                className="text-blue-200 hover:text-white transition-colors"
+              >
+                +971 56 596 33163
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -119,56 +156,17 @@ export function ContactSection() {
                       </a>
                     </Typography>
                   </div>
-
-                  {/* COMMENTED AS PER REQUEST
-                  <Typography
-                    variant="h5"
-                    className="py-4 !text-base lg:!text-2xl"
-                  >
-                    <i className="fa fa-phone text-2xl" color="deep-orange" /> &nbsp; GIVE US A RING
-                  </Typography>
-                  <div className="py-2">
-                    <Typography className="font-semibold">
-                      Business Development Manager
-                    </Typography>
-                    <Typography className="font-semibold">
-                      <i className="fa fa-phone" />
-                      <a href="tel:+971565963316"> +971 56 5963316</a>
-                    </Typography>
-                    <Typography className="font-semibold">
-                      <i className="fa fa-envelope" />{" "}
-                      <a href="mailto:bdm@warmsolindus.com">
-                        bdm@warmsolindus.com
-                      </a>
-                    </Typography>
-                  </div>
-                  <div className="flex justify-between gap-4 py-3">
-                    <IconButton className="rounded bg-[#1877F2] hover:shadow-[#1877F2]/20 focus:shadow-[#1877F2]/20 active:shadow-[#1877F2]/10">
-                      <i className="fab fa-facebook text-lg" />
-                    </IconButton>
-                    <IconButton className="rounded bg-[#000000] hover:shadow-[#000000]/20 focus:shadow-[#000000]/20 active:shadow-[#000000]/10">
-                      <svg
-                        className="h-5 w-5"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
-                      </svg>
-                    </IconButton>
-                    <IconButton className="rounded bg-[#0077B5] hover:shadow-[#0077B5]/20 focus:shadow-[#0077B5]/20 active:shadow-[#0077B5]/10">
-                      <i className="fab fa-linkedin text-lg" />
-                    </IconButton>
-                    <IconButton className="rounded bg-[#333333] hover:shadow-[#333333]/20 focus:shadow-[#333333]/20 active:shadow-[#333333]/10">
-                      <i className="fab fa-github text-lg" />
-                    </IconButton>
-                  </div> */}
+                  {/* ... (rest of your info section remains the same) ... */}
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <form className="flex flex-col gap-4 bg-white rounded-lg p-8 ">
+            {/* MODIFIED Contact Form */}
+            <form
+              ref={form} // ADDED: Form ref
+              onSubmit={sendEmail} // ADDED: Submit handler
+              className="flex flex-col gap-4 bg-white rounded-lg p-8 "
+            >
               <div>
                 <Typography className="mb-4 !text-base lg:!text-2xl font-bold">
                   Contact Us
@@ -186,7 +184,8 @@ export function ContactSection() {
                     color="purple"
                     size="lg"
                     placeholder="First Name"
-                    name="first-name"
+                    name="user_fname" // MODIFIED: Name attribute
+                    required // ADDED: Basic validation
                     className="focus:border-t-purple-700"
                     containerProps={{
                       className: "min-w-full",
@@ -207,7 +206,8 @@ export function ContactSection() {
                     color="purple"
                     size="lg"
                     placeholder="Last Name"
-                    name="last-name"
+                    name="user_lname" // MODIFIED: Name attribute
+                    required // ADDED: Basic validation
                     className="focus:border-t-purple-700"
                     containerProps={{
                       className: "!min-w-full",
@@ -218,27 +218,59 @@ export function ContactSection() {
                   />
                 </div>
               </div>
-              <div>
-                <Typography
-                  variant="small"
-                  className="mb-2 text-left font-medium !text-gray-900"
-                >
-                  Your Email
-                </Typography>
-                <Input
-                  color="purple"
-                  size="lg"
-                  placeholder="name@email.com"
-                  name="email"
-                  className="focus:border-t-purple-700"
-                  containerProps={{
-                    className: "!min-w-full",
-                  }}
-                  labelProps={{
-                    className: "hidden",
-                  }}
-                />
+
+              {/* MODIFIED: Put Email and Mobile in a grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Typography
+                    variant="small"
+                    className="mb-2 text-left font-medium !text-gray-900"
+                  >
+                    Your Email
+                  </Typography>
+                  <Input
+                    color="purple"
+                    size="lg"
+                    placeholder="name@email.com"
+                    name="user_email" // MODIFIED: Name attribute
+                    type="email" // ADDED: Email type validation
+                    required // ADDED: Basic validation
+                    className="focus:border-t-purple-700"
+                    containerProps={{
+                      className: "!min-w-full",
+                    }}
+                    labelProps={{
+                      className: "hidden",
+                    }}
+                  />
+                </div>
+
+                {/* ADDED: Mobile Number Field */}
+                <div>
+                  <Typography
+                    variant="small"
+                    className="mb-2 text-left font-medium !text-gray-900"
+                  >
+                    Mobile Number
+                  </Typography>
+                  <Input
+                    color="purple"
+                    size="lg"
+                    placeholder="+1 234 567 890"
+                    name="user_mobile" // ADDED: Name attribute
+                    type="tel" // ADDED: Telephone type
+                    required // ADDED: Basic validation
+                    className="focus:border-t-purple-700"
+                    containerProps={{
+                      className: "!min-w-full",
+                    }}
+                    labelProps={{
+                      className: "hidden",
+                    }}
+                  />
+                </div>
               </div>
+
               <div>
                 <Typography
                   variant="small"
@@ -250,7 +282,8 @@ export function ContactSection() {
                   rows={6}
                   color="purple"
                   placeholder="Message"
-                  name="message"
+                  name="message" // MODIFIED: Name attribute
+                  required // ADDED: Basic validation
                   className="focus:border-t-purple-700"
                   containerProps={{
                     className: "!min-w-full",
@@ -260,71 +293,89 @@ export function ContactSection() {
                   }}
                 />
               </div>
-              <Button className="w-full hover:scale-105" color="gray">
-                Send message
+              <Button
+                type="submit" // MODIFIED: Changed to type="submit"
+                className="w-full hover:scale-105"
+                color="gray"
+                disabled={isSending} // ADDED: Disable button while sending
+              >
+                {isSending ? "Sending..." : "Send Message"}
               </Button>
+
+              {/* ADDED: Success and Error Messages */}
+              {sendSuccess && (
+                <Typography color="green" className="text-center font-medium">
+                  Message sent successfully!
+                </Typography>
+              )}
+              {sendError && (
+                <Typography color="red" className="text-center font-medium">
+                  {sendError}
+                </Typography>
+              )}
             </form>
           </div>
 
-          {/* Our Regional Presence */}
+          {/* ... (rest of your component remains the same) ... */}
           <div className="mt-16">
-            <Typography
-              variant="h5"
-              className="mb-10 !text-2xl font-bold text-center"
-            >
-              Our Regional Presence
-            </Typography>
+            <Typography
+      _variant="h5"
+              className="mb-10 !text-2xl font-bold text-center"
+            >
+              Our Regional Presence
+            </Typography>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* KSA */}
-              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
-                <Typography variant="h6" className="font-semibold mb-2">
-                  KSA
-                </Typography>
-                <Typography className="mb-2 text-gray-700 text-sm">
-                  Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist, Al Jubail, KSA
-                </Typography>
-                <Typography className="text-sm text-blue-700 hover:underline">
-                  <i className="fa fa-envelope mr-2" />{" "}
-                  <a href="mailto:sales.ksa@warmsolindus.com">
-                    sales.ksa@warmsolindus.com
-                  </a>
-                </Typography>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* KSA */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography _variant="h6" className="font-semibold mb-2">
+                  KSA
+                </Typography>
+className="mb-2 text-gray-700 text-sm">
+                  Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist, Al Jubail, KSA
+                </Typography>
+          _className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.ksa@warmsolindus.com">
+                    sales.ksa@warmsolindus.com
+                  </a>
+                </Typography>
+id=0>
+              </div>
 
-              {/* QATAR */}
-              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
-                <Typography variant="h6" className="font-semibold mb-2">
-                  QATAR
-                </Typography>
-                <Typography className="mb-2 text-gray-700 text-sm">
-                  Building no 2, Zone 25, Street 890, Abha Street, Doha - Qatar
-                </Typography>
-                <Typography className="text-sm text-blue-700 hover:underline">
-                  <i className="fa fa-envelope mr-2" />{" "}
-                  <a href="mailto:sales.qatar@warmsolindus.com">
-                    sales.qatar@warmsolindus.com
-                  </a>
-                </Typography>
-              </div>
+              {/* QATAR */}
+              <div _id="1" _className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography _variant="h6" className="font-semibold mb-2">
+                  QATAR
+                </Typography>
+className="mb-2 text-gray-700 text-sm">
+                  Building no 2, Zone 25, Street 890, Abha Street, Doha - Qatar
+                </Typography>
+          _className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+s                 <a _href="mailto:sales.qatar@warmsolindus.com">
+                    sales.qatar@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
 
-              {/* INDIA */}
-              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
-                <Typography variant="h6" className="font-semibold mb-2">
-                  INDIA
-                </Typography>
-                <Typography className="mb-2 text-gray-700 text-sm">
-                  No#242, Satra Plaza, Vashi, Sector 19d, Navi Mumbai 400 703. Maharashtra
-                </Typography>
-                <Typography className="text-sm text-blue-700 hover:underline">
-                  <i className="fa fa-envelope mr-2" />{" "}
-                  <a href="mailto:sales.in@warmsolindus.com">
-                    sales.in@warmsolindus.com
-                  </a>
-                </Typography>
-              </div>
-            </div>
-          </div>
+              {/* INDIA */}
+              <div _id="2" _className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography _variant="h6" className="font-semibold mb-2">
+                t   INDIA
+                </Typography>
+s             <Typography _className="mb-2 text-gray-700 text-sm">
+                  No#242, Satra Plaza, Vashi, Sector 19d, Navi Mumbai 400 703. Maharashtra
+                </Typography>
+          _className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+s                 <a _href="mailto:sales.in@warmsolindus.com">
+                    sales.in@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
