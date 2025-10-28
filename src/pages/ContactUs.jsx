@@ -322,60 +322,67 @@ export function ContactSection() {
       _variant="h5"
               className="mb-10 !text-2xl font-bold text-center"
             >
-              Our Regional Presence
-            </Typography>
+             {/* Our Regional Presence */}
+          <div className="mt-16">
+            <Typography
+              variant="h5"
+              className="mb-10 !text-2xl font-bold text-center"
+            >
+              Our Regional Presence
+            </Typography>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* KSA */}
-              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
-                <Typography _variant="h6" className="font-semibold mb-2">
-                  KSA
-                </Typography>
-className="mb-2 text-gray-700 text-sm">
-                  Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist, Al Jubail, KSA
-                </Typography>
-          _className="text-sm text-blue-700 hover:underline">
-                  <i className="fa fa-envelope mr-2" />{" "}
-                  <a href="mailto:sales.ksa@warmsolindus.com">
-                    sales.ksa@warmsolindus.com
-                  </a>
-                </Typography>
-id=0>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* KSA */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography variant="h6" className="font-semibold mb-2">
+                  KSA
+                </Typography>
+                <Typography className="mb-2 text-gray-700 text-sm">
+                  Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist,
+                  Al Jubail, KSA
+                </Typography>
+                <Typography className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.ksa@warmsolindus.com">
+                    sales.ksa@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
 
-              {/* QATAR */}
-              <div _id="1" _className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
-                <Typography _variant="h6" className="font-semibold mb-2">
-                  QATAR
-                </Typography>
-className="mb-2 text-gray-700 text-sm">
-                  Building no 2, Zone 25, Street 890, Abha Street, Doha - Qatar
-                </Typography>
-          _className="text-sm text-blue-700 hover:underline">
-                  <i className="fa fa-envelope mr-2" />{" "}
-s                 <a _href="mailto:sales.qatar@warmsolindus.com">
-                    sales.qatar@warmsolindus.com
-                  </a>
-                </Typography>
-              </div>
+              {/* QATAR */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography variant="h6" className="font-semibold mb-2">
+                  QATAR
+                </Typography>
+                <Typography className="mb-2 text-gray-700 text-sm">
+                  Building no 2, Zone 25, Street 890, Abha Street, Doha - Qatar
+                </Typography>
+                <Typography className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.qatar@warmsolindus.com">
+                    sales.qatar@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
 
-              {/* INDIA */}
-              <div _id="2" _className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
-                <Typography _variant="h6" className="font-semibold mb-2">
-                t   INDIA
-                </Typography>
-s             <Typography _className="mb-2 text-gray-700 text-sm">
-                  No#242, Satra Plaza, Vashi, Sector 19d, Navi Mumbai 400 703. Maharashtra
-                </Typography>
-          _className="text-sm text-blue-700 hover:underline">
-                  <i className="fa fa-envelope mr-2" />{" "}
-s                 <a _href="mailto:sales.in@warmsolindus.com">
-                    sales.in@warmsolindus.com
-                  </a>
-                </Typography>
-              </div>
-            </div>
-          </div>
+              {/* INDIA */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography variant="h6" className="font-semibold mb-2">
+                  INDIA
+                </Typography>
+                <Typography className="mb-2 text-gray-700 text-sm">
+                  No#242, Satra Plaza, Vashi, Sector 19d, Navi Mumbai 400 703.
+                  Maharashtra
+                </Typography>
+                <Typography className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.in@warmsolindus.com">
+                    sales.in@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
