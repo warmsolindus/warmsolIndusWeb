@@ -275,6 +275,46 @@ const sheetMetal = [
     },
   
 ];
+const tapesFoils = [
+
+    {
+     title: "Fiber Glass Tape",
+     path: "/tapes-foils/fiber-glass-tape",
+    },
+  {
+     title: "Filament Tape",
+     path: "/tapes-foils/filament-tape",
+    },
+   {
+     title: "Re-Inforced Aluminium Foil Tape",
+     path: "/tapes-foils/re-inforced-aluminium",
+    },
+{
+     title: "Aluminium Foils",
+     path: "/tapes-foils/aluminium-foils",
+    },
+  {
+     title: "Butyl Rubber Vapour Barrier",
+     path: "/tapes-foils/butyl-rubber",
+    },
+  {
+     title: "Reinforced Membrane",
+     path: "/tapes-foils/reinforced-membrane",
+    },
+  {
+     title: "Elastomer Sealant",
+     path: "/tapes-foils/elastomer-sealant",
+    },
+  {
+     title: "Mastic",
+     path: "/tapes-foils/mastic",
+    },
+  {
+     title: "Adhesives",
+     path: "/tapes-foils/adhesives",
+    },
+  
+];
 
 
 function NavListMenu() {
@@ -284,6 +324,7 @@ function NavListMenu() {
   const [accessoryNestedMenu, setAccessoryNestedMenu] = React.useState(false);
   const [refractoryNestedMenu, setRefractoryNestedMenu] = React.useState(false);
   const [sheetmetalNestedMenu, setSheetmetalNestedMenu] = React.useState(false);
+  const [tapesfoilsNestedMenu, setTapesfoilsNestedMenu] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = (menu) =>
     menu.map(({ title, path }, key) => (
@@ -426,7 +467,7 @@ function NavListMenu() {
             </MenuList>
           </Menu>
  {/* New menu item start */}
- <Menu
+           <Menu
             placement="right-start"
             allowHover
             offset={15}
@@ -448,6 +489,33 @@ function NavListMenu() {
             </Link>
             <MenuList className="rounded-xl">
               {renderItems(sheetMetal)}
+            </MenuList>
+          </Menu>
+          {/* New menu item end */}
+
+          {/* New menu item start */}
+           <Menu
+            placement="right-start"
+            allowHover
+            offset={15}
+            open={tapesfoilsNestedMenu}
+            handler={setTapesfoilsNestedMenu}
+          >
+            <Link to={"/tapes-foils"}>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Tapes, Foils, Sealant & Adhesives
+                  <ChevronUpIcon
+                  strokeWidth={2.5}
+                  className={`h-3.5 w-3.5 transition-transform ${
+                    isMenuOpen ? "rotate-90" : ""
+                  }`}
+                />
+                </MenuItem>
+              </MenuHandler>
+            </Link>
+            <MenuList className="rounded-xl">
+              {renderItems(tapesFoils)}
             </MenuList>
           </Menu>
           {/* New menu item end */}
@@ -577,6 +645,30 @@ function NavListMenu() {
             </Link>
             <MenuList className="block rounded-xl lg:hidden">
               {renderItems(sheetMetal)}
+            </MenuList>
+          </Menu>
+          <Menu
+            placement="bottom"
+            allowHover
+            offset={6}
+            open={tapesfoilsNestedMenu}
+            handler={setTapesfoilsNestedMenu}
+          >
+            <Link to={"/tapes-foils"}>
+              <MenuHandler className="flex items-center justify-between">
+                <MenuItem>
+                  Tapes, Foils, Sealant & Adhesives
+                  <ChevronUpIcon
+                    strokeWidth={2.5}
+                    className={`h-3.5 w-3.5 transition-transform ${
+                      isMenuOpen ? "rotate-90" : ""
+                    }`}
+                  />
+                </MenuItem>
+              </MenuHandler>
+            </Link>
+            <MenuList className="block rounded-xl lg:hidden">
+              {renderItems(tapesFoils)}
             </MenuList>
           </Menu>
           
