@@ -10,7 +10,7 @@ import {
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 import FooterWithSitemap from "../components/Footer";
 import Card from "../components/Cards";
-import sheetMetal from "../data/tapesFoils";
+import tapesFoils from "../data/tapesFoils";
 export default function TapesFoils() {
   useEffect(() => {
     window.scrollTo(0, 0);
