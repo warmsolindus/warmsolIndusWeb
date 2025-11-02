@@ -42,7 +42,7 @@ export default function TapesFoils() {
             color="white"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-center"
           >
-            TAPES, FOILS, SEALANT & ADHESIVES
+            TAPES, FOILS, SEALANT AND ADHESIVES
           </Typography>
         </div>
       </div>
