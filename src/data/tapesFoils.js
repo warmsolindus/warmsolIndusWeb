@@ -23,32 +23,47 @@ const tapesFoils = [
   },
   {
     imgUrl: "/images/tfo4.jpg",
-    title: "Sewing Threads",
+    title: "Aluminum Foils",
     subTitle:
-      "Insulation sewing threads are high-performance yarns made from materials like silica, fiberglass, ceramic fibers, Aramid (Kevlar), and stainless steel-reinforced cotton that are designed to withstand high temperatures and maintain their strength and flexibility in extreme environments",
-    links: "/tapes-foils/#",
+      " plain aluminum foil can be used on insulation as a vapor barrier to prevent moisture and mold, but engineered foil insulation products are a better alternative for long-term structural integrity and comprehensive insulation",
+    links: "/tapes-foils/aluminium-foils",
   },
   {
     imgUrl: "/images/tfo5.jpg",
-    title: "Lacing Hooks, Anchors",
+    title: "Butyl Rubber Vapour Barrier",
     subTitle:
-      " Insulation anchors and hooks are fasteners and accessories for installing thermal or acoustic insulation, available in various types like self-stick, perforated base, and lacing anchors for permanent and removable applications",
-    links: "/tapes-foils/#",
+      " Butyl rubber serves as an excellent, durable vapor barrier due to its low gas permeability, excellent temperature resistance, and strong adhesion, effectively sealing joints and seams in cold and HVAC insulation systems to prevent moisture from damaging the insulation and structure",
+    links: "/tapes-foils/butyl-rubber",
   },
   {
     imgUrl: "/images/tfo6.jpg",
-    title: "Quilting Pins",
+    title: "Reinforced Membrane",
     subTitle:
-      " Quilting pin is a metal fastener, typically 12 or 14 gauge, made of mild steel or stainless steel, with a sharp point and a welded retaining head. It is used to secure and provide support for insulation blankets, especially removable ones, usually lock with self locking washer",
-    links: "/tapes-foils/#",
+      "A reinforced membrane in insulation is a multi-layer sheet material, typically polymer-based, with an internal scrim or fiber reinforcement (like polyester or polypropylene) that provides enhanced durability, tear resistance, and tensile",
+    links: "/tapes-foils/reinforced-membrane",
   },
   {
     imgUrl: "/images/tfo7.jpg",
-    title: "Sheet Metal Hand Tools",
+    title: "Elastomer Sealant",
     subTitle:
-      " Using specialized tools is not a luxury—it's a necessity for an insulation system that performs to its specifications. The right tool ensures safety, efficiency, and, most importantly, the long-term integrity of the insulation, correct tools minimizes material waste, reduces installation time, and guarantees that the insulation system performs as designed",
-    links: "/tapes-foils/#",
+      "An elastomer sealant in insulation is a flexible, durable, rubber-like material used to seal gaps and joints in insulation systems, such as HVAC ducts and building envelopes, to prevent air leakage, moisture ingress, and improve energy efficiency and system performance",
+    links: "/tapes-foils/elastomer-sealant",
+  },
+    {
+    imgUrl: "/images/tfo8.jpg",
+    title: "Mastic",
+    subTitle:
+      " Insulation Mastics. Design Polymerics' Insulation Mastics provide durable, weather-resistant coatings for insulation systems, offering superior protection against moisture, UV exposure, and temperature fluctuations in HVAC and industrial applications like cold insulation in PIR & cellular glass insualtion",
+      links: "/tapes-foils/mastic",
+  },
+  {
+    imgUrl: "/images/tfo9.jpg",
+    title: "Adhesives",
+    subTitle:
+      " Insulation adhesives function to securely bond various insulating materials to different surfaces, providing strong, durable, and reliable connections. Their main functions include fixing the insulation in place, sealing gaps and preventing air infiltration for improved energy efficiency
+",
+    links: "/tapes-foils/adhesives",
   },
 ];
 
-export default sheetMetal;
+export default tapesFoils;
