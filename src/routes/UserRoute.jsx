@@ -5,6 +5,7 @@ import FoamGlass from "../pages/products/FoamGlass";
 import Polyisocyanurate from "../pages/products/Polyisocyanurate";
 import InsulationMaterials from "../pages/InsulationMaterials";
 import SheetMetal from "../pages/SheetMetal";
+import TapesFoils from "../pages/TapesFoils";
 import MetalJacketingMaterials from "../pages/MetalJacketingMaterials";
 import PolyurethaneFoam from "../pages/products/PolyurethaneFoam";
 import ContactSection from "../pages/ContactUs";
@@ -66,6 +67,7 @@ export default function UserRoute() {
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/insulation-materials" element={<InsulationMaterials />} />
       <Route path="/sheet-metal" element={<SheetMetal />} />
+      <Route path="/tapes-foils" element={<TapesFoils />} />
       <Route path="/insulation-materials/ceramic-fiber-blanket" element={<CFB />} />
       <Route path="/insulation-materials/cellular-or-foam-glass" element={<FoamGlass />} />
       <Route path="/insulation-materials/polyisocyanurate-PIR" element={<Polyisocyanurate />} />
