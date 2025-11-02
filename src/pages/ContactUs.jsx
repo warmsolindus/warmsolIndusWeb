@@ -306,7 +306,7 @@ export function ContactSection() {
               {/* Success and Error Messages */}
               {sendSuccess && (
                 <Typography color="green" className="text-center font-medium">
-                  Message sent successfully!
+                  Great, Message sent successfully!
                 </Typography>
               )}
               {sendError && (
