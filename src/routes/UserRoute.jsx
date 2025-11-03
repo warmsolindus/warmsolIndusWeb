@@ -95,6 +95,7 @@ export default function UserRoute() {
       <Route path="/insulation-and-cladding-accessories/aluminium-blind-rivet" element={<AluminumBlindRivet />} />
       <Route path="/insulation-and-cladding-accessories/ceramic-tape" element={<CeramicTape />} />
       <Route path="/insulation-and-cladding-accessories/fiber-glass-tape" element={<FiberglassTape />} />
+      <Route path="/tapes-foils/fiber-glass-tape" element={<FiberglassTape />} />
       <Route path="/insulation-and-cladding-accessories/inspection-plug" element={<InspectionPlug />} />
       <Route path="/insulation-and-cladding-accessories/sealants-and-adhesives" element={<SealantsAdhesives />} />
       <Route path="/insulation-and-cladding-accessories/filament-tape" element={<FilamentTape />} />
