@@ -135,7 +135,7 @@ export function ContactSection() {
                   </Typography>
                   <div className="py-4">
                     <Typography className="font-semibold">
-                      Warmsol Industries FZC LLC
+                      Warmsol Industries FZE LLC
                     </Typography>
                     <Typography className="font-semibold">
                       Business Center,
