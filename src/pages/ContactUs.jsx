@@ -158,7 +158,7 @@ export function ContactSection() {
                     </Typography>
                   </div>
                   <img
-                  src="images/logo.svg" 
+                  src="images/logo.png" 
                   alt="Warmsol Industries Logo"
                   className="mt-6 w-84 h-auto" 
                 />
