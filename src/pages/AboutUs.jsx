@@ -82,7 +82,7 @@ function AboutUs() {
               <Typography variant="paragraph" className="text-base text-gray-700">
                 At WarmSol Industries, our mission is to deliver exceptional insulation materials that ensure:
               </Typography>
-              <ul className="list-image-[url(/images/tick2.jpg)] list-outside mt-2 pl-4 text-gray-700">
+              <ul className="list-image-[url(/images/tick2.png)] list-outside mt-2 pl-4 text-gray-700">
                 <li>Optimal energy efficiency</li>
                 <li>Enhanced safety in various applications</li>
                 <li>Long-lasting durability in diverse environments</li>
