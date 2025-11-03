@@ -30,6 +30,7 @@ import StainlessSteelBlindRivet from "../pages/products/SSBlindRivet";
 import AluminumBlindRivet from "../pages/products/ALBlindRivet";
 import CeramicTape from "../pages/products/CeramicTape";
 import FiberglassTape from "../pages/products/FiberGlassTape";
+import FiberglassTape1 from "../pages/products/FiberGlassTape1";
 import CalciumSilicate from "../pages/products/CaSilicate";
 import Perlite from "../pages/products/Perlite";
 import InspectionPlug from "../pages/products/InspectionPlug";
@@ -95,7 +96,7 @@ export default function UserRoute() {
       <Route path="/insulation-and-cladding-accessories/aluminium-blind-rivet" element={<AluminumBlindRivet />} />
       <Route path="/insulation-and-cladding-accessories/ceramic-tape" element={<CeramicTape />} />
       <Route path="/insulation-and-cladding-accessories/fiber-glass-tape" element={<FiberglassTape />} />
-      <Route path="/tapes-foils/fiber-glass-tape" element={<FiberglassTape />} />
+      <Route path="/tapes-foils/fiber-glass-tape" element={<FiberglassTape1 />} />
       <Route path="/insulation-and-cladding-accessories/inspection-plug" element={<InspectionPlug />} />
       <Route path="/insulation-and-cladding-accessories/sealants-and-adhesives" element={<SealantsAdhesives />} />
       <Route path="/insulation-and-cladding-accessories/filament-tape" element={<FilamentTape />} />
