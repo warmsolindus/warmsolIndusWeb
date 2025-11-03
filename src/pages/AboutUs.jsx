@@ -56,9 +56,9 @@ function AboutUs() {
                   Leading the Way in Insulation Solutions
                 </Typography>
                 <Typography variant="paragraph" className="mb-4 text-base md:text-lg text-gray-700">
-                  WarmSol Industries stands at the forefront of insulation technology, manufacturing and distributing world-class products that meet the most demanding industry standards. Our comprehensive range includes:
+                  Warmsol Industries stands at the forefront of insulation technology, manufacturing and distributing world-class products that meet the most demanding industry standards. Our comprehensive range includes:
                 </Typography>
-                <ul className="list-image-[url(/images/tick2.jpg)] list-outside mb-4 pl-4 text-gray-700">
+                <ul className="list-image-[url(/images/tick2.png)] list-outside mb-4 pl-4 text-gray-700">
                   <li>Hot and Cold insulation materials</li>
                   <li>Cladding and Jacketing solutions</li>
                   <li>Essential insulation accessories</li>
