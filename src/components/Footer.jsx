@@ -13,9 +13,9 @@ const SITEMAP = [
     title: "Help Center",
     links: [
       { title: "LinkedIn", path: "" },
-      { title: "X", path: "" },
-      { title: "GitHub", path: "" },
-      { title: "Contact Us", path: "" },
+      { title: "Facebook", path: "https://www.facebook.com/profile.php?id=61581744818232" },
+      { title: "Instagram", path: "https://www.linkedin.com/company/warmsol-industries/?viewAsMember=true" },
+      { title: "About Warmsol", path: "/about-us" },
     ],
   },
 
@@ -32,6 +32,8 @@ const SITEMAP = [
         path: "/insulation-and-cladding-accessories",
       },
       { title: "Refractory Materials", path: "/refractory-materials" },
+      { title: "High Temperature Fabrics & Accessories", path: "/sheet-metal" },
+      { title: "Tapes, Foils, Sealant & Adhesives", path: "/tapes-foils" },
     ],
   },
 ];
