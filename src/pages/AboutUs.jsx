@@ -99,7 +99,7 @@ function AboutUs() {
               <Typography variant="paragraph" className="text-base text-gray-700">
                 We aspire to become the most trusted partner in the insulation industry by:
               </Typography>
-              <ul className="list-image-[url(/images/tick2.jpg)] list-outside mt-2 pl-4 text-gray-700">
+              <ul className="list-image-[url(/images/tick2.png)] list-outside mt-2 pl-4 text-gray-700">
                 <li>Providing top-tier insulation products for industrial and commercial spaces</li>
                 <li>Offering unparalleled professional knowledge and expertise</li>
                 <li>Delivering exceptional customer service at every touchpoint</li>
