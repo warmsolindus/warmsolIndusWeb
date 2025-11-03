@@ -80,13 +80,13 @@ export default function FooterWithSitemap() {
             className="mb-4 text-center font-normal text-blue-gray-300 md:mb-0"
           >
             &copy; {currentYear}{" "}
-            <a href="https://warmsolindus.com/">Warmsol Industries FZC LLC </a>.
+            <a href="https://warmsolindus.com/">Warmsol Industries FZE LLC </a>.
             All Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-blue-gray-200 sm:justify-center">
             <Typography
               as="a"
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61581744818232"
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <svg
