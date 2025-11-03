@@ -60,8 +60,7 @@ const tapesFoils = [
     imgUrl: "/images/tfo9.jpg",
     title: "Adhesives",
     subTitle:
-      " Insulation adhesives function to securely bond various insulating materials to different surfaces, providing strong, durable, and reliable connections. Their main functions include fixing the insulation in place, sealing gaps and preventing air infiltration for improved energy efficiency
-",
+      " Insulation adhesives function to securely bond various insulating materials to different surfaces, providing strong, durable, and reliable connections. Their main functions include fixing the insulation in place, sealing gaps and preventing air infiltration for improved energy efficiency",
     links: "/tapes-foils/adhesives",
   },
 ];
