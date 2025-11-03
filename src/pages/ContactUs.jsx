@@ -157,6 +157,11 @@ export function ContactSection() {
                       </a>
                     </Typography>
                   </div>
+                  <img
+                  src="images/logo.svg" 
+                  alt="Warmsol Industries Logo"
+                  className="mt-6 w-40" 
+                />
                   {/* ... (Your commented-out code was here) ... */}
                 </div>
               </div>
