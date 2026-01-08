@@ -46,13 +46,9 @@ export function ContactSection() {
 
   // Data for Regional Presence
   const locations = [
+   
     {
-      title: "KINGDOM OF SAUDI ARABIA",
-      address: "Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist, Al Jubail, KSA",
-      email: "sales.ksa@warmsolindus.com",
-    },
-    {
-      title: "KSA - BUSINESS CENTER",
+      title: "KSA",
       address: "No. 13, First Floor, Business Executive Center, Jubail-Dammam Highway, Al Jubail, Kingdom of Saudi Arabia",
       email: "sales.ksa@warmsolindus.com",
     },
