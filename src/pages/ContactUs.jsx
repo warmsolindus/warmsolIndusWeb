@@ -335,11 +335,27 @@ export function ContactSection() {
               {/* KSA */}
               <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
                 <Typography variant="h6" className="font-semibold mb-2">
-                  Kingdom of Saudi Arabia
+                  KINGDOM OF SAUDI ARABIA
                 </Typography>
                 <Typography className="mb-2 text-gray-700 text-sm">
                   Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist,
                   Al Jubail, KSA
+                </Typography>
+                <Typography className="text-sm text-blue-700 hover:underline">
+                  <i className="fa fa-envelope mr-2" />{" "}
+                  <a href="mailto:sales.ksa@warmsolindus.com">
+                    sales.ksa@warmsolindus.com
+                  </a>
+                </Typography>
+              </div>
+
+               {/* KSA */}
+              <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                <Typography variant="h6" className="font-semibold mb-2">
+                  KSA
+                </Typography>
+                <Typography className="mb-2 text-gray-700 text-sm">
+                  No. 13, First Floor, Business Executive Center, Jubail-Dammam Highway, Al Jubail, Kingdom of Saudi Arabia
                 </Typography>
                 <Typography className="text-sm text-blue-700 hover:underline">
                   <i className="fa fa-envelope mr-2" />{" "}
