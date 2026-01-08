@@ -335,7 +335,7 @@ export function ContactSection() {
               {/* KSA */}
               <div className="p-6 rounded-lg bg-amber-50 hover:shadow-lg hover:scale-105 transition-transform cursor-pointer">
                 <Typography variant="h6" className="font-semibold mb-2">
-                  KSA
+                  Kingdom of Saudi Arabia
                 </Typography>
                 <Typography className="mb-2 text-gray-700 text-sm">
                   Building No.2500, Al Madinah Al Munawarah St., Al Tawyah Dist,
