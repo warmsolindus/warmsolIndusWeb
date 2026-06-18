@@ -11,11 +11,15 @@ const directors = [
     name: "Theerthangar Mazhumdar",
     position: "Director Business Development",
     image: "/images/theerth.jpg",
+    description:
+      "Driving strategic growth, market expansion and customer relationships while strengthening WarmSol Industries' presence across global markets.",
   },
   {
     name: "S Vijaya Raghavan",
     position: "Technical Director",
     image: "/images/vijaya.jpg",
+    description:
+      "Providing technical leadership, engineering expertise and innovative insulation solutions that ensure the highest standards of quality and performance.",
   },
 ];
 function AboutUs() {
@@ -124,7 +128,7 @@ function AboutUs() {
 {/* =========================================
     OUR DIRECTORS SECTION
 ========================================= */}
-<section className="mt-16 overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-r from-amber-700 via-orange-700 to-amber-800">
+<section className="mb-8 overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-r from-amber-700 via-orange-700 to-amber-800">
 
   <div className="relative px-6 py-16 md:px-12">
 
@@ -161,7 +165,7 @@ function AboutUs() {
       {directors.map((director, index) => (
         <div
           key={index}
-          className="group text-center transition-all duration-500 hover:-translate-y-3"
+          className="group text-center transition-all duration-500 hover:-translate-y-3 bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
         >
 
           {/* Image */}
@@ -172,8 +176,7 @@ function AboutUs() {
             <img
               src={director.image}
               alt={director.name}
-              className="relative w-52 h-52 md:w-60 md:h-60 object-cover object-top rounded-full border-4 border-white shadow-[0_15px_40px_rgba(0,0,0,0.35)] transition-all duration-500 group-hover:scale-105"
-            />
+              className="relative w-60 h-60 md:w-64 md:h-64 object-cover object-top rounded-full border-4 border-white shadow-[0_15px_40px_rgba(0,0,0,0.35)] transition-all duration-500 group-hover:scale-105"           />
           </div>
 
           {/* Name */}
@@ -201,9 +204,7 @@ function AboutUs() {
             variant="paragraph"
             className="text-white/90 mt-5 max-w-md mx-auto leading-relaxed"
           >
-            Dedicated to delivering excellence, innovation and sustainable
-            growth while strengthening WarmSol Industries' position as a
-            trusted leader in insulation and industrial solutions.
+            {director.description}
           </Typography>
         </div>
       ))}
@@ -212,7 +213,7 @@ function AboutUs() {
 
   </div>
 </section>
-        
+        <div className="mt-10">
         <Card className="overflow-hidden">
           <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
             <Typography variant="h3" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold text-center">
@@ -252,6 +253,7 @@ function AboutUs() {
             </div>
           </CardBody>
         </Card>
+        </div>
       </div>
       <FooterWithSitemap />
     </div>
