@@ -6,7 +6,18 @@ import {
 } from "@material-tailwind/react";
 import FooterWithSitemap from "../components/Footer";
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
-
+const directors = [
+  {
+    name: "Theerthangar Mazhumdar",
+    position: "Director Business Development",
+    image: "/images/theerth.jpg",
+  },
+  {
+    name: "S Vijaya Raghavan",
+    position: "Technical Director",
+    image: "/images/vijaya.jpg",
+  },
+];
 function AboutUs() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -109,6 +120,99 @@ function AboutUs() {
             </CardBody>
           </Card>
         </div>
+
+{/* =========================================
+    OUR DIRECTORS SECTION
+========================================= */}
+<section className="mt-16 overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-r from-amber-700 via-orange-700 to-amber-800">
+
+  <div className="relative px-6 py-16 md:px-12">
+
+    {/* Decorative Background */}
+    <div className="absolute inset-0 opacity-10">
+      <div className="absolute top-10 left-10 h-40 w-40 rounded-full border border-white"></div>
+      <div className="absolute bottom-10 right-10 h-60 w-60 rounded-full border border-white"></div>
+    </div>
+
+    {/* Heading */}
+    <div className="relative text-center mb-14">
+      <Typography
+        variant="h2"
+        color="white"
+        className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide"
+      >
+        OUR DIRECTORS
+      </Typography>
+
+      <div className="w-24 h-1 bg-white mx-auto rounded-full mt-4"></div>
+
+      <Typography
+        variant="paragraph"
+        className="mt-5 text-white/90 text-lg max-w-3xl mx-auto"
+      >
+        Meet the visionary leaders driving innovation, growth and excellence
+        across WarmSol Industries.
+      </Typography>
+    </div>
+
+    {/* Directors Grid */}
+    <div className="relative grid grid-cols-1 md:grid-cols-2 gap-14 max-w-6xl mx-auto">
+
+      {directors.map((director, index) => (
+        <div
+          key={index}
+          className="group text-center transition-all duration-500 hover:-translate-y-3"
+        >
+
+          {/* Image */}
+          <div className="relative inline-block">
+
+            <div className="absolute inset-0 rounded-full bg-white/20 blur-2xl scale-110"></div>
+
+            <img
+              src={director.image}
+              alt={director.name}
+              className="relative w-52 h-52 md:w-60 md:h-60 object-cover object-top rounded-full border-4 border-white shadow-[0_15px_40px_rgba(0,0,0,0.35)] transition-all duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Name */}
+          <Typography
+            variant="h4"
+            color="white"
+            className="mt-8 text-2xl md:text-3xl font-bold"
+          >
+            {director.name}
+          </Typography>
+
+          {/* Position */}
+          <Typography
+            variant="h6"
+            className="text-amber-200 uppercase tracking-[2px] mt-2 font-semibold"
+          >
+            {director.position}
+          </Typography>
+
+          {/* Divider */}
+          <div className="w-20 h-1 bg-white/60 mx-auto mt-5 rounded-full"></div>
+
+          {/* Description */}
+          <Typography
+            variant="paragraph"
+            className="text-white/90 mt-5 max-w-md mx-auto leading-relaxed"
+          >
+            Dedicated to delivering excellence, innovation and sustainable
+            growth while strengthening WarmSol Industries' position as a
+            trusted leader in insulation and industrial solutions.
+          </Typography>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+        
         <Card className="overflow-hidden">
           <CardBody className="p-8 bg-gradient-to-r from-amber-100 to-light-blue-100">
             <Typography variant="h3" color="blue-gray" className="mb-4 text-2xl md:text-3xl font-semibold text-center">
