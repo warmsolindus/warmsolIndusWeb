@@ -8,11 +8,11 @@ import FooterWithSitemap from "../components/Footer";
 import NavigationbarWithDropdownMultilevelMenu from "../components/Navbar";
 const directors = [
   {
-    name: "Theerthangar Mazhumdar",
-    position: "Director Business Development",
+    name: "Tirthankar Mazumdar",
+    position: "Director - Business Development",
     image: "/images/theerth.jpg",
     description:
-      "Driving strategic growth, market expansion and customer relationships while strengthening WarmSol Industries' presence across global markets.",
+      "Driving strategic growth, market expansion and customer relationships while strengthening Warmsol Industries presence across global markets.",
   },
   {
     name: "S Vijaya Raghavan",
