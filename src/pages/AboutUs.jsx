@@ -15,11 +15,11 @@ const directors = [
       "Driving strategic growth, market expansion and customer relationships while strengthening Warmsol Industries presence across global markets.",
   },
   {
-    name: "S Vijaya Raghavan",
+    name: "S Vijayaraghavan",
     position: "Technical Director",
     image: "/images/vijaya.jpg",
     description:
-      "Providing technical leadership, engineering expertise and innovative insulation solutions that ensure the highest standards of quality and performance.",
+      "Providing technical leadership, engineering expertise and innovative industrial solutions that ensure the highest standards of quality and performance.",
   },
 ];
 function AboutUs() {
